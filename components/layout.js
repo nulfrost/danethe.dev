@@ -9,6 +9,10 @@ export default ({ children, title = "danethe.dev" }) => (
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
         rel="stylesheet"
       />
+      <meta
+        name="description"
+        content="Dane Miller's personal website. Information about current experience, personal projects and his blog can be found on the site."
+      />
     </Head>
     <div className="antialiased bg-gray-100">
       <div
