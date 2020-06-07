@@ -10,12 +10,12 @@ export default ({ children, title = "danethe.dev" }) => (
         rel="stylesheet"
       />
     </Head>
-    <div className="bg-gray-100">
+    <div className="antialiased bg-gray-100">
       <div
         className="flex flex-col max-w-6xl min-h-screen p-5 mx-auto"
         style={{ fontFamily: "Inter, sans-serif" }}
       >
-        <nav className="flex items-center justify-around md:justify-between">
+        <nav className="flex items-center justify-between">
           <Link href="/">
             <a className="px-5 py-1 font-semibold text-white bg-green-500 rounded-md ">
               danethe.dev
