@@ -16,8 +16,8 @@ export default function Home() {
             and general tinkerer of things.
           </p>
           <p className="text-lg text-gray-600">
-            I enjoy making fast and reponsive web applications using
-            React/Next.js and Tailwind.
+            I enjoy making fast and reponsive web applications using the latest
+            web technologies.
           </p>
         </div>
         <div ref={hoverRef}>

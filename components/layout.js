@@ -15,11 +15,13 @@ export default ({ children, title = "danethe.dev" }) => (
         className="flex flex-col max-w-6xl min-h-screen p-5 mx-auto"
         style={{ fontFamily: "Inter, sans-serif" }}
       >
-        <nav className="flex justify-around md:justify-between">
+        <nav className="flex items-center justify-around md:justify-between">
           <Link href="/">
-            <a className="font-semibold text-green-500">danethe.dev</a>
+            <a className="px-5 py-1 font-semibold text-white bg-green-500 rounded-md ">
+              danethe.dev
+            </a>
           </Link>
-          <div className="space-x-4 font-semibold">
+          <div className="px-5 py-1 space-x-4 font-semibold">
             <Link href="/projects">
               <a className="pb-2 text-gray-500 transition duration-150 ease-in-out border-green-500 hover:text-gray-900 hover:border-b-4">
                 Projects
