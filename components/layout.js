@@ -59,6 +59,15 @@ export default ({ children, title = "danethe.dev" }) => (
             >
               Vercel
             </a>
+            . Illustrations by{" "}
+            <a
+              href="https://github.com/miukimiu/react-kawaii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 underline"
+            >
+              miukimiu
+            </a>
             .
           </p>
         </footer>

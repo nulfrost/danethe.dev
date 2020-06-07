@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout title="Home">
       <header className="flex flex-col items-center justify-center flex-1 p-5 md:flex-row md:justify-between md:p-0">
-        <div className="w-full mb-10 text-center md:w-1/2 md:text-left">
+        <div className="w-full mb-10 text-center md:w-1/2 lg:text-left">
           <p className="mb-3 text-2xl font-bold text-gray-900 md:text-4xl">
             I'm Dane, <span className="text-green-500">Frontend Developer</span>{" "}
             and general tinkerer of things.
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <div ref={hoverRef}>
           <Browser
-            size={300}
+            size={size.width < 1000 ? 200 : 300}
             mood={isHovered ? "blissful" : "happy"}
             color="#48BB78"
           />
