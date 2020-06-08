@@ -46,7 +46,7 @@ export default function Projects() {
             >
               <h2 className="text-xl font-semibold">{title}</h2>
               <p>{description}</p>
-              <p className="text-sm break-words">{libs.join("•")}</p>
+              <p className="text-sm break-words">{libs.join(" • ")}</p>
               <div className="flex justify-between text-sm text-green-500 underline">
                 <a
                   href={live}

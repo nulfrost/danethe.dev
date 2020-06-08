@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <Layout title="Home">
       <header className="flex flex-col items-center justify-center flex-1 p-5 md:flex-row md:justify-between md:p-0">
-        <div className="mb-10 text-center sm:mb-0 md:w-1/2 lg:text-left">
-          <p className="mb-3 text-2xl font-bold text-gray-900 md:text-4xl">
+        <div className="mb-10 text-center md:text-left md:mb-0 md:w-1/2">
+          <p className="mb-3 text-2xl font-bold text-gray-900 md:text-2xl lg:text-4xl">
             I'm Dane, <span className="text-green-500">Frontend Developer</span>{" "}
             and general tinkerer of things.
           </p>
