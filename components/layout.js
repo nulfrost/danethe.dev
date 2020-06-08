@@ -44,8 +44,7 @@ export default ({ children, title = "danethe.dev" }) => (
           </div>
         </nav>
         {children}
-        <footer className="flex flex-col justify-between text-sm sm:flex-row">
-          <p>Designed and developed by Dane.</p>
+        <footer className="flex justify-end text-sm">
           <p>
             Built with{" "}
             <a

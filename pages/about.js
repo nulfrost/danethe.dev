@@ -20,9 +20,10 @@ export default function About() {
             <span className="font-semibold text-green-500">JavaScript</span> and
             I build all of my personal projects using frameworks/libraries based
             around it. Some of the technologies I am familiar with are
-            React/Next.js, Express, Node, PostgreSQL, MongoDB, Rest API Desgin,
-            3rd party APIs (Discord, Slack, etc.), Cloud hosting (Digital Ocean,
-            Heroku, AWS) and Github Actions/TravisCI. Just to name a few.
+            React/Next.js, Express, GraphQL, Node, PostgreSQL, MongoDB, Rest API
+            Design, 3rd party APIs (Discord, Slack, etc.), Cloud hosting
+            (Digital Ocean, Heroku, AWS) and Github Actions/TravisCI. Just to
+            name a few.
           </p>
           <p>
             Outside of programming some of my{" "}
