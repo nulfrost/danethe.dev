@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Layout title="About">
       <div className="flex flex-col items-center justify-center flex-1 px-3 py-5 md:flex-row md:justify-between md:p-0">
-        <div className="mb-10 space-y-2 leading-relaxed text-justify text-gray-600 md:w-1/2">
+        <div className="mb-10 space-y-8 leading-relaxed text-justify text-gray-600 md:w-1/2">
           <h1 className="pl-2 mb-4 text-2xl font-bold text-gray-900 border-l-4 border-green-500">
             About
           </h1>
@@ -26,8 +26,37 @@ export default function About() {
           </p>
           <p>
             Outside of programming some of my{" "}
-            <span className="font-semibold text-green-500">hobbies</span> are
-            skateboarding, video games, cooking, and music.
+            <span className="font-semibold text-green-500">hobbies</span>{" "}
+            include skateboarding, video games, cooking, and music.
+          </p>
+          <p>
+            If you would like to get in touch or view more of what I work on you
+            can check out my{" "}
+            <a
+              href="https://github.com/Danex2"
+              className="font-semibold text-green-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </a>
+            , send me an{" "}
+            <a
+              href="mailto:khadane.miller@gmail.com"
+              className="font-semibold text-green-500"
+            >
+              email
+            </a>{" "}
+            or hit me up on{" "}
+            <a
+              className="font-semibold text-green-500"
+              href="https://twitter.com/hybridearth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              twitter
+            </a>
+            !
           </p>
         </div>
         <SpeechBubble

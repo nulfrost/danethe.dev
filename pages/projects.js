@@ -8,84 +8,65 @@ export default function Projects() {
           Projects
         </h1>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
+          {[
+            {
+              title: "Tidus",
+              description:
+                "A moderation and utility bot built for the Discord chat application.",
+              libs: ["Node", "Docker", "Discord.js"],
+              live: "#",
+              repo: "https://github.com/Danex2/tidus",
+            },
+            {
+              title: "Thrifty",
+              description:
+                "A marketplace app for buying and selling items locally.",
+              libs: ["Next.js", "Tailwind", "Prisma", "Vercel", "TypeScript"],
+              live: "#",
+              repo: "#",
+            },
+            {
+              title: "Fotos",
+              description: "Photography application similar to flickr",
+              libs: ["Next.js", "Tailwind", "Prisma", "Vercel"],
+              live: "#",
+              repo: "#",
+            },
+            {
+              title: "Some react project",
+              description: "it does stuff",
+              libs: ["React", "Tailwind", "Firebase"],
+              live: "#",
+              repo: "#",
+            },
+          ].map(({ title, description, libs, live, repo }) => (
+            <div
+              className="flex flex-col justify-between px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500"
+              key={title}
+            >
+              <h2 className="text-xl font-semibold">{title}</h2>
+              <p>{description}</p>
+              <p className="text-sm break-words">{libs.join("•")}</p>
+              <div className="flex justify-between text-sm text-green-500 underline">
+                <a
+                  href={live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-800"
+                >
+                  Live
+                </a>
+                <a
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-800"
+                >
+                  Repo
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
-            </div>
-          </div>
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
-            </div>
-          </div>
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
-            </div>
-          </div>
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
-            </div>
-          </div>
-          <div className="px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500">
-            <h2 className="font-semibold">Exerlog</h2>
-            <p>An app build with Next.js to track at home workouts.</p>
-            <p>Next.js &bull; Tailwind.css &bull; Vercel</p>
-            <div className="flex justify-between text-sm text-green-500 underline">
-              <a href="#" className="hover:text-green-800">
-                Live
-              </a>
-              <a href="#" className="hover:text-green-800">
-                Repo
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </Layout>
