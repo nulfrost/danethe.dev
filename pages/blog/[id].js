@@ -9,9 +9,8 @@ export default function Post({ postData }) {
       <div className="flex flex-col justify-center flex-1 px-1 py-5 ">
         <p>{postData.title}</p>
         <p>{postData.id}</p>
-        <p>{postData.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <Date dateString={postData.date} />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <Link href="/blog">
           <a>&larr; Back to posts</a>
         </Link>

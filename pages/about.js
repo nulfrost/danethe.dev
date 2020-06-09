@@ -11,7 +11,7 @@ export default function About() {
           <h1 className="pl-2 mb-4 text-2xl font-bold text-gray-900 border-l-4 border-green-500">
             About
           </h1>
-          <div className="space-y-8 leading-relaxed text-justify text-gray-600 text-md">
+          <div className="space-y-8 text-lg leading-relaxed text-justify text-gray-600">
             <p>
               Hi, I'm Dane! I'm a Frontend Developer located in{" "}
               <span className="font-semibold text-green-500">Toronto, ON.</span>
