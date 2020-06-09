@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 export default function Projects() {
   return (
     <Layout title="Projects">
-      <div className="flex flex-col justify-center flex-1 px-3 py-5">
+      <div className="flex flex-col justify-center flex-1 px-1 py-5">
         <h1 className="pl-2 mb-4 text-2xl font-bold border-l-4 border-green-500">
           Projects
         </h1>
