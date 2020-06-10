@@ -2,7 +2,7 @@ import Layout from "@/components/layout";
 
 export default function Projects() {
   return (
-    <Layout title="Projects">
+    <Layout title="Projects | Dane Miller">
       <div className="flex flex-col justify-center flex-1 px-1 py-5">
         <h1 className="pl-2 mb-4 text-2xl font-bold border-l-4 border-green-500">
           Projects
@@ -17,7 +17,7 @@ export default function Projects() {
               live: "#",
               repo: "https://github.com/Danex2/tidus",
             },
-            {
+            /*{
               title: "Thrifty",
               description:
                 "A marketplace app for buying and selling items locally.",
@@ -38,7 +38,7 @@ export default function Projects() {
               libs: ["React", "Tailwind", "Firebase"],
               live: "#",
               repo: "#",
-            },
+            },*/
           ].map(({ title, description, libs, live, repo }) => (
             <div
               className="flex flex-col justify-between px-3 py-4 space-y-2 bg-gray-200 border-l-4 border-green-500"
@@ -50,7 +50,6 @@ export default function Projects() {
               <div className="flex justify-between text-sm text-green-500 underline">
                 <a
                   href={live}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-green-800"
                 >

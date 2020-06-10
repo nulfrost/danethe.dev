@@ -1,11 +1,10 @@
 import Layout from "@/components/layout";
 import Date from "@/components/date";
-import Link from "next/link";
 import { getAllPostIds, getPostData } from "lib/posts";
 
 export default function Post({ postData }) {
   return (
-    <Layout title={postData.title}>
+    <Layout title={`${postData.title} | Dane Miller`}>
       <article className="flex-1 px-1 py-5 mt-10 markdown-body">
         <div className="mb-10">
           <p className="text-4xl font-bold">{postData.title}</p>

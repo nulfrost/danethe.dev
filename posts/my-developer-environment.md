@@ -3,7 +3,7 @@ title: 'A short overview of my dev environment'
 date: '2020-06-10'
 ---
 
-I've gone through many different developer setup since I've started coding. From Windows to Linux to Mac and then back to Windows again. I've been fairly
+I've gone through many different developer setups since I've started coding. From Windows to Linux to Mac and then back to Windows again. I've been fairly
 impressed with the efforts Microsoft has been making recently and also realized that the operating system doesn't really matter much to me personally when
 it comes to programming. Below you will find what I typically use on a day to day basis when doing web development.
 
