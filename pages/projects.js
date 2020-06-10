@@ -41,7 +41,7 @@ export default function Projects() {
             },
           ].map(({ title, description, libs, live, repo }) => (
             <div
-              className="flex flex-col justify-between px-3 py-4 space-y-2 bg-gray-300 border-l-4 border-green-500"
+              className="flex flex-col justify-between px-3 py-4 space-y-2 bg-gray-200 border-l-4 border-green-500"
               key={title}
             >
               <h2 className="text-xl font-semibold">{title}</h2>
