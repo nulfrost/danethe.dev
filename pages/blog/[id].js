@@ -6,15 +6,13 @@ import { getAllPostIds, getPostData } from "lib/posts";
 export default function Post({ postData }) {
   return (
     <Layout title={postData.title}>
-      <div className="flex-1 px-1 py-5 mt-10 markdown">
-        <p className="text-3xl font-bold">{postData.title}</p>
-        <p>{postData.id}</p>
-        <Date dateString={postData.date} />
+      <article className="flex-1 px-1 py-5 mt-10 markdown-body">
+        <div className="mb-10">
+          <p className="text-4xl font-bold">{postData.title}</p>
+          <Date dateString={postData.date} />
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        <Link href="/blog">
-          <a>&larr; Back to posts</a>
-        </Link>
-      </div>
+      </article>
     </Layout>
   );
 }
