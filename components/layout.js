@@ -36,6 +36,11 @@ export default ({ children, title = "danethe.dev" }) => (
                 About
               </a>
             </Link>
+            <Link href="/blog">
+              <a className="pb-2 text-gray-500 transition duration-150 ease-in-out border-green-500 hover:text-gray-900 hover:border-b-4">
+                Blog
+              </a>
+            </Link>
           </div>
         </nav>
         {children}
