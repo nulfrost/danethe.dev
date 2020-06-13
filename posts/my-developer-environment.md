@@ -1,5 +1,6 @@
 ---
 title: 'A short overview of my dev environment'
+description: 'Some tools I use for everyday web development.'
 date: '2020-06-10'
 ---
 
