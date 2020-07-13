@@ -6,8 +6,8 @@ export default function About() {
   const size = useWindowSize();
   return (
     <Layout title="About | Dane Miller">
-      <div className="flex flex-col items-center justify-center flex-1 px-1 py-5 md:flex-row md:justify-between md:p-0">
-        <div className="mb-10 md:w-1/2">
+      <div className="flex flex-col items-center justify-center flex-1 px-1 md:p-0">
+        <div className="mb-10">
           <h1 className="pl-2 mb-4 text-2xl font-bold text-gray-900 border-l-4 border-green-500">
             About
           </h1>

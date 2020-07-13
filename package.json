@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 0.0.0.0:3000",
+    "dev": "next dev -p 8888",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.4.0",
+    "@tailwindcss/typography": "^0.1.1",
     "autoprefixer": "^9.8.0",
     "date-fns": "^2.14.0",
     "gray-matter": "^4.0.2",

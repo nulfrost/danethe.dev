@@ -10,7 +10,10 @@ export default function Post({ postData }) {
           <p className="text-4xl font-bold">{postData.title}</p>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className="prose md:prose-xl"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
     </Layout>
   );
