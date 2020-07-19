@@ -36,7 +36,7 @@ export default function About() {
               you can check out my{" "}
               <a
                 href="https://github.com/Danex2"
-                className="font-semibold text-green-500"
+                className="pb-1 font-semibold text-green-500 border-b-4 border-green-500 "
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,13 +45,13 @@ export default function About() {
               , send me an{" "}
               <a
                 href="mailto:khadane.miller@gmail.com"
-                className="font-semibold text-green-500"
+                className="pb-1 font-semibold text-green-500 border-b-4 border-green-500"
               >
                 email
               </a>{" "}
               or hit me up on{" "}
               <a
-                className="font-semibold text-green-500"
+                className="pb-1 font-semibold text-green-500 border-b-4 border-green-500"
                 href="https://twitter.com/hybridearth"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,11 +62,6 @@ export default function About() {
             </p>
           </div>
         </div>
-        <SpeechBubble
-          size={size.width < 1000 ? 200 : 300}
-          mood="excited"
-          color="#48BB78"
-        />
       </div>
     </Layout>
   );
