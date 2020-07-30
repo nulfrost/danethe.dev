@@ -1,9 +1,6 @@
-import { SpeechBubble } from "react-kawaii";
 import Layout from "@/components/layout";
-import { useWindowSize } from "../hooks/useWindowSize";
 
 export default function About() {
-  const size = useWindowSize();
   return (
     <Layout title="About | Dane Miller">
       <div className="flex flex-col items-center justify-center flex-1 px-1 md:p-0">

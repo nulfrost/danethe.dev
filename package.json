@@ -9,18 +9,18 @@
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.4.0",
-    "@tailwindcss/typography": "^0.1.1",
-    "autoprefixer": "^9.8.0",
-    "date-fns": "^2.14.0",
+    "@tailwindcss/typography": "^0.1.4",
+    "autoprefixer": "^9.8.5",
+    "date-fns": "^2.15.0",
     "gray-matter": "^4.0.2",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-kawaii": "^0.16.0",
     "rehype-stringify": "^8.0.0",
-    "remark-parse": "^8.0.2",
+    "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^1.5.1",
     "unified": "^9.0.0"
   },
   "devDependencies": {
