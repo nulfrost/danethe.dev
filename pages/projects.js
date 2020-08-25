@@ -7,7 +7,7 @@ export default function Projects() {
         <h1 className="pl-2 mb-4 text-2xl font-bold border-l-4 border-green-500">
           Projects
         </h1>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
           {[
             {
               title: "Tidus",
@@ -17,22 +17,23 @@ export default function Projects() {
               live: "#",
               repo: "https://github.com/Danex2/tidus",
             },
-            /*{
-              title: "Thrifty",
+            {
+              title: "World Of Warcraft Token Price",
               description:
-                "A marketplace app for buying and selling items locally.",
-              libs: ["Next.js", "Tailwind", "Prisma", "Vercel", "TypeScript"],
-              live: "#",
-              repo: "#",
+                "A simple website to view the current price of the World of Warcraft subscription token",
+              libs: ["Next.js", "Tailwind", "Blizzard API", "Vercel"],
+              live: "wowtoken.vercel.app",
+              repo: "https://github.com/Danex2/wowtoken",
             },
             {
-              title: "Fotos",
-              description: "Photography application similar to flickr",
-              libs: ["Next.js", "Tailwind", "Prisma", "Vercel"],
-              live: "#",
-              repo: "#",
+              title: "Find My Pet",
+              description:
+                "A web application to help pet owners find their pets",
+              libs: ["React", "Tailwind", "MongoDB", "Express"],
+              live: "https://findmypet1.herokuapp.com/",
+              repo: "https://github.com/Danex2/findmypet",
             },
-            {
+            /*{
               title: "Some react project",
               description: "it does stuff",
               libs: ["React", "Tailwind", "Firebase"],
