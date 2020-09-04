@@ -33,13 +33,14 @@ export default function Projects() {
               live: "https://findmypet1.herokuapp.com/",
               repo: "https://github.com/Danex2/findmypet",
             },
-            /*{
-              title: "Some react project",
-              description: "it does stuff",
-              libs: ["React", "Tailwind", "Firebase"],
-              live: "#",
-              repo: "#",
-            },*/
+            {
+              title: "QuickUI",
+              description:
+                "A web application made to quickly view and copy ElvUI setups for world of warcraft",
+              libs: ["TyeScript", "Next.js", "GraphQL", "AWS Amplify"],
+              live: "https://master.d3vtz7bmt2l79k.amplifyapp.com",
+              repo: "https://github.com/Danex2/quickui",
+            },
           ].map(({ title, description, libs, live, repo }) => (
             <div
               className="flex flex-col justify-between px-3 py-4 space-y-2 bg-gray-200 border-l-4 border-green-500"
