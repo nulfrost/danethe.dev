@@ -10,14 +10,6 @@ export default function Projects() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
           {[
             {
-              title: "Tidus",
-              description:
-                "A moderation and utility bot built for the Discord chat application.",
-              libs: ["Node", "Docker", "Discord.js"],
-              live: "#",
-              repo: "https://github.com/Danex2/tidus",
-            },
-            {
               title: "World Of Warcraft Token Price",
               description:
                 "A simple website to view the current price of the World of Warcraft subscription token",
