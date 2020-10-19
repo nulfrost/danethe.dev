@@ -29,9 +29,17 @@ export default function Projects() {
               title: "QuickUI",
               description:
                 "A web application made to quickly view and copy ElvUI setups for world of warcraft",
-              libs: ["TyeScript", "Next.js", "GraphQL", "AWS Amplify"],
+              libs: ["TypeScript", "Next.js", "GraphQL", "AWS Amplify"],
               live: "https://master.d3vtz7bmt2l79k.amplifyapp.com",
               repo: "https://github.com/Danex2/quickui",
+            },
+            {
+              title: "Omen",
+              description:
+                "A utility bot for Discord",
+              libs: ["Discord.js", "JavaScript", "AWS"],
+              live: "#",
+              repo: "https://github.com/Danex2/omen",
             },
           ].map(({ title, description, libs, live, repo }) => (
             <div
