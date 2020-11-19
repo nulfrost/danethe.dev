@@ -3,27 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8888",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.4.0",
     "@tailwindcss/typography": "^0.1.4",
-    "autoprefixer": "^9.8.5",
-    "date-fns": "^2.16.1",
-    "gray-matter": "^4.0.2",
+    "autoprefixer": "^9.8.6",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-kawaii": "^0.16.0",
-    "rehype-stringify": "^8.0.0",
-    "remark-parse": "^8.0.3",
-    "remark-rehype": "^7.0.0",
-    "tailwindcss": "^1.7.6",
-    "unified": "^9.0.0"
-  },
-  "devDependencies": {
-    "rehype-accessible-emojis": "^0.3.2"
+    "tailwindcss": "^1.7.6"
   }
 }
