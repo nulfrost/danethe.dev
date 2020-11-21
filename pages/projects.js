@@ -1,13 +1,12 @@
 import Layout from "@/components/layout";
+import Container from "@/components/Container";
 
 export default function Projects() {
   return (
     <Layout title="Projects | Dane Miller">
-      <div className="flex flex-col justify-center flex-1 px-1 py-5">
-        <h1 className="pl-2 mb-4 text-2xl font-bold border-l-4 border-green-500">
-          Projects
-        </h1>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
+      <Container>projects</Container>
+
+      {/* <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
           {[
             {
               title: "World Of Warcraft Token Price",
@@ -68,8 +67,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </div> */}
     </Layout>
   );
 }

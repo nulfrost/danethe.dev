@@ -1,13 +1,20 @@
 import Layout from "@/components/layout";
+import Container from "@/components/Container";
 
 export default function Home() {
   return (
     <Layout title="Home">
-      <div className="flex flex-col justify-center h-screen">
+      <Container>
         <h1 className="text-5xl font-bold text-left">Dane Miller</h1>
         <p className="mb-5 text-lg font-semibold">Fullstack Developer</p>
         <div className="flex mb-10 space-x-3">
-          <div className="p-1 duration-150 rounded hover:bg-gray-200">
+          <a
+            href="https://github.com/Danex2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 duration-150 rounded hover:bg-gray-200"
+          >
+            {" "}
             <svg
               width="24"
               height="24"
@@ -21,8 +28,14 @@ export default function Home() {
                 fill="#000"
               />
             </svg>
-          </div>
-          <div className="p-1 duration-150 rounded hover:bg-gray-200">
+          </a>
+
+          <a
+            href="#"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-1 duration-150 rounded hover:bg-gray-200"
+          >
             <svg
               width="24"
               height="24"
@@ -36,8 +49,14 @@ export default function Home() {
                 fill="#000"
               />
             </svg>
-          </div>
-          <div className="p-1 duration-150 rounded hover:bg-gray-200">
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/dmiller94/"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-1 duration-150 rounded hover:bg-gray-200"
+          >
             <svg
               width="24"
               height="24"
@@ -45,14 +64,20 @@ export default function Home() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M4 2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v16h16V4H4zm9 5c-.518 0-1.065.158-1.548.452L11 9h-1v7h2v-4c0-.576.594-1 1-1h1c.406 0 1 .424 1 1v4h2v-4c0-1.853-1.606-3-3-3h-1zM8 8a1 1 0 100-2 1 1 0 000 2zM7 9v7h2V9H7z"
                 fill="#000"
               />
             </svg>
-          </div>
-          <div className="p-1 duration-150 rounded hover:bg-gray-200">
+          </a>
+
+          <a
+            href="https://twitter.com/hybridearth"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="p-1 duration-150 rounded hover:bg-gray-200"
+          >
             <svg
               width="24"
               height="24"
@@ -66,13 +91,13 @@ export default function Home() {
                 fill="#000"
               />
             </svg>
-          </div>
+          </a>
         </div>
         <p className="w-1/3 text-lg text-justify opacity-70">
           From the great white north. I enjoy building cool applications using
           React, GraphQL and Node.
         </p>
-      </div>
+      </Container>
     </Layout>
   );
 }
