@@ -93,7 +93,7 @@ export default function Home() {
             </svg>
           </a>
         </div>
-        <p className="w-1/3 text-lg text-justify opacity-70">
+        <p className="w-1/2 text-lg text-justify md:w-1/3 opacity-70">
           From the great white north. I enjoy building cool applications using
           React, GraphQL and Node.
         </p>
