@@ -5,8 +5,10 @@ export default function Home() {
   return (
     <Layout title="Home">
       <Container>
-        <h1 className="text-5xl font-bold text-left">Dane Miller</h1>
-        <p className="mb-5 text-lg font-semibold">Fullstack Developer</p>
+        <h1 className="text-3xl font-bold md:text-5xl">Dane Miller</h1>
+        <p className="mb-5 text-sm font-semibold md:text-xl">
+          Fullstack Developer
+        </p>
         <div className="flex mb-10 space-x-3">
           <a
             href="https://github.com/Danex2"
@@ -93,8 +95,8 @@ export default function Home() {
             </svg>
           </a>
         </div>
-        <p className="w-1/2 text-lg text-justify md:w-1/3 opacity-70">
-          From the great white north. I enjoy building cool applications using
+        <p className="w-full px-3 text-sm text-center md:text-lg md:w-1/2 opacity-70">
+          From the great white north. I enjoy building cool applications with
           React, GraphQL and Node.
         </p>
       </Container>
