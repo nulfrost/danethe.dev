@@ -96,8 +96,8 @@ export default function Home() {
           </a>
         </div>
         <p className="w-full px-3 text-sm text-center md:text-lg md:w-1/2 opacity-70">
-          From the great white north. I enjoy building cool applications with
-          React, GraphQL and Node.
+          From the great white north. I enjoy building cool applications using
+          the latest web technologies.
         </p>
       </Container>
     </Layout>
