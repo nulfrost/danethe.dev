@@ -33,7 +33,7 @@ export default function Home() {
           </a>
 
           <a
-            href="#"
+            href="mailto:khadane.miller@gmail.com?subject=Howdy, Dane!"
             rel="noopener noreferrer"
             target="_blank"
             className="p-1 duration-150 rounded hover:bg-gray-200"
