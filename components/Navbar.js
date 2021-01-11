@@ -6,7 +6,6 @@ export default function Navbar() {
       <NavLink href="/" name="Home" />
       <NavLink href="/about" name="About" />
       <NavLink href="/projects" name="Projects" />
-      <NavLink href="/uses" name="Uses" />
     </nav>
   );
 }
