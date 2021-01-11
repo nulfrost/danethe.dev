@@ -13,9 +13,9 @@ export default function Layout({ children, title = "danethe.dev" }) {
         />
         <meta name="description" content="Dane's personal website" />
       </Head>
-      <main className="min-h-screen antialiased">
-        <Navbar />
-        <div className="max-w-6xl mx-auto">{children}</div>
+      <Navbar />
+      <main className="flex flex-col justify-center max-w-6xl min-h-screen mx-auto">
+        {children}
       </main>
     </>
   );

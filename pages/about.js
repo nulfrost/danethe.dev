@@ -5,7 +5,7 @@ export default function About() {
   return (
     <Layout title="About">
       <Container>
-        <div className="max-w-2xl px-5 text-justify text-md lg:text-lg opacity-70">
+        <div className="max-w-2xl px-5 text-sm text-justify lg:text-lg opacity-70">
           <p>
             Hello! My name is Dane and I am a fullstack web developer from
             Toronto, ON. My love for software development comes from the crazy
