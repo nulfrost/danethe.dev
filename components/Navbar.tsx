@@ -1,36 +1,22 @@
-import { Box, Link, Stack } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
+import NavLink from "./NavLink";
 
 export default function Navbar() {
   return (
-    <Box as="nav" background="#040F16" color="white" p={10} position="fixed">
+    <Box
+      as="nav"
+      background="#040F16"
+      color="white"
+      p={10}
+      display="flex"
+      justifyContent="flex-end"
+      width="100%"
+      position={{ base: "initial", lg: "fixed" }}
+    >
       <Stack direction="row" spacing={10}>
-        <Link
-          href="#home"
-          paddingBottom={2}
-          _hover={{
-            borderBottom: "3px solid white",
-          }}
-        >
-          Home
-        </Link>
-        <Link
-          href="#about"
-          paddingBottom={2}
-          _hover={{
-            borderBottom: "3px solid white",
-          }}
-        >
-          About
-        </Link>
-        <Link
-          href="#projects"
-          paddingBottom={2}
-          _hover={{
-            borderBottom: "3px solid white",
-          }}
-        >
-          Projects
-        </Link>
+        <NavLink href="/" name="Home" />
+        <NavLink href="/about" name="About" />
+        <NavLink href="/projects" name="Projects" />
       </Stack>
     </Box>
   );
