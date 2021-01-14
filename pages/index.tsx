@@ -14,6 +14,7 @@ import {
   Skateboard,
   Controller,
   PersonWithComputer,
+  Camera,
 } from "../components/Icons";
 import { useEffect, useState } from "react";
 
@@ -23,6 +24,7 @@ const icons = [
   Skateboard,
   Controller,
   PersonWithComputer,
+  Camera,
 ];
 
 export default function Home() {
