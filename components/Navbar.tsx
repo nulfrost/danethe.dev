@@ -17,6 +17,10 @@ export default function Navbar() {
         <NavLink href="/" name="Home" />
         <NavLink href="/about" name="About" />
         <NavLink href="/projects" name="Projects" />
+        <NavLink
+          href="https://drive.google.com/file/d/11aZlf8kSrCz23jgpVkXRYOiIpJ28Kt5n/view?usp=sharing"
+          name="Resume"
+        />
       </Stack>
     </Box>
   );

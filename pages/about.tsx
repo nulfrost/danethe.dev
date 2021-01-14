@@ -38,7 +38,7 @@ export default function About() {
             >
               About
             </Text>
-            <Box fontSize={{ base: "xs", lg: "lg" }} opacity={0.7}>
+            <Box fontSize={{ base: "md", lg: "lg" }} opacity={0.7}>
               <Text as="p" mb={3}>
                 I’ve always been interested with how things worked under the
                 hood ever since I was a small child. Always taking things apart

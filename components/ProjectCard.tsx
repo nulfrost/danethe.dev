@@ -22,7 +22,7 @@ export default function ProjectCard({
       <Text as="h2" fontWeight="bold" mb={2}>
         {name}
       </Text>
-      <Text as="p" opacity={0.7} mb={3} fontSize={{ base: "xs", lg: "md" }}>
+      <Text as="p" opacity={0.7} mb={3} fontSize="md">
         {description}
       </Text>
       <Stack direction="row" mb={4}>
