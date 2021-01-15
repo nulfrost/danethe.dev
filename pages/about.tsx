@@ -39,7 +39,7 @@ export default function About() {
               About
             </Text>
             <Box fontSize={{ base: "md", lg: "lg" }} opacity={0.7}>
-              <Text as="p" mb={3}>
+              <Text as="p" mb={10}>
                 I’ve always been interested with how things worked under the
                 hood ever since I was a small child. Always taking things apart
                 (sorry mom) and putting them back together just to get an idea
@@ -54,7 +54,7 @@ export default function About() {
                 activities in the game to get an understanding of how they
                 worked.
               </Text>
-              <Text as="p" mb={3}>
+              <Text as="p" mb={10}>
                 From there I started to make some scripts of my own and at the
                 time I knew absolutely nothing about programming but I still
                 managed to make a few (mostly broken) scripts that ran fairly
@@ -69,7 +69,7 @@ export default function About() {
                 people who have been developers for a lot longer than I have and
                 look forward to an opportunity to learn from them.
               </Text>
-              <Text as="p" mb={3}>
+              <Text as="p">
                 The tech stack I work with is Next.js, TypeScript, GraphQL and
                 Prisma to build my personal projects but I have a growing
                 interest in cloud services such as AWS and other DevOps related
