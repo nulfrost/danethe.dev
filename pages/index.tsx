@@ -64,7 +64,7 @@ export default function Home() {
                 w={{ base: 6, lg: 8 }}
               />
             </Link>
-            <Link href="https://github.com/Danex2" isExternal>
+            <Link href="https://github.com/nulfrost" isExternal>
               <Icon
                 as={FaGithubSquare}
                 h={{ base: 6, lg: 8 }}
