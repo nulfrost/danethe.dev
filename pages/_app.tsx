@@ -1,22 +1,8 @@
 import { AppProps } from "next/app";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-
-const theme = extendTheme({
-  styles: {
-    global: {
-      body: {
-        fontFamily: "Rubik, sans-serif",
-      },
-    },
-  },
-});
+import "styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
