@@ -14,8 +14,12 @@ export default function Home() {
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Dane Miller - Frontend Developer" />
+        <meta property="og:url" content="https://danethe.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/public/images/dane2.png" />
       </Head>
-      <div className="px-5 max-w-4xl mx-auto">
+      <div className="max-w-4xl px-5 mx-auto">
         <Header />
         <About />
         <Projects />
