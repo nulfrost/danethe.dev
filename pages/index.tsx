@@ -5,6 +5,7 @@ import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Blog from "@/components/sections/Blog";
 import { request } from "lib/datocms";
+import { renderMetaTags } from "react-datocms";
 
 const HOMEPAGE_QUERY = `
 query HomePage($limit: IntType) {
@@ -16,23 +17,32 @@ query HomePage($limit: IntType) {
   }
 }`;
 
-export default function Home({ articles }) {
+const BLOG_SEO = `
+query BlogSeo {
+  blog {
+    _seoMetaTags {
+      attributes
+      content
+      tag
+    }
+  }
+}
+`;
+
+export default function Home({ articles, blogSeo }) {
   return (
     <>
       <Head>
-        <title>Dane Miller | Frontend Developer</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content="Dane Miller - Frontend Developer" />
         <meta property="og:url" content="https://danethe.dev" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/public/images/dane2.png" />
+        {renderMetaTags(blogSeo.blog._seoMetaTags)}
       </Head>
-      <div className="max-w-4xl px-5 mx-auto">
+      <div className="max-w-4xl mx-auto lg:px-0">
         <Header />
         <About />
         <Projects />
@@ -48,9 +58,15 @@ export const getStaticProps: GetStaticProps = async () => {
     variables: { limit: 10 },
   });
 
+  const blogSeo = await request({
+    query: BLOG_SEO,
+    variables: {},
+  });
+
   return {
     props: {
       articles,
+      blogSeo,
     },
     revalidate: 1,
   };
