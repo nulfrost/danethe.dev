@@ -1,9 +1,12 @@
 import Head from "next/head";
+import { GetStaticProps } from "next";
 import Header from "@/components/sections/Header";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
+import Blog from "@/components/sections/Blog";
+import { contentful } from "lib/contentful";
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <>
       <Head>
@@ -23,7 +26,19 @@ export default function Home() {
         <Header />
         <About />
         <Projects />
+        <Blog articles={articles} />
       </div>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await contentful.getEntries();
+
+  return {
+    props: {
+      articles: articles.items,
+    },
+    revalidate: 60,
+  };
+};
