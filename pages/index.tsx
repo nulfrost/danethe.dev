@@ -4,7 +4,17 @@ import Header from "@/components/sections/Header";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Blog from "@/components/sections/Blog";
-import { contentful } from "lib/contentful";
+import { request } from "lib/datocms";
+
+const HOMEPAGE_QUERY = `
+query HomePage($limit: IntType) {
+  allArticles(first: $limit) {
+    id
+    title
+    slug
+    excerpt
+  }
+}`;
 
 export default function Home({ articles }) {
   return (
@@ -33,12 +43,15 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const articles = await contentful.getEntries();
+  const articles = await request({
+    query: HOMEPAGE_QUERY,
+    variables: { limit: 10 },
+  });
 
   return {
     props: {
-      articles: articles.items,
+      articles,
     },
-    revalidate: 60,
+    revalidate: 1,
   };
 };
