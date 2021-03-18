@@ -97,7 +97,7 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        {renderMetaTags(article._seoMetaTags)}
+        {renderMetaTags(article?._seoMetaTags)}
         <meta
           name="og:url"
           content={typeof window !== "undefined" && window.location.href}
