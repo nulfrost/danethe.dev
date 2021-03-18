@@ -42,7 +42,7 @@ export default function Home({ articles, blogSeo }) {
         <meta property="og:url" content="https://danethe.dev" />
         {renderMetaTags(blogSeo.blog._seoMetaTags)}
       </Head>
-      <div className="max-w-4xl mx-auto lg:px-0">
+      <div className="max-w-4xl px-5 mx-auto lg:px-0">
         <Header />
         <About />
         <Projects />
@@ -68,6 +68,6 @@ export const getStaticProps: GetStaticProps = async () => {
       articles,
       blogSeo,
     },
-    revalidate: 1,
+    revalidate: 60,
   };
 };
