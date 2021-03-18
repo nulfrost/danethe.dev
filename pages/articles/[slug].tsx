@@ -13,7 +13,7 @@ import Head from "next/head";
 const ARTICLE = `
 query Article($slug: String) {
    article(filter: {slug: {eq: $slug}}) {
-    _seoMetaTags {
+    seo: _seoMetaTags {
         attributes
         content
         tag
@@ -97,12 +97,12 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        {renderMetaTags(article?._seoMetaTags)}
+        {/* {renderMetaTags(article?.seo)} */}
         <meta
           name="og:url"
           content={typeof window !== "undefined" && window.location.href}
         />
-        <meta name="og:description" content={article.excerpt} />
+        <meta name="og:description" content={article?.excerpt} />
       </Head>
       <article className="max-w-6xl px-5 pb-20 mx-auto lg:px-0 mt-36">
         {router.isFallback ? (
@@ -116,19 +116,19 @@ export default function Article({ article }) {
                 <a className="block mb-4 hover:underline">Home</a>
               </Link>
               <h1 className="mb-3 text-3xl font-bold lg:text-5xl">
-                {article.title}
+                {article?.title}
               </h1>
               <p className="mb-4 text-xs font-bold uppercase">
-                {formatDate(article.date)}
+                {formatDate(article?.date)}
               </p>
               <Image
-                data={article.coverImage.responsiveImage}
+                data={article?.coverImage?.responsiveImage}
                 className="mb-8"
               />
             </header>
             <section>
               <ReactMarkdown
-                children={article.content}
+                children={article?.content}
                 className="prose-sm prose max-w-none lg:prose-lg"
                 plugins={[a11yEmoji]}
                 renderers={renderers}
