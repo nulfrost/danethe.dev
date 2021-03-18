@@ -1,5 +1,5 @@
 import { Prism as Syntax } from "react-syntax-highlighter";
-import { monokai } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps } from "next";
 import a11yEmoji from "@fec/remark-a11y-emoji";
@@ -23,7 +23,7 @@ query Article($slug: String) {
     title
     id
     date
-    content(markdown: true)
+    content(markdown: false)
     coverImage {
       responsiveImage(imgixParams: {fit: crop, ar: "16:9", w: 750, auto: format }) {
         srcSet
@@ -80,18 +80,30 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const renderers = {
   code: ({ language, value }) => {
-    return <Syntax style={monokai} language={language} showLineNumbers />;
+    return (
+      <Syntax
+        style={nord}
+        language={language}
+        children={value}
+        showLineNumbers
+      />
+    );
   },
 };
 
 export default function Article({ article }) {
   const router = useRouter();
 
-  console.log(article);
-
   return (
     <>
-      <Head>{renderMetaTags(article._seoMetaTags)}</Head>
+      <Head>
+        {renderMetaTags(article._seoMetaTags)}
+        <meta
+          name="og:url"
+          content={typeof window !== "undefined" && window.location.href}
+        />
+        <meta name="og:description" content={article.excerpt} />
+      </Head>
       <article className="max-w-6xl px-5 pb-20 mx-auto lg:px-0 mt-36">
         {router.isFallback ? (
           <h1 className="text-5xl font-bold">
@@ -106,22 +118,22 @@ export default function Article({ article }) {
               <h1 className="mb-3 text-3xl font-bold lg:text-5xl">
                 {article.title}
               </h1>
-              <p className="text-xs font-bold uppercase">
+              <p className="mb-4 text-xs font-bold uppercase">
                 {formatDate(article.date)}
               </p>
+              <Image
+                data={article.coverImage.responsiveImage}
+                className="mb-8"
+              />
             </header>
             <section>
               <ReactMarkdown
                 children={article.content}
                 className="prose-sm prose max-w-none lg:prose-lg"
-                allowDangerousHtml
                 plugins={[a11yEmoji]}
                 renderers={renderers}
               />
             </section>
-            {/* <section className="mx-auto prose-sm prose max-w-none lg:prose-lg">
-            <Image data={article.coverImage.responsiveImage} />
-          </section> */}
           </>
         )}
       </article>
