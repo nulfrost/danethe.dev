@@ -68,6 +68,12 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/contentful.Ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "lib/contentful.Ts",
+    "pages/articles/[slug].tsx"
+  ],
   "exclude": ["node_modules"]
 }

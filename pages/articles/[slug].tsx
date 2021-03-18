@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps } from "next";
 import a11yEmoji from "@fec/remark-a11y-emoji";
 import { formatDate } from "lib/utils";
-import { Image, renderMetaTags } from "react-datocms";
+import { Image } from "react-datocms";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { request } from "lib/datocms";
@@ -97,11 +97,55 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        {/* {renderMetaTags(article?.seo)} */}
+        <title>{article?.seo[0].content}</title>
+        <meta
+          property="og:title"
+          content={article?.seo[1]?.attributes?.content}
+        />
+        <meta
+          name="twitter:title"
+          content={article?.seo[2]?.attributes?.content}
+        />
+        <meta
+          property="og:image"
+          content={article?.seo[3]?.attributes?.content}
+        />
+        <meta
+          property="og:image:width"
+          content={article?.seo[4]?.attributes?.content}
+        />
+        <meta
+          property="og:image:height"
+          content={article?.seo[5]?.attributes?.content}
+        />
+        <meta
+          name="twitter:image"
+          content={article?.seo[6]?.attributes?.content}
+        />
+        <meta
+          property="og:locale"
+          content={article?.seo[7]?.attributes?.content}
+        />
+        <meta
+          property="og:type"
+          content={article?.seo[8]?.attributes?.content}
+        />
+        <meta
+          property="article:modified_time"
+          content={article?.seo[9]?.attributes?.content}
+        />
+        <meta
+          name="twitter:card"
+          content={article?.seo[10]?.attributes?.content}
+        />
         <meta
           name="og:url"
-          content={typeof window !== "undefined" && window.location.href}
+          content="http://localhost:3000/articles/docker-for-frontend-developers"
         />
+
+        {typeof window !== "undefined" && (
+          <meta name="og:url" content={window.location.href} />
+        )}
         <meta name="og:description" content={article?.excerpt} />
       </Head>
       <article className="max-w-6xl px-5 pb-20 mx-auto lg:px-0 mt-36">
