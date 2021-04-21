@@ -10,13 +10,22 @@ export default function Projects() {
         <div className="grid gap-10 ">
           {[
             {
-              name: "giyu",
+              name: "Not Yahoo Answers",
               description:
-                " Extremely simple express logger middleware. I liked the style of the loggers that I used when I was working with golang so I made one for Express with a similar log format.",
-              tech: ["Typescript", "Node"],
-              code: "https://github.com/nulfrost/giyu",
-              website: "https://github.com/nulfrost/giyu",
+                "With the news of Yahoo! Answers coming to and end I thought it would be fun to make somewhat of a clone of the famous forum. This isn't a full 1 to 1 copy of the website but mostly an excercise to try new technologies and get back into the habit of programming daily.",
+              tech: [
+                "Typescript",
+                "Next.js",
+                "TailwindCSS",
+                "Prisma",
+                "Postgres",
+                "GraphQL",
+                "Cypress",
+              ],
+              code: "https://github.com/nulfrost/not-yahoo-answers",
+              website: "https://not-yahoo-answers.vercel.app",
             },
+
             {
               name: "QuickUI",
               description:
@@ -26,6 +35,14 @@ export default function Projects() {
               website: "https://master.d3vtz7bmt2l79k.amplifyapp.com/",
             },
             {
+              name: "giyu",
+              description:
+                " Extremely simple express logger middleware. I liked the style of the loggers that I used when I was working with golang so I made one for Express with a similar log format.",
+              tech: ["Typescript", "Node"],
+              code: "https://github.com/nulfrost/giyu",
+              website: "https://github.com/nulfrost/giyu",
+            },
+            {
               name: "jobber",
               description:
                 "Very basic frontend application using Next.js and ChakraUI. Fetches data from the github jobs API. Jobs can be filtered by the title or description as well as sorting based on date.",
@@ -33,21 +50,6 @@ export default function Projects() {
               code: "https://github.com/nulfrost/jobber",
               website: "https://jobber-chi.vercel.app/",
             },
-            // {
-            //   name: "petfinder",
-            //   description:
-            //     "I came up with the idea for this project because I saw a lost dog poster in my area and thought that it could probably get more reach if it was posted online. I wanted to help pet owners that have lost their pet to be able to reconnect with them quicker and safer. I used a similar stack as my other project and wanted to focus again on UI and UX very heavily since every second is critical for the pet owner to get their post up and visible.",
-            //   tech: [
-            //     "Typescript",
-            //     "Next.js",
-            //     "ChakraUI",
-            //     "Prisma",
-            //     "Postgres",
-            //     "GraphQL",
-            //   ],
-            //   code: "https://github.com/nulfrost/petfinder",
-            //   website: "tbd",
-            // },
           ].map(({ name, description, tech, code, website }) => (
             <div className="flex flex-col" key={name}>
               <p className="mb-3 text-2xl font-bold">{name}</p>

@@ -138,11 +138,6 @@ export default function Article({ article }) {
           name="twitter:card"
           content={article?.seo[10]?.attributes?.content}
         />
-        <meta
-          name="og:url"
-          content="http://localhost:3000/articles/docker-for-frontend-developers"
-        />
-
         {typeof window !== "undefined" && (
           <meta name="og:url" content={window.location.href} />
         )}
