@@ -1,4 +1,30 @@
 import Link from "next/link";
+import { GetStaticProps } from "next";
+import { request } from "lib/datocms";
+
+const HOMEPAGE_QUERY = `
+query HomePage($limit: IntType) {
+  allArticles(first: $limit) {
+    id
+    title
+    slug
+    excerpt
+  }
+}`;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await request({
+    query: HOMEPAGE_QUERY,
+    variables: { limit: 10 },
+  });
+
+  return {
+    props: {
+      articles,
+    },
+    revalidate: 60,
+  };
+};
 
 export default function Blog({ articles }) {
   return (

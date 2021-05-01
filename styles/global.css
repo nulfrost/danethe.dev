@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: hsl(100, 100%, 99%, 1);
+    --color-text-secondary: hsl(100, 100%, 99%, 0.8);
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  #__next {
+    height: 100%;
+  }
+
+  body {
+    background: #1e1e24;
+  }
+
+  .nav__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-text-base);
+    transition: width 0.3s;
+    margin-top: 5px;
+  }
+
+  .nav__link:hover::after {
+    width: 100%;
+  }
+}

@@ -1,21 +1,8 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import Header from "@/components/sections/Header";
-import About from "@/components/sections/About";
-import Projects from "@/components/sections/Projects";
-import Blog from "@/components/sections/Blog";
 import { request } from "lib/datocms";
 import { renderMetaTags } from "react-datocms";
-
-const HOMEPAGE_QUERY = `
-query HomePage($limit: IntType) {
-  allArticles(first: $limit) {
-    id
-    title
-    slug
-    excerpt
-  }
-}`;
+import Layout from "@/components/sections/Layout";
 
 const BLOG_SEO = `
 query BlogSeo {
@@ -29,35 +16,36 @@ query BlogSeo {
 }
 `;
 
-export default function Home({ articles, blogSeo }) {
+export default function Home({ blogSeo }) {
   return (
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:url" content="https://danethe.dev" />
         {renderMetaTags(blogSeo.blog._seoMetaTags)}
       </Head>
-      <div className="max-w-4xl px-5 mx-auto lg:px-0">
-        <Header />
-        <About />
-        <Projects />
-        <Blog articles={articles} />
-      </div>
+      <Layout>
+        <div className="mt-[184px] text-skin-base">
+          <h1 className="mb-10 text-5xl font-bold md:text-8xl">
+            'Sup, I'm Dane
+          </h1>
+          <p className="mt-4 text-lg md:text-2xl text-skin-secondary">
+            I’m a frontend + cloud developer from Toronto. I specialize in
+            making fast and responsive websites using the latest web and cloud
+            technologies.
+          </p>
+        </div>
+      </Layout>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const articles = await request({
-    query: HOMEPAGE_QUERY,
-    variables: { limit: 10 },
-  });
-
   const blogSeo = await request({
     query: BLOG_SEO,
     variables: {},
@@ -65,9 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      articles,
       blogSeo,
     },
-    revalidate: 60,
   };
 };
