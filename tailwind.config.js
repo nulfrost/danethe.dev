@@ -13,6 +13,21 @@ module.exports = {
           secondary: "var(--color-text-secondary)",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h2: {
+              color: "#FDFFFC",
+            },
+            code: {
+              color: "#FDFFFC",
+            },
+            a: {
+              color: "#FDFFFC",
+            },
+          },
+        },
+      },
     },
   },
   variants: {
