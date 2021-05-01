@@ -5,7 +5,7 @@ export default function About() {
     <Layout>
       <div className="mt-[88px] lg:mt-[184px] text-skin-base">
         <div className="mb-10">
-          <h1 className="mb-2 text-4xl font-bold">About</h1>
+          <h2 className="mb-2 text-4xl font-bold">About</h2>
           <p className=" text-skin-secondary">a little bit about myself</p>
         </div>
         <div className="pb-10 space-y-8 leading-relaxed lg:space-y-20 lg:text-2xl lg:pb-0 text-md text-skin-secondary">

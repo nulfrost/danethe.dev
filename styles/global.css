@@ -13,6 +13,11 @@
     height: 100%;
   }
 
+  ::selection {
+    background: var(--color-text-base);
+    color: #1e1e24;
+  }
+
   #__next {
     height: 100%;
   }
