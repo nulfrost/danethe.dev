@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import { request } from "lib/datocms";
 import { renderMetaTags } from "react-datocms";
 import Layout from "@/components/sections/Layout";
+import { motion } from "framer-motion";
 
 const BLOG_SEO = `
 query BlogSeo {
@@ -31,15 +32,33 @@ export default function Home({ blogSeo }) {
       </Head>
       <Layout>
         <div className="mt-[88px] lg:mt-[184px] text-skin-base">
-          <h1 className="mb-10 text-5xl font-bold md:text-8xl">
+          <motion.h1
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: -100 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            className="mb-10 text-5xl font-bold md:text-8xl"
+          >
             'Sup, I'm Dane
-          </h1>
-          <p className="mt-4 text-lg md:text-2xl text-skin-secondary">
+          </motion.h1>
+          <motion.p
+            className="mt-4 text-lg md:text-2xl text-skin-secondary"
+            animate="visible"
+            initial="hidden"
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 100 },
+            }}
+            transition={{ duration: 1 }}
+          >
             I’m a frontend{" "}
             <span className="inline-block transform rotate-45">+</span> cloud
             developer from Toronto. I specialize in making fast and responsive
             websites using the latest web and cloud technologies.
-          </p>
+          </motion.p>
         </div>
       </Layout>
     </>

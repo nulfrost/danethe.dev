@@ -1,9 +1,16 @@
 import Layout from "@/components/sections/Layout";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <Layout>
-      <div className="mt-[88px] lg:mt-[184px] text-skin-base">
+      <motion.div
+        className="mt-[88px] lg:mt-[184px] text-skin-base"
+        layoutId="about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="mb-10">
           <h2 className="mb-2 text-4xl font-bold">About</h2>
           <p className=" text-skin-secondary">a little bit about myself</p>
@@ -31,7 +38,7 @@ export default function About() {
             cool tricks on my skateboard.
           </p>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }
