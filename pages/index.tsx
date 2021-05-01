@@ -30,14 +30,15 @@ export default function Home({ blogSeo }) {
         {renderMetaTags(blogSeo.blog._seoMetaTags)}
       </Head>
       <Layout>
-        <div className="mt-[184px] text-skin-base">
+        <div className="mt-[88px] lg:mt-[184px] text-skin-base">
           <h1 className="mb-10 text-5xl font-bold md:text-8xl">
             'Sup, I'm Dane
           </h1>
           <p className="mt-4 text-lg md:text-2xl text-skin-secondary">
-            I’m a frontend + cloud developer from Toronto. I specialize in
-            making fast and responsive websites using the latest web and cloud
-            technologies.
+            I’m a frontend{" "}
+            <span className="inline-block transform rotate-45">+</span> cloud
+            developer from Toronto. I specialize in making fast and responsive
+            websites using the latest web and cloud technologies.
           </p>
         </div>
       </Layout>
