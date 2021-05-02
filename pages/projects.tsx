@@ -1,13 +1,37 @@
+import Layout from "@/components/sections/Layout";
 import { FaCode } from "react-icons/fa";
 import { GoBrowser } from "react-icons/go";
+import { motion } from "framer-motion";
 
 export default function Projects() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: 200 },
+    show: { opacity: 1, x: 0 },
+  };
   return (
-    <>
-      <section aria-label="Personal / Open Source Projects" className="mb-20">
-        <h2 className="mb-2 text-2xl font-bold">Projects</h2>
-        <p className="mb-10 text-gray-400">personal / open source projects</p>
-        <div className="grid gap-10 ">
+    <Layout>
+      <motion.div
+        className="mt-[88px] lg:mt-[184px] text-skin-base"
+        variants={container}
+        initial="hidden"
+        animate="show"
+        transition={{ duration: 1.5 }}
+      >
+        <div>
+          <h2 className="mb-2 text-2xl font-bold">Projects</h2>
+          <p className="mb-10 text-gray-400">personal / open source projects</p>
+        </div>
+        <div className="space-y-10">
           {[
             {
               name: "Not Yahoo Answers",
@@ -51,7 +75,12 @@ export default function Projects() {
               website: "https://jobber-chi.vercel.app/",
             },
           ].map(({ name, description, tech, code, website }) => (
-            <div className="flex flex-col" key={name}>
+            <motion.div
+              className="flex flex-col"
+              key={name}
+              variants={item}
+              transition={{ type: "just" }}
+            >
               <p className="mb-3 text-2xl font-bold">{name}</p>
               <ul className="flex mb-3 space-x-3">
                 <li>
@@ -73,20 +102,16 @@ export default function Projects() {
                   </a>
                 </li>
               </ul>
-              <p className="mb-4 text-gray-500 lg:text-lg">{description}</p>
+              <p className="mb-4 text-skin-secondary lg:text-lg">
+                {description}
+              </p>
               <span className="mt-auto text-sm font-semibold">
                 {tech.join(" • ")}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
-      <hr
-        style={{
-          borderTop: "5px solid #7E90A0",
-          marginBottom: "2.5rem",
-        }}
-      />
-    </>
+      </motion.div>
+    </Layout>
   );
 }
