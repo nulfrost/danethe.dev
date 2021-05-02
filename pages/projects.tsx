@@ -86,7 +86,7 @@ export default function Projects() {
                 <li>
                   <a
                     href={code}
-                    className="mb-4 text-lg text-gray-400 duration-150 hover:text-gray-600"
+                    className="text-lg text-skin-secondary"
                     target="_blank"
                   >
                     <FaCode className="text-lg" />
@@ -95,7 +95,7 @@ export default function Projects() {
                 <li>
                   <a
                     href={website}
-                    className="mb-4 text-lg text-gray-400 duration-150 hover:text-gray-600"
+                    className="text-lg text-skin-secondary"
                     target="_blank"
                   >
                     <GoBrowser />
