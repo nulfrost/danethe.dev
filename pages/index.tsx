@@ -1,96 +1,79 @@
-import Layout from "../components/Layout";
-import { Text, Icon, Stack, Link, Box } from "@chakra-ui/react";
-import Section from "../components/Section";
-import {
-  FaTwitterSquare,
-  FaGithubSquare,
-  FaLinkedin,
-  FaEnvelopeSquare,
-} from "react-icons/fa";
+import Head from "next/head";
+import { GetStaticProps } from "next";
+import { request } from "lib/datocms";
+import { renderMetaTags } from "react-datocms";
+import Layout from "@/components/sections/Layout";
+import { motion } from "framer-motion";
 
-import {
-  CanadaFlagIcon,
-  MusicNote,
-  Skateboard,
-  Controller,
-  PersonWithComputer,
-  Camera,
-} from "../components/Icons";
-import { useEffect, useState } from "react";
+const BLOG_SEO = `
+query BlogSeo {
+  blog {
+    _seoMetaTags {
+      attributes
+      content
+      tag
+    }
+  }
+}
+`;
 
-const icons = [
-  CanadaFlagIcon,
-  MusicNote,
-  Skateboard,
-  Controller,
-  PersonWithComputer,
-  Camera,
-];
-
-export default function Home() {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    let myInterval = setInterval(() => {
-      if (counter === icons.length - 1) {
-        setCounter(0);
-      } else {
-        setCounter(counter + 1);
-      }
-    }, 1000);
-
-    return () => clearInterval(myInterval);
-  }, [counter]);
-
+export default function Home({ blogSeo }) {
   return (
-    <Layout title="Home 🏡">
-      <Section>
-        <Box>
-          <Text
-            as="h1"
-            fontSize={{ base: "3xl", lg: "100px" }}
-            fontWeight="bold"
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:url" content="https://danethe.dev" />
+        {renderMetaTags(blogSeo.blog._seoMetaTags)}
+      </Head>
+      <Layout>
+        <div className="mt-[88px] lg:mt-[184px] text-skin-base">
+          <motion.h1
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: -100 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            className="mb-10 text-5xl font-bold md:text-8xl"
           >
-            Hey, I'm <Text as="span">Dane</Text> <Icon as={icons[counter]} />
-          </Text>
-          <Text as="p" fontSize={{ base: "xl", lg: "32px" }} mb={5}>
-            Fullstack Developer
-          </Text>
-          <Stack direction="row">
-            <Link href="https://twitter.com/hybridearth" isExternal>
-              <Icon
-                as={FaTwitterSquare}
-                h={{ base: 6, lg: 8 }}
-                w={{ base: 6, lg: 8 }}
-              />
-            </Link>
-            <Link href="https://github.com/nulfrost" isExternal>
-              <Icon
-                as={FaGithubSquare}
-                h={{ base: 6, lg: 8 }}
-                w={{ base: 6, lg: 8 }}
-              />
-            </Link>
-            <Link href="https://www.linkedin.com/in/dmiller94/" isExternal>
-              <Icon
-                as={FaLinkedin}
-                h={{ base: 6, lg: 8 }}
-                w={{ base: 6, lg: 8 }}
-              />
-            </Link>
-            <Link
-              href="mailto:khadane.miller@gmail.com?subject=Howdy, Dane!"
-              isExternal
-            >
-              <Icon
-                as={FaEnvelopeSquare}
-                h={{ base: 6, lg: 8 }}
-                w={{ base: 6, lg: 8 }}
-              />
-            </Link>
-          </Stack>
-        </Box>
-      </Section>
-    </Layout>
+            'Sup, I'm Dane
+          </motion.h1>
+          <motion.p
+            className="mt-4 text-lg md:text-2xl text-skin-secondary"
+            animate="visible"
+            initial="hidden"
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 100 },
+            }}
+            transition={{ duration: 1 }}
+          >
+            I’m a frontend{" "}
+            <span className="inline-block transform rotate-45">+</span> cloud
+            developer from Toronto. I specialize in making fast and responsive
+            websites using the latest web and cloud technologies.
+          </motion.p>
+        </div>
+      </Layout>
+    </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const blogSeo = await request({
+    query: BLOG_SEO,
+    variables: {},
+  });
+
+  return {
+    props: {
+      blogSeo,
+    },
+  };
+};
