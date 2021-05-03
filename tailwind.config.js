@@ -16,6 +16,9 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            strong: {
+              color: "#FDFFFC",
+            },
             h2: {
               color: "#FDFFFC",
             },
