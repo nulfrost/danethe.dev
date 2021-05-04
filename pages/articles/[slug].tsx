@@ -167,7 +167,7 @@ export default function Article({ article }) {
               <section>
                 <ReactMarkdown
                   children={article?.content}
-                  className="prose prose-xl max-w-none !text-skin-base"
+                  className="prose prose-sm lg:prose-xl max-w-none !text-skin-base"
                   plugins={[a11yEmoji]}
                   renderers={renderers}
                 />

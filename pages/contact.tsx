@@ -14,16 +14,16 @@ export default function Contact() {
             where you can find me on the interwebs
           </p>
         </div>
-        <div className="space-y-8">
-          <div className="flex items-start space-x-3 text-2xl">
+        <div className="space-y-8 text-xl lg:text-2xl">
+          <div className="flex items-start space-x-3">
             <AiOutlineTwitter className="text-3xl" />
             <span>@hybridearth</span>
           </div>
-          <div className="flex items-start space-x-3 text-2xl">
+          <div className="flex items-start space-x-3">
             <FaLinkedinIn className="text-3xl" />
             <span>dmiller94</span>
           </div>
-          <div className="flex items-start space-x-3 text-2xl">
+          <div className="flex items-start space-x-3">
             <HiOutlineMail className="text-3xl" />
             <span>khadane (dot) miller @gmail.com</span>
           </div>
