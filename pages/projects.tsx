@@ -36,7 +36,7 @@ export default function Projects() {
             {
               name: "Not Yahoo Answers",
               description:
-                "With the news of Yahoo! Answers coming to and end I thought it would be fun to make somewhat of a clone of the famous forum. This isn't a full 1 to 1 copy of the website but mostly an excercise to try new technologies and get back into the habit of programming daily.",
+                "With the news of Yahoo! Answers coming to an end I thought it would be fun to make somewhat of a clone of the famous forum. This isn't a full 1 to 1 copy of the website but mostly an excercise to try new technologies and get back into the habit of programming daily.",
               tech: [
                 "Typescript",
                 "Next.js",
@@ -53,7 +53,7 @@ export default function Projects() {
             {
               name: "QuickUI",
               description:
-                "A website I made that let's people share their world of warcraft UI configurations quickly. User are able to share their UI code and to anyone that wants to use it all they have to do is import that code into the add-on. At the time I was just getting into the AWS ecosystem and was hearing a lot about amplify so I wanted to try it out. Auth was extremely easy to set up and creating a GraphQL API was very simple also. Overall I like the experience with Amplify if AWS was the only thing I could use.",
+                "A website I made that let's people share their world of warcraft UI configurations quickly. Users are able to share their UI code and to anyone that wants to use it, all they have to do is import that code into the add-on. At the time I was just getting into the AWS ecosystem and was hearing a lot about amplify so I wanted to try it out. Authentication was extremely easy to set up and creating a GraphQL API was very simple also. Overall I like the experience with Amplify if AWS was the only thing I could use.",
               tech: ["Typescript", "Next.js", "ChakraUI", "Prisma", "Postgres"],
               code: "https://github.com/nulfrost/quickui",
               website: "https://master.d3vtz7bmt2l79k.amplifyapp.com/",
