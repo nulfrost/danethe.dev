@@ -19,7 +19,7 @@ export default function Projects() {
     show: { opacity: 1, x: 0 },
   };
   return (
-    <Layout>
+    <Layout title="projects">
       <motion.div
         className="mt-[88px] lg:mt-[184px] text-skin-base"
         variants={container}

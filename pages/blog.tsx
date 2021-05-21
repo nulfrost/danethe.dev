@@ -44,7 +44,7 @@ export default function Blog({ articles }) {
     show: { opacity: 1, x: 0 },
   };
   return (
-    <Layout>
+    <Layout title="blog">
       <div className="mt-[88px] lg:mt-[184px] text-skin-base mb-10">
         <h2 className="mb-2 text-4xl font-bold">Blog</h2>
         <p className="text-skin-secondary">

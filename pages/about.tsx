@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <Layout>
+    <Layout title="about">
       <motion.div
         className="mt-[88px] lg:mt-[184px] text-skin-base"
         layoutId="about"

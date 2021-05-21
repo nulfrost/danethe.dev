@@ -30,7 +30,7 @@ export default function Home({ blogSeo }) {
         <meta property="og:url" content="https://danethe.dev" />
         {renderMetaTags(blogSeo.blog._seoMetaTags)}
       </Head>
-      <Layout>
+      <Layout title="home">
         <div className="mt-[88px] lg:mt-[184px] text-skin-base">
           <motion.h1
             variants={{
