@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Client } from "@notionhq/client";
 
 export default function Reading({ db }) {
-  console.log(db);
   return (
     <Layout title="reading">
       <motion.div className="mt-[88px] lg:mt-[184px] text-skin-base">
