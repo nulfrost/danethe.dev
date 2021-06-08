@@ -144,7 +144,7 @@ export default function Article({ article }) {
         )}
         <meta name="og:description" content={article?.excerpt} />
       </Head>
-      <Layout>
+      <Layout title={article?.title}>
         <article className="text-skin-base mt-[88px] lg:mt-[184px] pb-20">
           {router.isFallback ? (
             <h1 className="text-5xl font-bold">
