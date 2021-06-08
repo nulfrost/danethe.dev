@@ -7,7 +7,7 @@ export default function Header() {
         <a className="mb-4 mr-10 text-2xl font-bold md:mb-0">Dane.</a>
       </Link>
       <nav>
-        <ul className="flex space-x-8">
+        <ul className="flex flex-wrap space-x-5 md:space-x-7">
           <li>
             <Link href="/about">
               <a className="nav__link">About</a>
@@ -24,8 +24,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link href="/reading">
+              <a className="nav__link">Reading List</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/contact">
-              <a className="nav__link">Contact</a>
+              <a className="nav__link m-0">Contact</a>
             </Link>
           </li>
         </ul>
