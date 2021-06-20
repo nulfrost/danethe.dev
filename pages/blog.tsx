@@ -51,32 +51,35 @@ export default function Blog({ articles }) {
           where i ramble about tech and other stuff
         </p>
       </div>
-      <motion.div
+      <motion.ul
         className="space-y-10 text-skin-base"
         variants={container}
         initial="hidden"
         animate="show"
+        aria-label="List of Dane's current blog posts"
       >
         {articles.allArticles.map((article) => (
-          <Link key={article.id} href={`/articles/${article.slug}`}>
-            <motion.a
-              className="block"
-              style={{ cursor: "pointer" }}
-              variants={item}
-              transition={{ type: "just" }}
-              whileHover={{ marginLeft: "24px" }}
-            >
-              <p className="text-2xl lg:text-[32px] font-bold">
-                {" "}
-                {article.title}
-              </p>
-              <p className="text-lg lg:text-2xl text-skin-secondary">
-                {article.excerpt}
-              </p>
-            </motion.a>
-          </Link>
+          <li key={article.id}>
+            <Link href={`/articles/${article.slug}`}>
+              <motion.a
+                className="block"
+                style={{ cursor: "pointer" }}
+                variants={item}
+                transition={{ type: "just" }}
+                whileHover={{ marginLeft: "24px" }}
+              >
+                <p className="text-2xl lg:text-[32px] font-bold">
+                  {" "}
+                  {article.title}
+                </p>
+                <p className="text-lg lg:text-2xl text-skin-secondary">
+                  {article.excerpt}
+                </p>
+              </motion.a>
+            </Link>
+          </li>
         ))}
-      </motion.div>
+      </motion.ul>
     </Layout>
   );
 }
