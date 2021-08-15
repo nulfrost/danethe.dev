@@ -42,7 +42,7 @@ export default function Home({ blogSeo }) {
             transition={{ duration: 1 }}
             className="mb-10 text-5xl font-bold md:text-8xl"
           >
-            'Sup, I'm Dane
+            Hey, I'm Dane
           </motion.h1>
           <motion.p
             className="mt-4 text-lg md:text-2xl text-skin-secondary"
