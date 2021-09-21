@@ -36,8 +36,10 @@
 	<h1 class="text-5xl font-bold mb-4">Reading</h1>
 	<div class="grid grid-cols-2 gap-6">
 		{#each reading as book}
-			<div
-				tabindex="0"
+			<a
+				href={book.properties.Link.url}
+				rel="external"
+				target="_blank"
 				class="border-2 rounded px-5 py-3 h-40 hover:border-purple-600 flex flex-col focus:outline-none focus:border-purple-600"
 			>
 				<h2 class="text-lg font-semibold mb-2">{book.properties.Name.title[0].plain_text}</h2>
@@ -50,14 +52,8 @@
 							book.properties.Status.select.name
 						)}">{book.properties.Status.select.name}</small
 					>
-					<a
-						href={book.properties.Link.url}
-						class="ml-auto text-blue-500"
-						rel="external"
-						target="_blank">Link &rarr;</a
-					>
 				</div>
-			</div>
+			</a>
 		{/each}
 	</div>
 </section>
