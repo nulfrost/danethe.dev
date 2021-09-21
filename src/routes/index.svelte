@@ -7,18 +7,18 @@
 	<title>Dane Miller - Home</title>
 </svelte:head>
 
-<section class="mt-[112px] dark:text-gray-100">
+<section class="mt-[112px] ">
 	<h1 class="text-5xl font-bold mb-4">Hey, I'm Dane.</h1>
-	<p class="text-lg mb-4 text-gray-600 dark:text-gray-200">
+	<p class="text-lg mb-4 text-gray-600 ">
 		I'm a frontend developer from <a
 			href="https://www.youtube.com/watch?v=ChT3ewZXTfM"
 			rel="external"
 			target="_blank"
-			class="font-semibold text-blue-500 dark:text-blue-400"
+			class="font-semibold text-blue-500 "
 			>Toronto, ON. <span role="img" aria-label="canadian flag">&#127464;&#127462;</span></a
 		>
 	</p>
-	<div class="max-w-2xl flex flex-col gap-4 text-gray-600 dark:text-gray-300">
+	<div class="max-w-2xl flex flex-col gap-4 text-gray-600 ">
 		<p>
 			I enjoy making <span class="font-bold">fast</span> and
 			<span class="font-bold">accessible</span> websites using the latest web technologies. Some of the
@@ -34,19 +34,16 @@
 			You can check out the things I am tinkering with on my <a
 				rel="external"
 				href="https://github.com/nulfrost"
-				class="font-semibold text-indigo-600 dark:text-indigo-400">Github</a
+				class="font-semibold text-indigo-600 ">Github</a
 			>. If you would like to get in touch feel free to connect on
 			<a
 				href="https://www.linkedin.com/in/dmiller94/"
 				rel="external"
 				target="_blank"
-				class="text-yellow-600 font-semibold dark:text-yellow-400">Linkedin</a
+				class="text-yellow-600 font-semibold ">Linkedin</a
 			>
 			or send me an
-			<a
-				href="mailto:khadane.miller@gmail.com"
-				class="text-green-600 dark:text-green-400 font-semibold">E-mail</a
-			>.
+			<a href="mailto:khadane.miller@gmail.com" class="text-green-600  font-semibold">E-mail</a>.
 		</p>
 	</div>
 </section>
