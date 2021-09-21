@@ -1,5 +1,5 @@
 <header>
-	<nav class="flex items-baseline gap-6 py-5 dark:text-gray-100">
+	<nav class="flex items-baseline gap-6 py-5">
 		<a href="/" class="text-2xl font-bold ">Dane.</a>
 		<ul class="flex gap-4">
 			<li>
