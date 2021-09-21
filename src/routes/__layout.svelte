@@ -16,7 +16,7 @@
 	/>
 </svelte:head>
 
-<style>
+<style lang="postcss" global>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
@@ -25,6 +25,8 @@
 		height: 100%;
 		@apply max-w-4xl;
 		@apply bg-gray-50;
+		@apply bg-gray-900;
+
 		margin: 0 auto;
 		font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
