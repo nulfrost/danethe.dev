@@ -41,7 +41,9 @@
 					<small class="text-yellow-800 font-semibold bg-yellow-300 px-2 py-1 rounded"
 						>{book.status}</small
 					>
-					<a href={book.link} class="ml-auto text-blue-500">Link &rarr;</a>
+					<a href={book.link} class="ml-auto text-blue-500" rel="external" target="_blank"
+						>Link &rarr;</a
+					>
 				</div>
 			</div>
 		{/each}

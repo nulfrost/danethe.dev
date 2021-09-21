@@ -26,5 +26,6 @@
 		@apply max-w-4xl;
 		@apply bg-gray-50;
 		margin: 0 auto;
+		font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 </style>
