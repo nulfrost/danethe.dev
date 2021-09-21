@@ -1,5 +1,10 @@
 module.exports = {
 	mode: 'jit',
 	purge: ['./src/**/*.svelte'],
-	darkMode: false
+	darkMode: false,
+	theme: {
+		fontFamily: {
+			body: ['Inter']
+		}
+	}
 };
