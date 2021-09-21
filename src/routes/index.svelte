@@ -1,6 +1,11 @@
 <script context="module">
 	export const hydrate = false;
+	export const prerender = true;
 </script>
+
+<svelte:head>
+	<title>Dane Miller - Home</title>
+</svelte:head>
 
 <section class="mt-[112px]">
 	<h1 class="text-5xl font-bold mb-4">Hey, I'm Dane.</h1>

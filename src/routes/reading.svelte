@@ -27,6 +27,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Dane Miller - Reading</title>
+</svelte:head>
+
 <section class="mt-[112px]">
 	<h1 class="text-5xl font-bold mb-4">Reading</h1>
 	<div class="grid grid-cols-2 gap-6">
