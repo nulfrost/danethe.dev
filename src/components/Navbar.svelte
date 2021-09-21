@@ -1,4 +1,4 @@
-<header>
+<header class="px-5 lg:px-0">
 	<nav class="flex items-baseline gap-6 py-5">
 		<a href="/" class="text-2xl font-bold ">Dane.</a>
 		<ul class="flex gap-4">
