@@ -1,3 +1,5 @@
+import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
+
 const config = {
 	layout: {
 		md: './src/components/MarkdownLayout.svelte'
@@ -8,7 +10,7 @@ const config = {
 	},
 
 	remarkPlugins: [],
-	rehypePlugins: []
+	rehypePlugins: [rehypeAccessibleEmojis]
 };
 
 export default config;
