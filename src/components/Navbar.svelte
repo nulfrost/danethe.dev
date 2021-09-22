@@ -23,6 +23,13 @@
 					>Reading</a
 				>
 			</li>
+			<li>
+				<a
+					href="/uses"
+					class="focus:border-b-4 border-purple-700 pb-2 focus:outline-none hover:border-b-4"
+					>Uses</a
+				>
+			</li>
 			<!-- <li>
 				<a
 					href="/projects"

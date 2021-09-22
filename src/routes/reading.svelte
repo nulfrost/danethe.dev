@@ -1,12 +1,13 @@
 <script context="module">
-	export async function load() {
+	export async function load({ fetch }) {
 		const res = await fetch('http://localhost:3000/api/books');
 		const reading = await res.json();
 
 		return {
 			props: {
 				reading: reading?.books
-			}
+			},
+			maxage: 3600
 		};
 	}
 </script>
@@ -32,7 +33,7 @@
 	<title>Dane Miller - Reading</title>
 </svelte:head>
 
-<h1 class="text-5xl font-bold mb-4">Reading</h1>
+<h1 class="text-4xl font-bold mb-4">Reading</h1>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 	{#each reading as book}
 		<a

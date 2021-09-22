@@ -7,10 +7,11 @@
 	<title>Dane Miller - Home</title>
 </svelte:head>
 
-<h1 class="text-5xl font-bold mb-4 text-center md:text-left">Hey, I'm Dane.</h1>
+<h1 class="text-4xl font-bold mb-4 text-center md:text-left">Hey, I'm Dane.</h1>
 <p class="text-lg mb-4 text-gray-600 text-center md:text-left">
 	I'm a frontend developer from <a
 		href="https://www.youtube.com/watch?v=ChT3ewZXTfM"
+		title="Link to video of game winning shot by Kawhi Leonard in 2019 against the 76ers"
 		rel="external"
 		target="_blank"
 		class="font-semibold text-blue-500 "
