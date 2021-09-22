@@ -1,6 +1,11 @@
 <script context="module">
+	import { variables } from '../lib/variables';
+
 	export async function load({ fetch }) {
-		const res = await fetch('http://localhost:3000/api/books');
+		const api_url =
+			variables.dev === true ? 'http://localhost:3000/api/books' : 'https://danethe.dev/api/books';
+
+		const res = await fetch(api_url);
 		const reading = await res.json();
 
 		return {
