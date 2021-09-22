@@ -2,6 +2,10 @@
 layout: md
 ---
 
+<svelte:head>
+<title>Dane Miller - Uses</title>
+</svelte:head>
+
 # Uses
 
 ![My Macbook specs](https://i.imgur.com/uj2ujNP.png)
