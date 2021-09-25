@@ -24,14 +24,12 @@
 	let filter = '';
 
 	function setFilter(event) {
-		filter = event.target.outerText;
+		filter = event.target.textContent;
 	}
 
 	$: {
 		if (filter) {
-			filteredBooks = reading.filter(
-				(read) => read.properties.Status.select.name === event.target.outerText
-			);
+			filteredBooks = reading.filter((read) => read.properties.Status.select.name === filter);
 		} else {
 			filteredBooks = reading;
 		}
