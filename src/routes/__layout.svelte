@@ -1,10 +1,11 @@
 <script>
 	import Navbar from '../components/Navbar.svelte';
+	import { page } from '$app/stores';
 </script>
 
 <Navbar />
-<main class="pb-32 px-5 lg:px-0">
-	<section class="mt-[112px]">
+<main class="px-5 lg:px-0 xl:flex-1 xl:flex xl:flex-col xl:justify-center pb-32">
+	<section class={$page.path === '/' ? 'mt-0' : 'mt-[112px]'}>
 		<slot />
 	</section>
 </main>
@@ -25,9 +26,6 @@
 
 	:global(body, html, #svelte) {
 		height: 100%;
-		@apply max-w-4xl;
-		@apply bg-gray-50;
-
 		margin: 0 auto;
 		font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}

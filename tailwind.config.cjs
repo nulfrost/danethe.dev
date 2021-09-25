@@ -1,6 +1,6 @@
 module.exports = {
 	mode: 'jit',
 	purge: ['./src/**/*.svelte'],
-	darkMode: 'media',
+	darkMode: false,
 	plugins: [require('@tailwindcss/typography')]
 };
