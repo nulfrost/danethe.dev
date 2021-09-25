@@ -44,21 +44,20 @@
 
 <div class="flex justify-between items-baseline flex-col md:flex-row">
 	<h1 class="text-4xl font-bold mb-4">Reading</h1>
-	<div class="font-semibold mb-4 md:mb-0">
-		<span
-			class="text-red-800 bg-red-50 px-2 py-1 rounded hover:bg-red-100 duration-150 cursor-pointer"
-			tabindex="0"
-			on:click={setFilter}>Ready to Start</span
+	<div class="mb-4 md:mb-0">
+		<button
+			class="text-red-800 bg-red-50 px-2 py-1 rounded hover:bg-red-100 duration-150 "
+			on:click={setFilter}>Ready to Start</button
 		>
-		<span
-			class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded hover:bg-yellow-100 duration-150 cursor-pointer"
+		<button
+			class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded hover:bg-yellow-100 duration-150"
 			tabindex="0"
-			on:click={setFilter}>Paused</span
+			on:click={setFilter}>Paused</button
 		>
-		<span
-			class="text-green-800 bg-green-50 px-2 py-1 rounded hover:bg-green-100 duration-150 cursor-pointer"
+		<button
+			class="text-green-800 bg-green-50 px-2 py-1 rounded hover:bg-green-100 duration-150"
 			tabindex="0"
-			on:click={setFilter}>Finished</span
+			on:click={setFilter}>Finished</button
 		>
 	</div>
 </div>
