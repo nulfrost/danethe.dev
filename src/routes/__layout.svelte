@@ -4,8 +4,8 @@
 </script>
 
 <Navbar />
-<main class="px-5 lg:px-0 xl:flex-1 xl:flex xl:flex-col xl:justify-center pb-32">
-	<section class={$page.path === '/' ? 'mt-0' : 'mt-[112px]'}>
+<main class="px-5 lg:px-0 pb-32">
+	<section class="mt-[112px]">
 		<slot />
 	</section>
 </main>
