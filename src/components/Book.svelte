@@ -17,7 +17,7 @@
 <a
 	href={properties.Link.url}
 	title="External link to buy or access the book {properties.Name.title[0].plain_text}"
-	rel="external"
+	rel="external noopener noreferrer"
 	target="_blank"
 	class="border-4 rounded px-5 py-3 h-40 hover:border-gray-900 flex flex-col focus:border-gray-900 focus:outline-none"
 >
