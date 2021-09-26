@@ -1,7 +1,7 @@
 ---
 title: 'Creating a RESTful API with Express, Prisma and Postgres'
 description: 'A short walk-through on how to create an API and follow some best practices'
-date: 'Sun May 2 2021 12:34:33 GMT-0400 (Eastern Daylight Time)'
+date: '2021-05-03'
 layout: markdown
 ---
 

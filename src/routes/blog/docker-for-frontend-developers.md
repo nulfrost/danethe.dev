@@ -1,7 +1,7 @@
 ---
 title: 'Docker for Frontend Developers'
 description: 'How I utilize docker to make developing and deploying websites easier'
-date: 'Wed Mar 17 2021 12:34:33 GMT-0400 (Eastern Daylight Time)'
+date: '2021-03-18'
 layout: markdown
 ---
 
