@@ -2,10 +2,16 @@
 layout: uses
 ---
 
-<svelte:head>
+<script context="module">
+	export const hydrate = false;
+    export const prerender = true;
+</script>
 
-<title>Dane Miller - Uses</title>
-</svelte:head>
+<script>
+    import Title from "../components/PageTitle.svelte"
+</script>
+
+<Title title="Uses" />
 
 # Uses
 

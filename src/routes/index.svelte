@@ -7,7 +7,7 @@
 	import Title from '../components/PageTitle.svelte';
 </script>
 
-<Title title={'Home'} />
+<Title title="Home" />
 
 <h1 class="text-5xl font-bold mb-4 text-center md:text-left">Hey, I'm Dane.</h1>
 <p class="text-xl mb-4 text-gray-600 text-center md:text-left">

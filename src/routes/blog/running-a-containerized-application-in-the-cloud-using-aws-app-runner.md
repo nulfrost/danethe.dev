@@ -5,6 +5,17 @@ date: '2021-05-21'
 layout: blog
 ---
 
+<script context="module">
+	export const hydrate = false;
+    export const prerender = true;
+</script>
+
+<script>
+    import Title from "../../components/PageTitle.svelte"
+</script>
+
+<Title {title} />
+
 # {title}
 
 I've been pretty deep in the cloud space for a few weeks now, researching different topics related to system design and playing around with different AWS services. So far I've been playing around with containers and figuring out ways I could deploy a simple containerized application to the cloud without much fuss. I've found AWS Elastic Container Service and AWS Elastic Kubernetes Service (more on kubernetes in another blog post, I've been having fun learning about it) but those are more for managing clusters of containers than just being able to deploy something simple and small. I've also looked at AWS Elastic Beanstalk and while it is possible to deploy docker containers through that service I haven't had much luck doing it through the UI or the Elastic Beanstalk CLI.

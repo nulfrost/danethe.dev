@@ -5,6 +5,17 @@ date: '2021-03-18'
 layout: blog
 ---
 
+<script context="module">
+	export const hydrate = false;
+    export const prerender = true;
+</script>
+
+<script>
+    import Title from "../../components/PageTitle.svelte"
+</script>
+
+<Title {title} />
+
 # {title}
 
 I'll be honest, it took me a while to understand what docker was and why/how one would even use it in a typical workflow. I've read the documentation months ago to understand the basics but never knew how I could apply it into my own workflow or projects until recently. That's when I started to use it wherever I could.

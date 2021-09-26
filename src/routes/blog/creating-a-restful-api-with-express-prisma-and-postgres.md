@@ -5,6 +5,17 @@ date: '2021-05-03'
 layout: blog
 ---
 
+<script context="module">
+	export const hydrate = false;
+    export const prerender = true;
+</script>
+
+<script>
+    import Title from "../../components/PageTitle.svelte"
+</script>
+
+<Title {title} />
+
 # {title}
 
 In my journey to becoming a web developer at some point I needed a way to store and retrieve data from an application I wanted to build. At the time I wasn't really sure how to do it but I at least knew I would need a database to store information. Other components needed are a web server to handle the requests and a way to talk to the database to store and retrieve information. This can be done with just raw SQL or with an ORM. In this blog post I'll go over the different pieces needed to create RESTful API.

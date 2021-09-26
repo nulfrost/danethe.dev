@@ -17,7 +17,7 @@
 	export let posts;
 </script>
 
-<Title title={'Blog'} />
+<Title title="Blog" />
 
 <h1 class="text-4xl font-bold mb-4">Blog</h1>
 

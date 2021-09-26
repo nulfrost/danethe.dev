@@ -37,7 +37,7 @@
 	}
 </script>
 
-<Title title={'Reading'} />
+<Title title="Reading" />
 
 <div class="flex justify-between items-baseline flex-col md:flex-row">
 	<h1 class="text-4xl font-bold mb-4">Reading</h1>
