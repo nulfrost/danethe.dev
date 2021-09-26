@@ -25,10 +25,10 @@
 	{#each posts as { title, description, slug, date }}
 		<article>
 			<h2 class="text-lg font-semibold">{title}</h2>
-			<time datetime={date} class="text-sm text-gray-500 block mb-2"
+			<time datetime={date} class="text-sm text-gray-500 block mb-2 xl:text-md"
 				>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(new Date(date))}</time
 			>
-			<p class="text-sm text-gray-500 mb-3">{description}</p>
+			<p class="text-gray-500 mb-3">{description}</p>
 			<footer>
 				<a href={`/blog/${slug}`} class="text-sm text-blue-500 hover:text-blue-700 duration-150"
 					>Read more &rarr;</a
