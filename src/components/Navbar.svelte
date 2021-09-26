@@ -39,7 +39,7 @@
 				>
 			</li> -->
 		</ul>
-		<div class="md:hidden cursor-pointer" on:click={openMenu}>
+		<!-- <button class="md:hidden cursor-pointer menu" on:click={openMenu}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-6 w-6"
@@ -54,9 +54,9 @@
 					d="M4 6h16M4 12h16M4 18h16"
 				/>
 			</svg>
-		</div>
+		</button> -->
 	</nav>
-	<ul class="md:hidden {open ? 'flex flex-col gap-3 items-center' : 'hidden'}">
+	<ul class="md:hidden flex space-x-5">
 		<li>
 			<a href="/">Home</a>
 		</li>
@@ -70,9 +70,7 @@
 			<a href="/uses">Uses</a>
 		</li>
 		<!-- <li>
-			<a
-				href="/projects"
-				class="focus:border-b-4 border-purple-700 pb-2  hover:border-b-4"
+			<a href="/projects" class="focus:border-b-4 border-purple-700 pb-2  hover:border-b-4"
 				>Projects</a
 			>
 		</li> -->
