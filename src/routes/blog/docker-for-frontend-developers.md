@@ -30,7 +30,7 @@ With docker you're able to pull pre-configured images from the docker "hub" and 
 
 Typically when I start a new project, be it a website or a discord bot, I'll usually end up needing some sort of database. Usually I would download the software needed to run the database on my computer and maybe a client to view the data in the database. Now, I'd just use docker and pull whatever image I needed for the database I'm using.
 
-```
+```bash
 docker pull postgres
 docker run --name -d -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
 ```
@@ -39,7 +39,7 @@ That's it! That's all I would need to get a postgres database running.
 
 I'll explain what some of these command line options mean.
 
-```
+```bash
 docker pull postgres
 ```
 
@@ -47,7 +47,7 @@ With this command I'm saying, "On docker hub, find the postgres image and downlo
 
 There are a ton of images on docker hub for services you may neeed such as redis, apache, mongoDB, etc.
 
-```
+```bash
 docker run --name postgres -d -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
 ```
 
