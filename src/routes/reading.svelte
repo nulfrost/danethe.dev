@@ -19,6 +19,7 @@
 
 <script>
 	import Book from '../components/Book.svelte';
+	import Title from '../components/PageTitle.svelte';
 	export let reading;
 	let filteredBooks = [];
 	let filter = '';
@@ -36,9 +37,7 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Dane Miller - Reading</title>
-</svelte:head>
+<Title title={'Reading'} />
 
 <div class="flex justify-between items-baseline flex-col md:flex-row">
 	<h1 class="text-4xl font-bold mb-4">Reading</h1>

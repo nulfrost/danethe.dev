@@ -1,5 +1,5 @@
 ---
-layout: md
+layout: markdown
 ---
 
 <svelte:head>

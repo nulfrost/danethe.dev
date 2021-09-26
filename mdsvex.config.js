@@ -2,7 +2,7 @@ import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
 
 const config = {
 	layout: {
-		md: './src/components/MarkdownLayout.svelte'
+		markdown: './src/components/Markdown.svelte'
 	},
 	extensions: ['.svelte.md', '.md', '.svx'],
 	smartypants: {
