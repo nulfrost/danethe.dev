@@ -20,7 +20,7 @@
 		>Toronto, ON. <span role="img" aria-label="canadian flag">&#127464;&#127462;</span></a
 	>
 </p>
-<div class="max-w-2xl flex flex-col gap-4 text-gray-600 text-justify md:text-left text-lg">
+<div class="max-w-2xl flex flex-col gap-4 text-gray-600  text-left text-lg">
 	<p>
 		I enjoy making <span class="font-bold">fast</span> and
 		<span class="font-bold">accessible</span> websites using the latest web technologies. Some of the

@@ -3,10 +3,8 @@
 </script>
 
 <Navbar />
-<main class="px-5 lg:px-0 pb-32 max-w-4xl mx-auto">
-	<section class="mt-[112px]">
-		<slot />
-	</section>
+<main class="px-5 lg:px-0 pb-32 max-w-4xl mx-auto mt-[112px]">
+	<slot />
 </main>
 
 <svelte:head>
