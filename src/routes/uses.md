@@ -9,7 +9,7 @@ layout: md
 
 # Uses
 
-![My Macbook specs](https://i.imgur.com/uj2ujNP.png)
+![An image of Dane's macbook specs](https://i.imgur.com/uj2ujNP.png)
 
 Inspired by Wes Bos' [uses](https://uses.tech/) website, I've decided to compile a list of tech / tools that I use.
 

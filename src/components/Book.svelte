@@ -19,7 +19,7 @@
 	title="External link to buy or access the book {properties.Name.title[0].plain_text}"
 	rel="external"
 	target="_blank"
-	class="border-2 rounded px-5 py-3 h-40 hover:border-purple-600 flex flex-col focus:outline-none focus:border-purple-600"
+	class="border-4 rounded px-5 py-3 h-40 hover:border-gray-900 flex flex-col focus:border-gray-900 focus:outline-none"
 >
 	<h2 class="text-lg font-semibold mb-2">{properties.Name.title[0].plain_text}</h2>
 	<p class="text-gray-500">
