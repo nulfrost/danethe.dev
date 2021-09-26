@@ -2,7 +2,7 @@
 title: 'Creating a RESTful API with Express, Prisma and Postgres'
 description: 'A short walk-through on how to create an API and follow some best practices'
 date: '2021-05-03'
-layout: markdown
+layout: blog
 ---
 
 # {title}

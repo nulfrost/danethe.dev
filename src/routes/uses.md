@@ -1,5 +1,5 @@
 ---
-layout: markdown
+layout: uses
 ---
 
 <svelte:head>

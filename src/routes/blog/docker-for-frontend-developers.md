@@ -2,7 +2,7 @@
 title: 'Docker for Frontend Developers'
 description: 'How I utilize docker to make developing and deploying websites easier'
 date: '2021-03-18'
-layout: markdown
+layout: blog
 ---
 
 # {title}
