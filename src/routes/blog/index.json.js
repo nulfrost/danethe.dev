@@ -17,6 +17,7 @@ export async function get() {
 	}
 
 	const posts = await Promise.all(postPromises);
+	posts.sort((a, b) => (new Date(a.date) < new Date(b.date) ? -1 : 1));
 
 	return {
 		body: posts
