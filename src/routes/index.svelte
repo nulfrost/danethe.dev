@@ -5,9 +5,19 @@
 
 <script>
 	import Title from '../components/PageTitle.svelte';
+	import SEO from 'svelte-seo';
 </script>
 
 <Title title="Home" />
+<SEO
+	openGraph={{
+		title: 'Dane Miller - Web enthusiast building cool experiences on the internet.',
+		description:
+			"Hey, I'm Dane! Welcome to my little corner on the internet. I'm a frontend developer from Toronto, ON. I enjoy building fast and accessible websites using the latest web technologies.",
+		type: 'website',
+		url: 'https://danethe.dev'
+	}}
+/>
 
 <h1 class="text-5xl font-bold mb-4 text-center md:text-left">Hey, I'm Dane.</h1>
 <p class="text-xl mb-4 text-gray-600 text-center md:text-left">

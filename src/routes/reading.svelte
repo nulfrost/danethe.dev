@@ -48,12 +48,10 @@
 		>
 		<button
 			class="text-yellow-800 bg-yellow-50 px-2 py-1 rounded hover:bg-yellow-100 duration-150"
-			tabindex="0"
 			on:click={setFilter}>Paused</button
 		>
 		<button
 			class="text-green-800 bg-green-50 px-2 py-1 rounded hover:bg-green-100 duration-150"
-			tabindex="0"
 			on:click={setFilter}>Finished</button
 		>
 	</div>
