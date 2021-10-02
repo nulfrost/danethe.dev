@@ -1,7 +1,7 @@
 ---
 title: 'Docker for Frontend Developers'
 description: 'How I utilize docker to make developing and deploying websites easier'
-date: '2021-03-18'
+date: '2021-03-18T00:00:00.000Z'
 layout: blog
 ---
 
@@ -12,9 +12,27 @@ layout: blog
 
 <script>
     import Title from "../../components/PageTitle.svelte"
+    import SEO from "svelte-seo"
 </script>
 
 <Title {title} />
+
+<SEO
+openGraph={{
+		title: "Docker for Frontend Developers",
+		description: "How I utilize docker to make developing and deploying websites easier",
+		type: "article",
+		url: "url",
+		article: {
+		publishedTime: "2021-03-18T00:00:00.000Z",
+		modifiedTime: "2021-03-18T00:00:00.000Z",
+		section: "Technology",
+		authors: [
+			"https://twitter.com/hybridearth",
+		],
+		},
+	}}
+/>
 
 # {title}
 
