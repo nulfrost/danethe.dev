@@ -12,29 +12,9 @@ layout: blog
 
 <script>
     import Title from "../../components/PageTitle.svelte"
-	import SEO from "svelte-seo"
-
-	
 </script>
 
 <Title {title} />
-
-<SEO
-openGraph={{
-		title: "Creating a RESTful API with Express, Prisma and Postgres",
-		description: "A short walk-through on how to create an API and follow some best practices",
-		type: "article",
-		url: "url",
-		article: {
-		publishedTime: "2021-05-03T00:00:00.000Z",
-		modifiedTime: "2021-05-03T00:00:00.000Z",
-		section: "Technology",
-		authors: [
-			"https://twitter.com/hybridearth",
-		],
-		},
-	}}
-/>
 
 # {title}
 
