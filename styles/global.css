@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    :root {
+        --color-offwhite: "#FAF9F6"
+        --color-kinda-black: "#211A21"
+        --color-grayish: "#908A99"
+    }
+
+    html, body, #__next {
+        font-family: 'Inter', sans-serif;
+        height: 100%;
+        @apply max-w-6xl mx-auto bg-kinda-black;
+    }
+}

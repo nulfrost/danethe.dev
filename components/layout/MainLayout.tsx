@@ -3,5 +3,9 @@ type Props = {
 };
 
 export const MainLayout: React.FunctionComponent<Props> = ({ children }) => {
-  return <main className="max-w-6xl mx-auto">{children}</main>;
+  return (
+    <>
+      <main className="h-full">{children}</main>
+    </>
+  );
 };
