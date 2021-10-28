@@ -14,7 +14,8 @@
   }
 
   html,
-  body {
+  body,
+  #__next {
     height: 100%;
   }
 
@@ -24,5 +25,6 @@
 
   #__next {
     font-family: "Inter", sans-serif;
+    @apply flex flex-col;
   }
 }

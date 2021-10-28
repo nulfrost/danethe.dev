@@ -2,7 +2,7 @@ import { Text } from "../components/common/Text";
 
 function HomePage() {
   return (
-    <div className="flex flex-col justify-center flex-1">
+    <div className="flex flex-col justify-center">
       <Text as="h1" className="mb-6 text-6xl font-bold text-kinda-black">
         Hey, I’m Dane. I am a frontend developer from Toronto.
       </Text>

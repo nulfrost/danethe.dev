@@ -8,7 +8,10 @@ export const Navbar = () => {
     <header className="pt-6">
       <nav className="flex items-baseline justify-between">
         <Link href="/">
-          <a className="text-2xl font-bold outline-none focus:ring-yellow-600 focus:ring-4">
+          <a
+            className="text-2xl font-bold outline-none focus:ring-yellow-600 focus:ring-4"
+            aria-label="Go to home page"
+          >
             Dane.
           </a>
         </Link>
@@ -16,6 +19,7 @@ export const Navbar = () => {
           <li>
             <Link href="/about">
               <a
+                aria-label="Go to about page"
                 className={`duration-150 hover:text-kinda-black outline-none focus:ring-yellow-600 focus:ring-4 ${
                   router.pathname === "/about"
                     ? "text-kinda-black"
@@ -29,6 +33,7 @@ export const Navbar = () => {
           <li>
             <Link href="/blog">
               <a
+                aria-label="Go to blog page"
                 className={`duration-150 hover:text-kinda-black outline-none focus:ring-yellow-600 focus:ring-4 ${
                   router.pathname === "/blog"
                     ? "text-kinda-black"
