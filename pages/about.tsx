@@ -2,7 +2,7 @@ import { Text } from "../components/common/Text";
 
 const About = () => {
   return (
-    <div className="flex flex-col flex-1 mt-28">
+    <div className="flex flex-col flex-1 mt-24">
       <Text as="h1" className="mb-8 text-4xl font-bold">
         A little bit aboot me
       </Text>
@@ -27,8 +27,8 @@ const About = () => {
           websites using React, JavaScript / TypeScript, Node and GraphQL but I
           do dabble in other frontend libraries / frameworks and programming
           languages. One thing I&apos;m focused on right now is learning more
-          about accessibility and making sure that any projects I make are fully
-          accessible to anyone that wants to use them.
+          about accessibility and making sure that any projects I build are
+          fully accessible for anyone that wants to use them.
         </Text>
         <Text as="p" className="leading-loose">
           Outside of web development I enjoy other things like skateboarding,
