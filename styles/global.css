@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    :root {
-        --color-offwhite: "#FAF9F6"
-        --color-kinda-black: "#211A21"
-        --color-grayish: "#908A99"
-    }
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+  :root {
+    --color-offwhite: #faf9f6;
+    --color-kinda-black: #211a21;
+    --color-grayish: #908a99;
+  }
 
-    html, body, #__next {
-        font-family: 'Inter', sans-serif;
-        height: 100%;
-        @apply max-w-6xl mx-auto bg-kinda-black;
-    }
+  *::selection {
+    @apply bg-yellow-600 text-offwhite;
+  }
+
+  html,
+  body,
+  #__next {
+    font-family: "Inter", sans-serif;
+    height: 100%;
+    @apply flex flex-col max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
+  }
 }

@@ -5,7 +5,9 @@ type Props = {
 export const MainLayout: React.FunctionComponent<Props> = ({ children }) => {
   return (
     <>
-      <main className="h-full">{children}</main>
+      <main className="flex flex-1">
+        <section className="flex flex-1">{children}</section>
+      </main>
     </>
   );
 };
