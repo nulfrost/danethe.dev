@@ -8,7 +8,7 @@ export const MainLayout: React.FunctionComponent<Props> = ({ children }) => {
   return (
     <>
       <motion.main
-        className="flex flex-1 pb-24"
+        className="flex flex-1"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

@@ -14,10 +14,15 @@
   }
 
   html,
-  body,
+  body {
+    height: 100%;
+  }
+
+  html {
+    @apply max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
+  }
+
   #__next {
     font-family: "Inter", sans-serif;
-    height: 100%;
-    @apply flex flex-col max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
   }
 }
