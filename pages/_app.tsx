@@ -2,6 +2,7 @@ import { MainLayout } from "../components/layout/MainLayout";
 import { Navbar } from "../components/layout/Navbar";
 import { AnimatePresence } from "framer-motion";
 import "../styles/global.css";
+import { Footer } from "../components/layout/Footer";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps, router }) {
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
+      <Footer />
     </AnimatePresence>
   );
 }

@@ -13,6 +13,9 @@ module.exports = {
         "kinda-black": "var(--color-kinda-black)",
         grayish: "var(--color-grayish)",
       },
+      borderColor: {
+        grayish: "var(--color-grayish)",
+      },
     },
   },
   variants: {
