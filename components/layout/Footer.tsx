@@ -5,7 +5,7 @@ export const Footer = () => {
 
   useEffect(() => {
     const getCurrentSong = async () => {
-      const response = await fetch(`${window.location.href}api/spotify`);
+      const response = await fetch(`${window.location.origin}/api/spotify`);
       const data = await response.json();
       setCurrentSong(data);
     };
