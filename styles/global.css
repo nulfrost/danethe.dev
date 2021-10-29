@@ -8,23 +8,24 @@
     --color-kinda-black: #211a21;
     --color-grayish: #908a99;
   }
+}
 
-  *::selection {
-    @apply bg-yellow-600 text-offwhite;
-  }
+*::selection {
+  @apply bg-yellow-600 text-offwhite;
+}
 
-  html,
-  body,
-  #__next {
-    height: 100%;
-  }
+html,
+body,
+#__next {
+  height: 100%;
+}
 
-  html {
-    @apply max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
-  }
+html {
+  @apply max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
+}
 
-  #__next {
-    font-family: "Inter", sans-serif;
-    @apply flex flex-col;
-  }
+#__next {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
 }

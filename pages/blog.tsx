@@ -48,7 +48,7 @@ const item = {
 const Blog = ({ posts }) => {
   const searchInputRef = useRef<HTMLInputElement | null>(null);
 
-  const [filteredPosts, setFilteredPosts] = useState(posts);
+  const [filteredPosts, setFilteredPosts] = useState<any[]>(posts);
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -79,36 +79,44 @@ const Blog = ({ posts }) => {
           ref={searchInputRef}
         />
       </form>
-      <motion.div
-        className="grid grid-cols-2 mt-6"
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
-        {filteredPosts.map((post) => (
-          <motion.article key={post.title} variants={item}>
-            <Link href={`/posts/${post.slug}`}>
-              <a aria-label={`Read ${post.title}`} className="w-max">
-                <Text as="h2" className="text-xl font-semibold rounded-md">
-                  {post.title}
-                </Text>
-              </a>
-            </Link>
-            <section className="mb-8">
-              <Text as="p" className="text-grayish">
-                {post.description}
-              </Text>
-            </section>
-            <footer>
-              <time className="text-sm text-grayish">
-                {new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
-                  new Date(post.date)
-                )}
-              </time>
-            </footer>
-          </motion.article>
-        ))}
-      </motion.div>
+      <div className="mt-6">
+        {!filteredPosts.length ? (
+          <span className="text-lg text-grayish">
+            Hmm..I can&apos;t find that post, try searching again maybe?
+          </span>
+        ) : (
+          <motion.div
+            className="grid grid-cols-2"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            {filteredPosts.map((post) => (
+              <motion.article key={post.title} variants={item}>
+                <Link href={`/posts/${post.slug}`}>
+                  <a aria-label={`Read ${post.title}`} className="w-max">
+                    <Text as="h2" className="text-xl font-semibold rounded-md">
+                      {post.title}
+                    </Text>
+                  </a>
+                </Link>
+                <section className="mb-8">
+                  <Text as="p" className="text-grayish">
+                    {post.description}
+                  </Text>
+                </section>
+                <footer>
+                  <time className="text-sm text-grayish">
+                    {new Intl.DateTimeFormat("en-US", {
+                      dateStyle: "full",
+                    }).format(new Date(post.date))}
+                  </time>
+                </footer>
+              </motion.article>
+            ))}
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };
