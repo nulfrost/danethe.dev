@@ -3,14 +3,9 @@ import { useEffect, useState } from "react";
 export const Footer = () => {
   const [currentSong, setCurrentSong] = useState<any>({});
 
-  const BASE_URL =
-    process.env.NODE_ENV !== "development"
-      ? "https://danethe.dev/"
-      : "http://localhost:3000/";
-
   useEffect(() => {
     const getCurrentSong = async () => {
-      const response = await fetch(`${BASE_URL}api/spotify`);
+      const response = await fetch(`${window.location.href}api/spotify`);
       const data = await response.json();
       setCurrentSong(data);
     };
