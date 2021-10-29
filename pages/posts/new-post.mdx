@@ -1,0 +1,19 @@
+---
+title: "This is just a test"
+description: "This is a test blog post"
+date: "2021-10-29"
+---
+
+import { BlogLayout } from "../../components/layout/BlogLayout";
+
+# Hello world
+
+export default ({ children }) => (
+  <BlogLayout meta={meta}>{children}</BlogLayout>
+);
+
+export const meta = {
+  title: "This is just a test",
+  description: "This is a test blog post",
+  date: "2021-10-29",
+};

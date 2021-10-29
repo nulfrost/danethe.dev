@@ -17,6 +17,18 @@ export const Navbar = () => {
         </Link>
         <ul className="flex gap-6">
           <li>
+            <Link href="/">
+              <a
+                aria-label="Go to home page"
+                className={`duration-150 hover:text-kinda-black outline-none focus:ring-yellow-600 focus:ring-4 ${
+                  router.pathname === "/" ? "text-kinda-black" : "text-grayish"
+                }`}
+              >
+                Home
+              </a>
+            </Link>
+          </li>
+          <li>
             <Link href="/about">
               <a
                 aria-label="Go to about page"
@@ -41,6 +53,20 @@ export const Navbar = () => {
                 }`}
               >
                 Blog
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/uses">
+              <a
+                aria-label="Go to uses page"
+                className={`duration-150 hover:text-kinda-black outline-none focus:ring-yellow-600 focus:ring-4 ${
+                  router.pathname === "/uses"
+                    ? "text-kinda-black"
+                    : "text-grayish"
+                }`}
+              >
+                Uses
               </a>
             </Link>
           </li>
