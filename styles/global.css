@@ -21,7 +21,7 @@ body,
 }
 
 html {
-  @apply max-w-4xl mx-auto bg-offwhite dark:bg-kinda-black;
+  @apply max-w-4xl px-5 mx-auto lg:px-0 bg-offwhite dark:bg-kinda-black;
 }
 
 #__next {

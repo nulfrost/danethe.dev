@@ -6,7 +6,7 @@ export function BlogLayout({ meta, children }) {
       <Head>
         <title>Dane Miller - {meta.title}</title>
       </Head>
-      <div className="flex-1 mt-24 prose max-w-max">{children}</div>
+      <div className="mt-24 prose-sm lg:prose max-w-none">{children}</div>
     </>
   );
 }
