@@ -20,9 +20,12 @@ export async function getStaticProps() {
     };
   });
 
+  // @ts-ignore
+  const sortedPosts = posts.sort((a, b) => new Date(a.date) - new Date(b.date));
+
   return {
     props: {
-      posts,
+      posts: sortedPosts,
     },
   };
 }
@@ -58,7 +61,7 @@ const Blog = ({ posts }) => {
       <Text as="h1" className="mb-8 text-4xl font-bold">
         Blog
       </Text>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="flex gap-2">
         <label htmlFor="search" className="block sr-only">
           Search for a blog post
         </label>
@@ -66,10 +69,16 @@ const Blog = ({ posts }) => {
           type="search"
           name="search"
           id="search"
-          className="block w-full bg-gray-200 border-transparent border-none rounded-md focus:bg-offwhite focus:ring-yellow-600 focus:ring-4"
+          className="block w-10/12 bg-gray-200 border-transparent border-none rounded-md focus:bg-offwhite focus:ring-yellow-600 focus:ring-4"
           placeholder="Looking for something?"
           ref={searchInputRef}
         />
+        <button
+          type="submit"
+          className="w-2/12 px-2 py-3 duration-150 rounded-md bg-kinda-black text-offwhite hover:bg-gray-700"
+        >
+          Search
+        </button>
       </form>
       <div className="mt-6">
         {!filteredPosts.length ? (
