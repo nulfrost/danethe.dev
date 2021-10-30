@@ -1,24 +1,21 @@
 import { Text } from "../components/common/Text";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
+import { Post } from "../components/Post";
 
 export async function getStaticProps() {
   const postsDir = path.join(process.cwd(), "/pages/posts");
   const markdownFiles = fs.readdirSync(postsDir);
   const posts = markdownFiles.map((file) => {
-    const filePath = path.join(postsDir, file);
+    const meta = require(`./posts/${file}`).metadata;
     const slug = file.replace(".mdx", "");
-    const content = fs.readFileSync(filePath, "utf8");
-    const { data } = matter(content);
 
     return {
-      title: data.title,
-      description: data.description,
-      date: data.date,
+      title: meta.title,
+      description: meta.description,
+      date: meta.date,
       slug,
     };
   });
@@ -35,14 +32,9 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
-};
-
-const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
 };
 
 const Blog = ({ posts }) => {
@@ -86,33 +78,13 @@ const Blog = ({ posts }) => {
           </span>
         ) : (
           <motion.div
-            className="grid grid-cols-2"
             variants={container}
             initial="hidden"
             animate="show"
+            className="space-y-7"
           >
             {filteredPosts.map((post) => (
-              <motion.article key={post.title} variants={item}>
-                <Link href={`/posts/${post.slug}`}>
-                  <a aria-label={`Read ${post.title}`} className="w-max">
-                    <Text as="h2" className="text-xl font-semibold rounded-md">
-                      {post.title}
-                    </Text>
-                  </a>
-                </Link>
-                <section className="mb-8">
-                  <Text as="p" className="text-grayish">
-                    {post.description}
-                  </Text>
-                </section>
-                <footer>
-                  <time className="text-sm text-grayish">
-                    {new Intl.DateTimeFormat("en-US", {
-                      dateStyle: "full",
-                    }).format(new Date(post.date))}
-                  </time>
-                </footer>
-              </motion.article>
+              <Post {...post} key={post.title} />
             ))}
           </motion.div>
         )}

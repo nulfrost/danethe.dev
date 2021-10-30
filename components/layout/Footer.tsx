@@ -18,7 +18,7 @@ export const Footer = () => {
         <span className="font-bold">Spotify</span> -{" "}
         <span className="max-w-max text-grayish">
           {!currentSong.isPlaying
-            ? "Not playing"
+            ? "not playing"
             : `${currentSong.title} by ${currentSong.artist}`}
         </span>
       </div>

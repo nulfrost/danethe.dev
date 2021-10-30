@@ -14,7 +14,7 @@ export const MainLayout: React.FunctionComponent<Props> = ({ children }) => {
       <Head>
         <title>
           Dane Miller -{" "}
-          {router.pathname === "/" ? "Home" : router.pathname.replace("/", "")}
+          {router.pathname === "/" ? "home" : router.pathname.replace("/", "")}
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
