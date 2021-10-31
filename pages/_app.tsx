@@ -3,6 +3,7 @@ import { Navbar } from "../components/layout/Navbar";
 import { AnimatePresence } from "framer-motion";
 import "../styles/global.css";
 import { Footer } from "../components/layout/Footer";
+import { RouteAnnouncer } from "../components/RouteAnnouncer";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps, router }) {
         <Component {...pageProps} />
       </MainLayout>
       <Footer />
+      <RouteAnnouncer message={router.route} />
     </AnimatePresence>
   );
 }
