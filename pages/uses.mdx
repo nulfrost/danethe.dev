@@ -17,7 +17,7 @@ import Image from "next/image";
   openGraph={{
     title: "Uses - Dane Miller",
     description: "The tech and tools I use for programming",
-    url: window.location.href,
+    url: typeof window !== "undefined" && window.location.href,
     type: "website",
   }}
 />

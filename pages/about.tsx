@@ -11,7 +11,7 @@ const About = () => {
           title: "About - Dane Miller",
           description:
             "A short bio about me and how I got into web development",
-          url: window.location.href,
+          url: typeof window !== "undefined" && window.location.href,
           type: "website",
         }}
       />

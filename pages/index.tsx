@@ -11,7 +11,7 @@ function HomePage() {
           title: "Home - Dane Miller",
           description:
             "Hey, I'm Dane! A frontend developer from Toronto that focuses on building fast and accessible websites using the latest web technologies",
-          url: window.location.href,
+          url: typeof window !== "undefined" && window.location.href,
           type: "website",
         }}
       />

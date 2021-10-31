@@ -14,7 +14,7 @@ export function BlogLayout({ meta, children }) {
         openGraph={{
           title: meta.title,
           description: meta.description,
-          url: window.location.href,
+          url: typeof window !== "undefined" && window.location.href,
           type: "article",
         }}
       />
