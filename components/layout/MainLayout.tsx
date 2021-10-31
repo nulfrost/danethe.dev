@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 import Head from "next/head";
 
 type Props = {
@@ -7,15 +6,9 @@ type Props = {
 };
 
 export const MainLayout: React.FunctionComponent<Props> = ({ children }) => {
-  const router = useRouter();
-
   return (
     <>
       <Head>
-        <title>
-          Dane Miller -{" "}
-          {router.pathname === "/" ? "home" : router.pathname.replace("/", "")}
-        </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <motion.main

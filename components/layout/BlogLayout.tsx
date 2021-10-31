@@ -1,5 +1,5 @@
-import Head from "next/head";
 import { useEffect } from "react";
+import { NextSeo } from "next-seo";
 
 export function BlogLayout({ meta, children }) {
   useEffect(() => {
@@ -8,9 +8,16 @@ export function BlogLayout({ meta, children }) {
 
   return (
     <>
-      <Head>
-        <title>Dane Miller - {meta.title}</title>
-      </Head>
+      <NextSeo
+        title={`${meta.title} - Dane Miller`}
+        description={meta.description}
+        openGraph={{
+          title: meta.title,
+          description: meta.description,
+          url: window.location.href,
+          type: "article",
+        }}
+      />
       <div className="mt-24 prose max-w-none">{children}</div>
     </>
   );
