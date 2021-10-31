@@ -1,15 +1,5 @@
 import Image from "next/image";
-
-<div className="prose mt-24 max-w-none">
-
-# Uses
-
-<Image
-  src="https://i.imgur.com/ms5kVdI.png"
-  height={490}
-  width={896}
-  alt="An image of Dane's macbook specs"
-/>
+import { NextSeo } from "next-seo";
 
 <NextSeo
   title="Uses - Dane Miller"
@@ -20,6 +10,17 @@ import Image from "next/image";
     url: typeof window !== "undefined" && window.location.href,
     type: "website",
   }}
+/>
+
+<div className="prose mt-24 max-w-none">
+
+# Uses
+
+<Image
+  src="https://i.imgur.com/ms5kVdI.png"
+  height={490}
+  width={896}
+  alt="An image of Dane's macbook specs"
 />
 
 Inspired by Wes Bos' [uses](https://uses.tech/) website, I've decided to compile a list of tech / tools that I use.
