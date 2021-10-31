@@ -65,7 +65,7 @@ const Blog = ({ posts }) => {
         openGraph={{
           title: "Blog - Dane Miller",
           description: "A place where I write about new things I've learned",
-          url: window.location.href,
+          url: typeof window !== "undefined" && window.location.href,
           type: "website",
         }}
       />
