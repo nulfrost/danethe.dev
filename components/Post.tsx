@@ -32,7 +32,7 @@ export const Post: React.FunctionComponent<Props> = ({
         </a>
       </Link>
       <section className="mb-3">
-        <Text as="p" className="text-grayish">
+        <Text as="p" className="text-sm text-grayish lg:text-md">
           {description}
         </Text>
       </section>

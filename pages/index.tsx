@@ -9,7 +9,7 @@ function HomePage() {
       >
         Hey, I’m Dane. I am a frontend developer from Toronto.
       </Text>
-      <Text as="p" className="lg:text-lg text-grayish">
+      <Text as="p" className="text-sm lg:text-lg text-grayish">
         I am a self-taught developer that enjoys building <b>fast</b> and{" "}
         <b>accessible</b> websites using the latest web technologies.
       </Text>

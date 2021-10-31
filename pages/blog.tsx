@@ -69,7 +69,7 @@ const Blog = ({ posts }) => {
           type="search"
           name="search"
           id="search"
-          className="block w-full px-2 py-3 bg-gray-200 border-transparent border-none rounded-md lg:w-10/12 focus:bg-offwhite focus:ring-yellow-600 focus:ring-4"
+          className="block w-full px-5 py-3 bg-gray-200 border-transparent border-none rounded-md lg:w-10/12 focus:bg-offwhite focus:ring-yellow-600 focus:ring-4"
           placeholder="Looking for something?"
           ref={searchInputRef}
         />

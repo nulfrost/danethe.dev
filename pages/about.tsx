@@ -4,9 +4,9 @@ const About = () => {
   return (
     <div className="flex flex-col flex-1 mt-24">
       <Text as="h1" className="mb-8 text-3xl font-bold lg:text-4xl">
-        A little bit aboot me
+        A little bit about me
       </Text>
-      <div className="space-y-6 text-md lg:text-lg text-grayish">
+      <div className="space-y-6 text-sm lg:text-lg text-grayish">
         <Text as="p" className="leading-loose">
           Programming was something I always enjoyed doing in my spare time so I
           figured I would try making a career out of it. I started off by
