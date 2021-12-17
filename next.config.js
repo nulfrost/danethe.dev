@@ -1,3 +1,7 @@
+/**
+ * @type {import('next').NextConfig}
+ */
+
 const rehypePrism = require("@mapbox/rehype-prism");
 
 const withMDX = require("@next/mdx")({
@@ -13,4 +17,5 @@ module.exports = withMDX({
   images: {
     domains: ["i.imgur.com"],
   },
+  swcMinify: true,
 });
