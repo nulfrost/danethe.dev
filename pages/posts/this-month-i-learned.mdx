@@ -1,0 +1,19 @@
+import { BlogLayout } from "../../components/layout/BlogLayout";
+
+# This month I learned, a new blog post series
+
+To get myself writing blog posts more this year and a way to keep myself accountable and accomplish the goals I've laid out in <a href="https://danethe.dev/posts/what-im-learning-2022" target="_blank" rel="noopener noreferrer" aria-label="Read what I'm learning in 2022, blog post, opens in new tab">this</a> post, I've decided
+to start a series of posts where I write about things I've learned for that month. Some months might have more stuff to talk about than others but the point of these posts is to write about at least one new thing I've learned that month. 
+
+I'm really excited to start writing more and doing deeper dives on things I'm not already well versed in! The plan is to write these posts at the end of the month but if I'm busy then I'll get them out the first week of the next month. Looking forward to an exciting 2022, happy new year and thanks for reading!
+
+
+export default ({ children }) => (
+  <BlogLayout meta={metadata}>{children}</BlogLayout>
+);
+
+export const metadata = {
+  title: "Keeping myself accountable - This Month I Learned",
+  description: "A series of blog posts I'll be making over the the course of 2022 of new things I learn every month",
+  date: "2022-01-04",
+};
