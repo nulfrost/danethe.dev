@@ -17,7 +17,7 @@ export function BlogLayout({ meta, children }) {
           url: typeof window !== "undefined" && window.location.href,
           type: "article",
           article: {
-            publishedTime: new Date(meta.data).toISOString(),
+            publishedTime: new Date(meta.date).toISOString(),
             tags: meta.tags
           },
           images: [
