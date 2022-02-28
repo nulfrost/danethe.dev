@@ -1,6 +1,5 @@
-node_modules/
-.next
-.cache
-.DS_Store
-.git
-.env*
+node_modules
+
+/.cache
+/functions/\[\[path\]\].js
+/public/build
