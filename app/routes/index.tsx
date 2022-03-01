@@ -12,19 +12,24 @@ export const meta: MetaFunction = () => ({
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
   "og:title": "Dane - Frontend Developer",
   "og:url": "https://danethe.dev",
+  "og:site_name": "Dane Miller",
   "og:type": "website",
   "og:description":
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
   "og:image:width": "1280",
   "og:image:height": "640",
   "og:image":
-    "https://og-image-six-ashen.vercel.app/**Dane - Frontend Developer**.png?md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets&widths=1280&heights=640",
+    "https://og-image-six-ashen.vercel.app/**Dane%20-%20Frontend%20Developer**.png?md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets&widths=1280&heights=640",
+  "og:image:secure_url":
+    "https://og-image-six-ashen.vercel.app/**Dane%20-%20Frontend%20Developer**.png?md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets&widths=1280&heights=640",
   "twitter:creator": "@hybridearth",
   "twitter:site": "@hybridearth",
   "twitter:title": "Dane - Frontend Developer",
   "twitter:description":
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
   "twitter:card": "summary_large_image",
+  "twitter:image":
+    "https://og-image-six-ashen.vercel.app/**Dane%20-%20Frontend%20Developer**.png?md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets&widths=1280&heights=640",
 });
 
 export default function Index() {
