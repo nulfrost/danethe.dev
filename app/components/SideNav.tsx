@@ -12,6 +12,7 @@ export function SideNav() {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? activeClass : baseClass)}
+              prefetch="intent"
             >
               home
             </NavLink>
@@ -20,6 +21,7 @@ export function SideNav() {
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? activeClass : baseClass)}
+              prefetch="intent"
             >
               about
             </NavLink>
@@ -28,6 +30,7 @@ export function SideNav() {
             <NavLink
               to="/blog"
               className={({ isActive }) => (isActive ? activeClass : baseClass)}
+              prefetch="intent"
             >
               blog
             </NavLink>
@@ -36,6 +39,7 @@ export function SideNav() {
             <NavLink
               to="/uses"
               className={({ isActive }) => (isActive ? activeClass : baseClass)}
+              prefetch="intent"
             >
               uses
             </NavLink>

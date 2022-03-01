@@ -4,7 +4,7 @@ import {
   TwitterLogo,
   EnvelopeSimple,
 } from "phosphor-react";
-import { MetaFunction, Meta } from "remix";
+import { MetaFunction } from "remix";
 
 export const meta: MetaFunction = () => ({
   title: "Dane - Frontend Developer",
@@ -12,6 +12,7 @@ export const meta: MetaFunction = () => ({
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
   "og:title": "Dane - Frontend Developer",
   "og:url": "https://danethe.dev",
+  "og:type": "website",
   "og:description":
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
   "twitter:creator": "@hybridearth",
