@@ -2,14 +2,15 @@ import { Link } from "remix";
 import blogs from "~/blogs.json";
 
 export default function Blog() {
+  // fetch blog posts from notion
   console.log(blogs);
 
   return (
     <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-highlight pt-[390px]">
+      <h1 className="text-6xl font-bold font-lexend mb-4 text-highlight relative -top-20">
         Blog
       </h1>
-      <div className="flex flex-wrap max-w-8xl gap-x-12 gap-y-8">
+      <div className="grid grid-cols-2 max-w-[1440px] gap-12 absolute pb-12">
         {blogs.map((blog, index) => (
           <article key={blog.title + index}>
             <h2 className="font-bold text-lg">

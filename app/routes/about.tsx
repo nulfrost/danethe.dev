@@ -1,10 +1,10 @@
 export default function About() {
   return (
     <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-4">
+      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-4 relative -top-20">
         About
       </h1>
-      <p className="leading-loose max-w-5xl">
+      <p className="leading-loose max-w-5xl text-lg absolute">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna enim,
         mauris maecenas et eu vitae. Gravida faucibus lacus, laoreet blandit
         risus pellentesque vulputate. Velit tempus id proin mi dolor habitant

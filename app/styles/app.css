@@ -908,6 +908,59 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.top-96 {
+  top: 24rem;
+}
+
+.top-40 {
+  top: 10rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-auto {
+  top: auto;
+}
+
+.-top-32 {
+  top: -8rem;
+}
+
+.-top-28 {
+  top: -7rem;
+}
+
+.-top-36 {
+  top: -9rem;
+}
+
+.-top-24 {
+  top: -6rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
 .order-2 {
   order: 2;
 }
@@ -940,6 +993,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-full {
   height: 100%;
 }
@@ -948,8 +1005,54 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 64rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+.max-w-fit {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.max-w-min {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
+.max-w-max {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.max-w-\[1440px\] {
+  max-width: 1440px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -968,12 +1071,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: baseline;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-x-12 {
@@ -1005,8 +1116,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 4rem;
 }
 
-.pt-\[390px\] {
-  padding-top: 390px;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-right {
@@ -1035,11 +1154,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -1092,14 +1206,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.hover\:rotate-45:hover {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:rotate-12:hover {
+  --tw-rotate: 12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:-rotate-12:hover {
+  --tw-rotate: -12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:text-secondary-4:hover {
   --tw-text-opacity: 1;
   color: rgb(197 157 122 / var(--tw-text-opacity));
-}
-
-.prose-headings\:text-lg :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .prose-headings\:text-accent :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
@@ -1107,19 +1231,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(218 218 210 / var(--tw-text-opacity));
 }
 
-.prose-h2\:text-lg :is(:where(h2):not(:where([class~="not-prose"] *))) {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .prose-h2\:text-2xl :is(:where(h2):not(:where([class~="not-prose"] *))) {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.prose-h2\:text-3xl :is(:where(h2):not(:where([class~="not-prose"] *))) {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .prose-h2\:font-bold :is(:where(h2):not(:where([class~="not-prose"] *))) {
