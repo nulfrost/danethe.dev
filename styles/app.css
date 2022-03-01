@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Lexend";
+    font-weight: 700;
+    src: url("/fonts/Lexend-Bold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    src: url("/fonts/Inter-Bold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 600;
+    src: url("/fonts/Inter-SemiBold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("/fonts/Inter-Regular.ttf") format("ttf");
+  }
+}
