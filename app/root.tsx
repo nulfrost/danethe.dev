@@ -10,7 +10,8 @@ import {
   Link,
 } from "remix";
 import type { MetaFunction } from "remix";
-import { SideNav } from "~/components";
+import { useState, useEffect } from "react";
+import { SideNav, RouteAnnouncer } from "~/components";
 import styles from "~/styles/app.css";
 
 export const meta: MetaFunction = () => {
@@ -22,6 +23,13 @@ export const links: LinksFunction = () => {
 };
 
 export default function App() {
+  const [announcement, setAnnouncement] = useState("");
+
+  useEffect(() => {
+    let route = document.title;
+    setAnnouncement(route);
+  }, [announcement]);
+
   return (
     <html lang="en" className="flex flex-col h-full">
       <head>
@@ -31,10 +39,11 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-primary flex justify-between flex-1 px-16 items-center">
-        <main className="text-accent flex flex-col flex-1">
+        <SideNav />
+        <main className="text-accent flex flex-col flex-1 order-1">
           <Outlet />
         </main>
-        <SideNav />
+        <RouteAnnouncer location={announcement} />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
@@ -55,11 +64,10 @@ export function CatchBoundary() {
           <h1 className="font-bold text-6xl mb-6 order-2">Page not found</h1>
           <p className="text-sm uppercase font-semibold order-1">404 error</p>
           <p className="order-3">
-            Looks like this page doesn't exist, click{" "}
+            Looks like this page doesn't exist,{" "}
             <Link to="/" className="text-highlight underline font-bold">
-              here
-            </Link>{" "}
-            to go back home.
+              click here to go back home.
+            </Link>
           </p>
         </div>
       );

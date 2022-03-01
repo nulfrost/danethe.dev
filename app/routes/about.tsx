@@ -1,3 +1,5 @@
+import { MetaFunction } from "remix";
+
 export default function About() {
   return (
     <>
