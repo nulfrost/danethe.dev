@@ -15,6 +15,10 @@ export const meta: MetaFunction = () => ({
   "og:type": "website",
   "og:description":
     "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
+  "og:image:width": "1280",
+  "og:image:height": "640",
+  "og:image":
+    "https://og-image-six-ashen.vercel.app/**Dane - Frontend Developer**.png?md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets&widths=1280&heights=640",
   "twitter:creator": "@hybridearth",
   "twitter:site": "@hybridearth",
   "twitter:title": "Dane - Frontend Developer",
