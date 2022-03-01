@@ -1,22 +1,13 @@
-# Welcome to Remix!
+# Dane's little corner of the interwebs
 
-- [Remix Docs](https://remix.run/docs)
+hi hi, this repository has the code for my personal website. whenever i decide to redesign my website i try to use a new framework / hosting solution when i do so. check out the branches on this repository to see the different frameworks i've used.
 
-## Development
+# Current tech stack
 
-You will be utilizing Wrangler for local development to emulate the Cloudflare runtime. This is already wired up in your package.json as the `dev` script:
+- [Remix](https://remix.run/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
 
-```sh
-# start the remix dev server and wrangler
-$ npm run dev
-```
+# Contact
 
-Open up [http://127.0.0.1:8788](http://127.0.0.1:8788) and you should be ready to go!
-
-## Deployment
-
-Cloudflare Pages are currently only deployable through their Git provider integrations.
-
-If you don't already have an account, then [create a Cloudflare account here](https://dash.cloudflare.com/sign-up/pages) and after verifying your email address with Cloudflare, go to your dashboard and follow the [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything).
-
-Configure the "Build command" should be set to `npm run build`, and the "Build output directory" should be set to `public`.
+Feel free to reach out to me on twitter [@hybridearth](https://twitter.com/hybridearth) if you want to chat!
