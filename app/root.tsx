@@ -62,7 +62,9 @@ export function CatchBoundary() {
       error = (
         <div className="flex flex-col">
           <h1 className="font-bold text-6xl mb-6 order-2">Page not found</h1>
-          <p className="text-sm uppercase font-semibold order-1">404 error</p>
+          <p className="text-sm uppercase font-semibold order-1 tracking-wider">
+            404 error
+          </p>
           <p className="order-3">
             Looks like this page doesn't exist,{" "}
             <Link to="/" className="text-highlight underline font-bold">
@@ -76,7 +78,9 @@ export function CatchBoundary() {
       error = (
         <div className="flex flex-col">
           <h1 className="font-bold text-6xl mb-6 order-2">Server error</h1>
-          <p className="text-sm uppercase font-semibold order-1">500 error</p>
+          <p className="text-sm uppercase font-semibold order-1 tracking-wider">
+            500 error
+          </p>
           <p className="order-3">
             Seems like the server had an issue, try refreshing the page or try
             again later
@@ -97,8 +101,8 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body className="bg-primary h-full flex items-center justify-between px-16">
-        <main className="text-accent">{error}</main>
         <SideNav />
+        <main className="text-accent">{error}</main>
         <Scripts />
       </body>
     </html>
