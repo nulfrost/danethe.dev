@@ -4,6 +4,23 @@ import {
   TwitterLogo,
   EnvelopeSimple,
 } from "phosphor-react";
+import { MetaFunction, Meta } from "remix";
+
+export const meta: MetaFunction = () => ({
+  title: "Dane - Frontend Developer",
+  description:
+    "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
+  "og:title": "Dane - Frontend Developer",
+  "og:url": "https://danethe.dev",
+  "og:description":
+    "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
+  "twitter:creator": "@hybridearth",
+  "twitter:site": "@hybridearth",
+  "twitter:title": "Dane - Frontend Developer",
+  "twitter:description":
+    "Hi, I'm Dane. Frontend Developer from Toronto that's passionate about building fast and accessible websites",
+  "twitter:card": "summary_large_image",
+});
 
 export default function Index() {
   return (
