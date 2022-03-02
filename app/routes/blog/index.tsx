@@ -3,7 +3,7 @@ import { load } from "~/datocms/datocms";
 
 type Blog = {
   title: string;
-  createdAt: string;
+  date: string;
   excerpt: string;
   id: number;
   slug: string;
@@ -11,9 +11,9 @@ type Blog = {
 
 const BLOGS_QUERY = `
   query BlogsQuery {
-    allArticles(orderBy: _createdAt_ASC) {
+    allArticles(orderBy: _createdAt_DESC) {
       title
-      createdAt
+      date
       excerpt
       id
       slug
@@ -37,26 +37,26 @@ export default function Blog() {
       <h1 className="text-6xl font-bold font-lexend mb-4 text-highlight mt-96">
         Blog
       </h1>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-3 gap-x-10 gap-y-14">
         {allArticles.map((blog) => (
-          <article key={blog.id}>
+          <article key={blog.id} className="flex flex-col">
             <h2 className="font-bold text-lg">
               <Link to={`/blog/${blog.slug}`} prefetch="intent">
                 {blog.title}
               </Link>
             </h2>
-            <section>
-              <p className="mb-4">{blog.excerpt}</p>
-            </section>
-            <footer className="flex flex-col">
-              <time dateTime={blog.createdAt}>
-                {new Intl.DateTimeFormat("en-US", {
-                  dateStyle: "medium",
-                }).format(new Date(blog.createdAt) as unknown as Date)}
-              </time>
-              <Link to={`/blog/${blog.slug}`} prefetch="intent">
-                read more &rarr;
-              </Link>
+            <p className="mb-4 opacity-50">{blog.excerpt}</p>
+            <footer className="flex items-end flex-1">
+              <div className="flex-1 flex justify-between">
+                <time dateTime={blog.date}>
+                  {new Intl.DateTimeFormat("en-US", {
+                    dateStyle: "medium",
+                  }).format(new Date(blog.date) as unknown as Date)}
+                </time>
+                <Link to={`/blog/${blog.slug}`} prefetch="intent">
+                  read more &rarr;
+                </Link>
+              </div>
             </footer>
           </article>
         ))}
