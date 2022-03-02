@@ -1,10 +1,10 @@
 export default function Uses() {
   return (
     <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-3 relative -top-20">
+      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-3 mt-96">
         Uses
       </h1>
-      <div className="max-w-5xl prose prose-headings:text-accent prose-h2:font-bold prose-h2:text-2xl prose-ul:text-accent prose-a:text-highlight prose-a:font-bold prose-a:underline absolute">
+      <div className="max-w-5xl prose prose-headings:text-accent prose-h2:font-bold prose-h2:text-2xl prose-ul:text-accent prose-a:text-highlight prose-a:font-bold prose-a:underline">
         <h2 id="hardware">Hardware</h2>
         <ul aria-labelledby="hardware">
           <li>2021 13 inch M1 Macbook air</li>

@@ -5,9 +5,9 @@ export function SideNav() {
   let baseClass = "hover:text-secondary-4 duration-150";
 
   return (
-    <aside className="self-center order-2">
+    <header>
       <nav>
-        <ul className="text-accent text-2xl text-right space-y-6">
+        <ul className="text-accent text-lg flex gap-3 items-center h-16 justify-end">
           <li>
             <NavLink
               to="/"
@@ -55,6 +55,6 @@ export function SideNav() {
           </li>
         </ul>
       </nav>
-    </aside>
+    </header>
   );
 }

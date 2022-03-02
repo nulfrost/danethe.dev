@@ -38,9 +38,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary flex justify-between flex-1 px-16 items-center">
+      <body className="bg-primary px-16 flex-1 flex flex-col">
         <SideNav />
-        <main className="text-accent flex flex-col flex-1 order-1">
+        <main className="text-accent flex flex-col flex-1 pb-11 max-w-6xl">
           <Outlet />
         </main>
         <RouteAnnouncer location={announcement} />
