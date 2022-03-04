@@ -1449,6 +1449,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.prose-p\:leading-loose :is(:where(p):not(:where([class~="not-prose"] *))) {
+  line-height: 2;
+}
+
+.prose-p\:leading-5 :is(:where(p):not(:where([class~="not-prose"] *))) {
+  line-height: 1.25rem;
+}
+
+.prose-p\:leading-10 :is(:where(p):not(:where([class~="not-prose"] *))) {
+  line-height: 2.5rem;
+}
+
+.prose-p\:leading-relaxed :is(:where(p):not(:where([class~="not-prose"] *))) {
+  line-height: 1.625;
+}
+
 .prose-p\:text-accent :is(:where(p):not(:where([class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: rgb(218 218 210 / var(--tw-text-opacity));
@@ -1547,6 +1563,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .prose-h2\:lg\:text-4xl :is(:where(h2):not(:where([class~="not-prose"] *))) {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .prose-p\:lg\:text-2xl :is(:where(p):not(:where([class~="not-prose"] *))) {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .prose-li\:lg\:text-2xl :is(:where(li):not(:where([class~="not-prose"] *))) {

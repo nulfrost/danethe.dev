@@ -1,5 +1,6 @@
 import type { LoaderFunction } from "remix";
 import { useLoaderData } from "remix";
+import { Heading } from "~/components";
 import { load } from "~/datocms/datocms";
 
 const BLOG_QUERY = `
@@ -25,12 +26,12 @@ export default function Blog() {
 
   return (
     <>
-      <h1 className="text-6xl font-bold font-lexend text-highlight mb-4 xl:mt-60">
+      <Heading level="1" classNames="text-highlight">
         {article.title}
-      </h1>
+      </Heading>
       <div
         dangerouslySetInnerHTML={{ __html: article.content }}
-        className="prose text-lg prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white"
+        className="prose text-lg prose-p:lg:text-2xl prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white prose-p:leading-relaxed"
       />
     </>
   );
