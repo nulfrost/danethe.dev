@@ -1,10 +1,12 @@
+import { PageSection, Heading } from "~/components";
+
 export default function Uses() {
   return (
-    <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-3 mt-96">
+    <PageSection id="uses">
+      <Heading level="1" classNames="text-secondary-3">
         Uses
-      </h1>
-      <div className="max-w-5xl prose prose-headings:text-accent prose-h2:font-bold prose-h2:text-2xl prose-ul:text-accent prose-a:text-highlight prose-a:font-bold prose-a:underline">
+      </Heading>
+      <div className="max-w-5xl prose prose-headings:text-accent prose-li:lg:text-2xl prose-h2:font-bold prose-h2:lg:text-4xl prose-ul:text-accent prose-a:text-highlight prose-a:font-bold prose-a:underline">
         <h2 id="hardware">Hardware</h2>
         <ul aria-labelledby="hardware">
           <li>2021 13 inch M1 Macbook air</li>
@@ -43,6 +45,6 @@ export default function Uses() {
           <li>Discord</li>
         </ul>
       </div>
-    </>
+    </PageSection>
   );
 }

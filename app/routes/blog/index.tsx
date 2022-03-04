@@ -1,4 +1,5 @@
 import { Link, LoaderFunction, useLoaderData } from "remix";
+import { PageSection, Heading } from "~/components";
 import { load } from "~/datocms/datocms";
 
 type Blog = {
@@ -33,11 +34,11 @@ export default function Blog() {
   const { allArticles } = useLoaderData<{ allArticles: Blog[] }>();
 
   return (
-    <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-highlight mt-96">
+    <PageSection>
+      <Heading level="1" classNames="text-highlight">
         Blog
-      </h1>
-      <div className="grid grid-cols-3 gap-x-10 gap-y-14">
+      </Heading>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14">
         {allArticles.map((blog) => (
           <article key={blog.id} className="flex flex-col">
             <h2 className="font-bold text-lg">
@@ -61,6 +62,6 @@ export default function Blog() {
           </article>
         ))}
       </div>
-    </>
+    </PageSection>
   );
 }

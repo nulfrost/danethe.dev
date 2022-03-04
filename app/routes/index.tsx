@@ -35,15 +35,15 @@ export const meta: MetaFunction = () => ({
 export default function Index() {
   return (
     <div className="flex justify-center flex-col flex-1">
-      <h1 className="text-6xl font-bold font-lexend mb-2">Dane</h1>
-      <p className="text-2xl mb-6">
+      <h1 className="text-4xl md:text-6xl font-bold font-lexend mb-2">Dane</h1>
+      <p className="text-lg md:text-2xl mb-6">
         Currently working at{" "}
         <abbr title="Bank of Montreal" className="font-bold text-secondary-2">
           BMO
         </abbr>{" "}
         as a frontend developer on the accessibility team.
       </p>
-      <ul className="flex gap-6">
+      <ul className="flex gap-6 text-sm">
         <li className="hover:rotate-12 duration-150">
           <a
             href="http://github.com/nulfrost"

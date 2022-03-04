@@ -38,7 +38,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary px-16 flex-1 flex flex-col">
+      <body className="bg-primary px-5 md:px-16 flex-1 flex flex-col">
         <SideNav />
         <main className="text-accent flex flex-col flex-1 pb-11 max-w-6xl">
           <Outlet />

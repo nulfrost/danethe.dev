@@ -1,10 +1,12 @@
+import { PageSection, Heading } from "~/components";
+
 export default function About() {
   return (
-    <>
-      <h1 className="text-6xl font-bold font-lexend mb-4 text-secondary-4 mt-96">
+    <PageSection>
+      <Heading level="1" classNames="text-secondary-4">
         About
-      </h1>
-      <div className="leading-loose max-w-5xl text-lg">
+      </Heading>
+      <div className="leading-loose max-w-5xl text-md md:text-lg lg:text-2xl">
         <p className="mb-6">
           Hiya, I'm Dane and welcome to my little corner of the internet. By day
           I'm a frontend developer working at{" "}
@@ -14,6 +16,6 @@ export default function About() {
           music, or shopping for another mechanical keyboard.
         </p>
       </div>
-    </>
+    </PageSection>
   );
 }

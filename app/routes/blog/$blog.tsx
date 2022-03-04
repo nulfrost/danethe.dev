@@ -12,7 +12,7 @@ const BLOG_QUERY = `
     }
 `;
 
-export const loader: LoaderFunction = ({ context, request, params }) => {
+export const loader: LoaderFunction = ({ context, params }) => {
   return load({
     query: BLOG_QUERY,
     variables: { slug: params.blog },
@@ -25,7 +25,7 @@ export default function Blog() {
 
   return (
     <>
-      <h1 className="text-6xl font-bold font-lexend text-highlight mb-4 mt-96">
+      <h1 className="text-6xl font-bold font-lexend text-highlight mb-4 xl:mt-60">
         {article.title}
       </h1>
       <div
