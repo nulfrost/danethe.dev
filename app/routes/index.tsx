@@ -12,16 +12,15 @@ export const meta: MetaFunction = () => ({
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
   "og:title": "Dane - Frontend Developer",
   "og:url": "https://danethe.dev",
-  "og:site_name": "Dane Miller",
   "og:type": "website",
   "og:description":
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
   "og:image:width": "1280",
   "og:image:height": "640",
   "og:image":
-    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646874408/danethe.dev/Home_Image_o3ogbz.png",
+    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646875027/danethe.dev/Home_Image_cdmm0n.png",
   "og:image:secure_url":
-    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646874408/danethe.dev/Home_Image_o3ogbz.png",
+    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646875027/danethe.dev/Home_Image_cdmm0n.png",
   "twitter:creator": "@hybridearth",
   "twitter:site": "@hybridearth",
   "twitter:title": "Dane - Frontend Developer",
@@ -29,7 +28,7 @@ export const meta: MetaFunction = () => ({
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
   "twitter:card": "summary_large_image",
   "twitter:image":
-    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646874408/danethe.dev/Home_Image_o3ogbz.png",
+    "https://res.cloudinary.com/dda1jyofd/image/upload/v1646875027/danethe.dev/Home_Image_cdmm0n.png",
 });
 
 export default function Index() {
