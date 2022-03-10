@@ -1,7 +1,7 @@
 import type { LoaderFunction } from "remix";
 import { useLoaderData } from "remix";
 import { Heading } from "~/components";
-import { load } from "~/datocms/datocms";
+import { load } from "~/datocms/datocms.server";
 
 const BLOG_QUERY = `
     query BLOG_QUERY($slug: String) {
@@ -31,7 +31,7 @@ export default function Blog() {
       </Heading>
       <div
         dangerouslySetInnerHTML={{ __html: article.content }}
-        className="prose text-lg prose-p:lg:text-2xl prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white prose-p:leading-relaxed"
+        className="text-lg prose prose-p:lg:text-2xl prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white prose-p:leading-relaxed"
       />
     </>
   );

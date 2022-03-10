@@ -1,6 +1,6 @@
 import { Link, LoaderFunction, useLoaderData } from "remix";
 import { PageSection, Heading } from "~/components";
-import { load } from "~/datocms/datocms";
+import { load } from "~/datocms/datocms.server";
 
 type Blog = {
   title: string;
@@ -41,14 +41,14 @@ export default function Blog() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14">
         {allArticles.map((blog) => (
           <article key={blog.id} className="flex flex-col">
-            <h2 className="font-bold text-lg">
+            <h2 className="text-lg font-bold">
               <Link to={`/blog/${blog.slug}`} prefetch="intent">
                 {blog.title}
               </Link>
             </h2>
             <p className="mb-4 opacity-50">{blog.excerpt}</p>
             <footer className="flex items-end flex-1">
-              <div className="flex-1 flex justify-between">
+              <div className="flex justify-between flex-1">
                 <time dateTime={blog.date}>
                   {new Intl.DateTimeFormat("en-US", {
                     dateStyle: "medium",
