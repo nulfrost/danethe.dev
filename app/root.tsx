@@ -14,10 +14,6 @@ import { useState, useEffect } from "react";
 import { SideNav, RouteAnnouncer } from "~/components";
 import styles from "~/styles/app.css";
 
-export const meta: MetaFunction = () => {
-  return { title: "Dane Miller - Home" };
-};
-
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
@@ -38,9 +34,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary px-5 md:px-16 flex-1 flex flex-col">
+      <body className="flex flex-col flex-1 px-5 bg-primary md:px-16">
         <SideNav />
-        <main className="text-accent flex flex-col flex-1 pb-11 max-w-6xl">
+        <main className="flex flex-col flex-1 max-w-6xl text-accent pb-11">
           <Outlet />
         </main>
         <RouteAnnouncer location={announcement} />
@@ -61,13 +57,13 @@ export function CatchBoundary() {
     case 404:
       error = (
         <div className="flex flex-col">
-          <h1 className="font-bold text-6xl mb-6 order-2">Page not found</h1>
-          <p className="text-sm uppercase font-semibold order-1 tracking-wider">
+          <h1 className="order-2 mb-6 text-6xl font-bold">Page not found</h1>
+          <p className="order-1 text-sm font-semibold tracking-wider uppercase">
             404 error
           </p>
           <p className="order-3">
             Looks like this page doesn't exist,{" "}
-            <Link to="/" className="text-highlight underline font-bold">
+            <Link to="/" className="font-bold underline text-highlight">
               click here to go back home.
             </Link>
           </p>
@@ -77,8 +73,8 @@ export function CatchBoundary() {
     case 500:
       error = (
         <div className="flex flex-col">
-          <h1 className="font-bold text-6xl mb-6 order-2">Server error</h1>
-          <p className="text-sm uppercase font-semibold order-1 tracking-wider">
+          <h1 className="order-2 mb-6 text-6xl font-bold">Server error</h1>
+          <p className="order-1 text-sm font-semibold tracking-wider uppercase">
             500 error
           </p>
           <p className="order-3">
@@ -100,7 +96,7 @@ export function CatchBoundary() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-primary h-full flex items-center justify-between px-16">
+      <body className="flex items-center justify-between h-full px-16 bg-primary">
         <SideNav />
         <main className="text-accent">{error}</main>
         <Scripts />

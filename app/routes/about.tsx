@@ -1,4 +1,9 @@
+import { MetaFunction } from "remix";
 import { PageSection, Heading } from "~/components";
+
+export const meta: MetaFunction = () => {
+  return { title: "Dane | About" };
+};
 
 export default function About() {
   return (
@@ -6,7 +11,7 @@ export default function About() {
       <Heading level="1" classNames="text-secondary-4">
         About
       </Heading>
-      <div className="leading-loose max-w-5xl text-md md:text-lg lg:text-2xl">
+      <div className="max-w-5xl leading-loose text-md md:text-lg lg:text-2xl">
         <p className="mb-6">
           Hiya, I'm Dane and welcome to my little corner of the internet. By day
           I'm a frontend developer working at{" "}

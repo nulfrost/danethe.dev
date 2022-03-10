@@ -1,5 +1,6 @@
 import { Link, LoaderFunction, useLoaderData } from "remix";
 import { PageSection, Heading } from "~/components";
+import { MetaFunction } from "remix";
 import { load } from "~/datocms/datocms.server";
 
 type Blog = {
@@ -21,6 +22,10 @@ const BLOGS_QUERY = `
     }
   }
 `;
+
+export const meta: MetaFunction = () => {
+  return { title: "Dane | Blog" };
+};
 
 export const loader: LoaderFunction = ({ context }) => {
   return load({

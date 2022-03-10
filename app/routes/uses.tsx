@@ -1,4 +1,9 @@
+import { MetaFunction } from "remix";
 import { PageSection, Heading } from "~/components";
+
+export const meta: MetaFunction = () => {
+  return { title: "Dane | Uses" };
+};
 
 export default function Uses() {
   return (

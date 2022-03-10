@@ -7,7 +7,7 @@ import {
 import { MetaFunction } from "remix";
 
 export const meta: MetaFunction = () => ({
-  title: "Dane - Frontend Developer",
+  title: "Dane | Home",
   description:
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
   "og:title": "Dane - Frontend Developer",
