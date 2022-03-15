@@ -11,7 +11,7 @@ export default function About() {
       <Heading level="1" classNames="text-secondary-4">
         About
       </Heading>
-      <div className="max-w-5xl leading-loose text-md md:text-lg lg:text-2xl">
+      <div className="max-w-5xl !leading-9 lg:!leading-relaxed text-md md:text-lg lg:text-2xl">
         <p className="mb-6">
           Hiya, I'm Dane and welcome to my little corner of the internet. By day
           I'm a frontend developer working at{" "}
