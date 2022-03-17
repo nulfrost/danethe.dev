@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => ({
   title: "Dane | Home",
   description:
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
-  "og:title": "Dane - Frontend Developer",
+  "og:title": "Dane",
   "og:url": "https://danethe.dev",
   "og:type": "website",
   "og:description":
@@ -23,7 +23,7 @@ export const meta: MetaFunction = () => ({
     "https://res.cloudinary.com/dda1jyofd/image/upload/v1646875027/danethe.dev/Home_Image_cdmm0n.png",
   "twitter:creator": "@hybridearth",
   "twitter:site": "@hybridearth",
-  "twitter:title": "Dane - Frontend Developer",
+  "twitter:title": "Dane",
   "twitter:description":
     "Frontend Developer from Toronto that's passionate about building fast and accessible websites.",
   "twitter:card": "summary_large_image",
