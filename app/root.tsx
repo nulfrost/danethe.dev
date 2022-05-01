@@ -9,9 +9,8 @@ import {
   useCatch,
   Link,
 } from "remix";
-import type { MetaFunction } from "remix";
 import { useState, useEffect } from "react";
-import { SideNav, RouteAnnouncer } from "~/components";
+import { Navbar, RouteAnnouncer } from "~/components";
 import styles from "~/styles/app.css";
 
 export const links: LinksFunction = () => {
@@ -23,6 +22,7 @@ export default function App() {
 
   useEffect(() => {
     let route = document.title;
+    console.log(route);
     setAnnouncement(route);
   }, [announcement]);
 
@@ -35,7 +35,7 @@ export default function App() {
         <Links />
       </head>
       <body className="flex flex-col flex-1 px-5 bg-primary md:px-16">
-        <SideNav />
+        <Navbar />
         <main className="flex flex-col flex-1 max-w-6xl text-accent pb-11">
           <Outlet />
         </main>
@@ -97,7 +97,7 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body className="flex items-center justify-between h-full px-16 bg-primary">
-        <SideNav />
+        <Navbar />
         <main className="text-accent">{error}</main>
         <Scripts />
       </body>

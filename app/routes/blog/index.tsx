@@ -46,7 +46,7 @@ export default function Blog() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14">
         {allArticles.map((blog) => (
           <article key={blog.id} className="flex flex-col">
-            <h2 className="text-lg font-bold">
+            <h2 className="text-lg font-bold hover:underline focus-visible:underline">
               <Link to={`/blog/${blog.slug}`} prefetch="intent">
                 {blog.title}
               </Link>
@@ -57,9 +57,15 @@ export default function Blog() {
                 <time dateTime={blog.date}>
                   {new Intl.DateTimeFormat("en-US", {
                     dateStyle: "medium",
-                  }).format(new Date(blog.date) as unknown as Date)}
+                  }).format(
+                    new Date(blog.date.split("-").join(",")) as unknown as Date
+                  )}
                 </time>
-                <Link to={`/blog/${blog.slug}`} prefetch="intent">
+                <Link
+                  to={`/blog/${blog.slug}`}
+                  prefetch="intent"
+                  className="hover:underline focus-visible:underline"
+                >
                   read more &rarr;
                 </Link>
               </div>

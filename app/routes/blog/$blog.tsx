@@ -55,7 +55,7 @@ export default function Blog() {
       </Heading>
       <div
         dangerouslySetInnerHTML={{ __html: article.content }}
-        className="text-lg prose prose-p:lg:text-2xl prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white prose-p:lg:!leading-relaxed prose-p:!leading-9"
+        className="text-lg prose prose-p:lg:text-2xl prose-p:text-accent max-w-none prose-headings:text-secondary-4 prose-a:text-highlight prose-ul:text-accent prose-strong:text-accent prose-code:text-white prose-p:lg:!leading-relaxed prose-p:!leading-9 prose-a:hover:underline"
       />
     </>
   );
