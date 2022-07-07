@@ -2,7 +2,8 @@ import { NavLink } from "remix";
 
 export function Navbar() {
   let activeClass = "text-secondary-4";
-  let baseClass = "hover:text-secondary-4 duration-150";
+  let baseClass =
+    "hover:text-secondary-4 duration-150 hover:border-b-4 pb-1 border-secondary-4";
 
   const links = [
     {
