@@ -592,10 +592,6 @@ video {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .max-w-md {
   max-width: 28rem;
 }
@@ -616,14 +612,6 @@ video {
   max-width: 24rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -638,10 +626,6 @@ video {
 
 .p-6 {
   padding: 1.5rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-2xl {
