@@ -1,21 +1,21 @@
-import { Link } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 
 export function Navbar() {
   return (
-    <header className="p-6">
+    <header className="p-6 mb-32">
       <nav>
         <ul className="flex justify-center gap-4">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/">Writing</Link>
+            <NavLink to="/">Writing</NavLink>
           </li>
           <li>
-            <Link to="/">Bookmarks</Link>
+            <NavLink to="/">Bookmarks</NavLink>
           </li>
           <li>
-            <Link to="/">Uses</Link>
+            <NavLink to="/">Uses</NavLink>
           </li>
         </ul>
       </nav>

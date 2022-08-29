@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -411,47 +411,35 @@ video {
 }
 
 @font-face {
-  font-family: "Manrope";
+  font-family: "Lexend";
 
   font-weight: 700;
 
-  src: url("/fonts/Manrope-Bold.ttf") format("ttf");
+  src: url("/fonts/Lexend-Bold.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Manrope";
+  font-family: "Inter";
+
+  font-weight: 700;
+
+  src: url("/fonts/Inter-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
 
   font-weight: 600;
 
-  src: url("/fonts/Manrope-SemiBold.ttf") format("ttf");
+  src: url("/fonts/Inter-SemiBold.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Manrope";
+  font-family: "Inter";
 
   font-weight: 400;
 
-  src: url("/fonts/Manrope-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Manrope";
-
-  font-weight: 500;
-
-  src: url("/fonts/Manrope-Medium.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Manrope";
-
-  font-weight: 300;
-
-  src: url("/fonts/Manrope-Light.ttf") format("ttf");
-}
-
-html {
-  font-family: Manrope, system-ui, sans-serif;
+  src: url("/fonts/Inter-Regular.ttf") format("ttf");
 }
 
 *, ::before, ::after {
@@ -600,6 +588,18 @@ html {
   margin-right: auto;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -610,10 +610,6 @@ html {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .inline-block {
@@ -628,8 +624,24 @@ html {
   display: grid;
 }
 
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
 .max-w-5xl {
   max-width: 64rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .max-w-lg {
@@ -661,6 +673,10 @@ html {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -677,6 +693,16 @@ html {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -685,21 +711,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -712,6 +723,11 @@ html {
 
 .duration-150 {
   transition-duration: 150ms;
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover {
