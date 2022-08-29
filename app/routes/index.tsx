@@ -50,8 +50,8 @@ function Intro() {
         I am a developer that enjoys building cool, accessible experiences on
         the web with the latest web technologies.
       </p>
-      <ul className="flex gap-4">
-        <li>
+      <ul className="flex gap-4" role="list">
+        <li role="listitem">
           <a
             href="https://www.linkedin.com/in/dmiller94/"
             aria-label="Dane's linkedin profile"
@@ -61,7 +61,7 @@ function Intro() {
             Linkedin
           </a>
         </li>
-        <li>
+        <li role="listitem">
           <a
             href="https://github.com/nulfrost"
             aria-label="Dane's github profile"
@@ -71,7 +71,7 @@ function Intro() {
             Github
           </a>
         </li>
-        <li>
+        <li role="listitem">
           <a
             href="https://twitter.com/hybridearth"
             aria-label="Dane's twitter profile"
@@ -81,7 +81,7 @@ function Intro() {
             Twitter
           </a>
         </li>
-        <li>
+        <li role="listitem">
           <a
             href="mailto:khadane.miller@gmail.com?subject=Hello%20There!"
             aria-label="Send an email to Dane, opens an email client"
@@ -107,7 +107,10 @@ function Bookmarks({ bookmarks }: BookmarksProps) {
       <p className="mb-6 text-lg text-gray-500">
         Interesting things I've found on the web
       </p>
-      <ul className="grid grid-cols-1 gap-4 mb-6 text-left md:grid-cols-3">
+      <ul
+        className="grid grid-cols-1 gap-4 mb-6 text-left md:grid-cols-3"
+        role="list"
+      >
         {bookmarks.map(({ link, title }) => (
           <Bookmark
             title={title}
@@ -133,7 +136,7 @@ type BookmarkProps = {
 
 function Bookmark({ title, link }: BookmarkProps) {
   return (
-    <li className="p-3 border border-gray-200 rounded-md">
+    <li className="p-3 border border-gray-200 rounded-md" role="listitem">
       <a
         href={link}
         aria-label={`${title}, opens in a new tab`}
@@ -158,9 +161,13 @@ function Spotify({ songs }: SpotifyProps) {
       <p className="mb-6 text-lg text-gray-500">
         Some music I'm currently jamming to
       </p>
-      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3" role="list">
         {songs.items.map(({ played_at, track }) => (
-          <li key={played_at} className="p-3 border border-gray-200 rounded-md">
+          <li
+            key={played_at}
+            className="p-3 border border-gray-200 rounded-md"
+            role="listitem"
+          >
             <h2 className="mb-2 font-bold">
               <a
                 href={track.external_urls.spotify}
