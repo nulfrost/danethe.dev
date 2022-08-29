@@ -29,14 +29,48 @@ export default function Index() {
     <>
       <section className="mb-16 text-center">
         <h1 className="mb-2 text-6xl font-bold">Hi, I'm Dane</h1>
-        <p className="max-w-lg mx-auto text-xl">
+        <p className="max-w-lg mx-auto mb-4 text-xl">
           I am a developer that enjoys building cool, accessible experiences on
           the web with the latest web technologies.
         </p>
+        <ul className="flex justify-center gap-4">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/dmiller94/"
+              aria-label="Dane's linkedin profile"
+              className="link-focus"
+            >
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/nulfrost"
+              aria-label="Dane's github profile"
+              className="link-focus"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/hybridearth"
+              aria-label="Dane's twitter profile"
+              className="link-focus"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="#" className="link-focus">
+              Email
+            </a>
+          </li>
+        </ul>
       </section>
       <section className="text-center">
         <h2 className="text-3xl font-bold">Bookmarks</h2>
-        <p className="mb-2 text-lg">Interesting things I've found on the web</p>
+        <p className="mb-6 text-lg">Interesting things I've found on the web</p>
         <ul className="grid grid-cols-3 gap-4 mb-6 text-left">
           {bookmarks.map(({ link, title }) => (
             <Bookmark
@@ -48,7 +82,7 @@ export default function Index() {
         </ul>
         <Link
           to="/bookmarks"
-          className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50"
+          className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus"
         >
           View more bookmarks &rarr;
         </Link>
@@ -68,7 +102,7 @@ function Bookmark({ title, link }: BookmarkProps) {
       <a
         href={link}
         aria-label={`${title}, opens in a new tab`}
-        className="font-bold hover:underline"
+        className="font-bold hover:underline link-focus"
       >
         {title}
       </a>

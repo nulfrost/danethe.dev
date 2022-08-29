@@ -413,7 +413,7 @@ video {
 .link-focus:focus-visible {
   outline-style: dashed;
   outline-width: 4px;
-  outline-offset: 4px;
+  outline-offset: 8px;
   outline-color: #4338ca;
 }
 
@@ -627,6 +627,10 @@ html {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -761,4 +765,20 @@ html {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.focus-visible\:outline-dashed:focus-visible {
+  outline-style: dashed;
+}
+
+.focus-visible\:outline-4:focus-visible {
+  outline-width: 4px;
+}
+
+.focus-visible\:outline-offset-8:focus-visible {
+  outline-offset: 8px;
+}
+
+.focus-visible\:outline-indigo-700:focus-visible {
+  outline-color: #4338ca;
 }

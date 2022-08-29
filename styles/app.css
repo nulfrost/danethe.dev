@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  .link-focus {
+    @apply focus-visible:outline-dashed focus-visible:outline-offset-4 focus-visible:outline-4 focus-visible:outline-indigo-700;
+  }
+
   @font-face {
     font-family: "Manrope";
     font-weight: 700;

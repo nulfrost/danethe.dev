@@ -410,13 +410,6 @@ video {
   height: auto;
 }
 
-.link-focus:focus-visible {
-  outline-style: dashed;
-  outline-width: 4px;
-  outline-offset: 4px;
-  outline-color: #4338ca;
-}
-
 @font-face {
   font-family: "Manrope";
 
@@ -619,12 +612,12 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .inline-block {
@@ -678,6 +671,10 @@ html {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -745,12 +742,24 @@ html {
   text-decoration-thickness: 2px;
 }
 
+.decoration-4 {
+  text-decoration-thickness: 4px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
 .underline-offset-8 {
   text-underline-offset: 8px;
 }
 
 .duration-150 {
   transition-duration: 150ms;
+}
+
+.\[text-underline-thickness\:8px\] {
+  text-underline-thickness: 8px;
 }
 
 .hover\:bg-gray-50:hover {
@@ -761,4 +770,8 @@ html {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.focus-visible\:outline-dotted:focus-visible {
+  outline-style: dotted;
 }
