@@ -1,8 +1,16 @@
 import { Link, useLoaderData } from "@remix-run/react";
 import type { LoaderArgs } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
+import { fetchSpotifyRecent } from "~/utils/spotify";
+import { formatDistanceToNow } from "date-fns";
+import type { RecentSongsResponse } from "~/utils/spotify";
 
-export function loader({}: LoaderArgs) {
+export async function loader({ context }: LoaderArgs) {
+  const songs = await fetchSpotifyRecent({
+    // @ts-ignore
+    token: context.SPOTIFY_ACCESS_TOKEN,
+  });
+
   const bookmarks = [
     {
       link: "https://testingaccessibility.com/introducing-keyboard-testing-library-by-grunet",
@@ -19,75 +27,102 @@ export function loader({}: LoaderArgs) {
     },
   ];
   // ideally return the most recent things I've bookmarked
-  return json({ bookmarks });
+  return json({ bookmarks, songs });
 }
 
 export default function Index() {
-  const { bookmarks } = useLoaderData<typeof loader>();
+  const { bookmarks, songs } = useLoaderData<typeof loader>();
 
   return (
     <>
-      <section className="mb-16 text-center">
-        <h1 className="mb-2 text-6xl font-bold">Hi, I'm Dane</h1>
-        <p className="max-w-lg mx-auto mb-4 text-xl">
-          I am a developer that enjoys building cool, accessible experiences on
-          the web with the latest web technologies.
-        </p>
-        <ul className="flex justify-center gap-4">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/dmiller94/"
-              aria-label="Dane's linkedin profile"
-              className="link-focus"
-            >
-              Linkedin
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/nulfrost"
-              aria-label="Dane's github profile"
-              className="link-focus"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/hybridearth"
-              aria-label="Dane's twitter profile"
-              className="link-focus"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a href="#" className="link-focus">
-              Email
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section className="text-center">
-        <h2 className="text-3xl font-bold">Bookmarks</h2>
-        <p className="mb-6 text-lg">Interesting things I've found on the web</p>
-        <ul className="grid grid-cols-3 gap-4 mb-6 text-left">
-          {bookmarks.map(({ link, title }) => (
-            <Bookmark
-              title={title}
-              link={link}
-              key={JSON.stringify({ link, title })}
-            />
-          ))}
-        </ul>
-        <Link
-          to="/bookmarks"
-          className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus"
-        >
-          View more bookmarks &rarr;
-        </Link>
-      </section>
+      <Intro />
+      <Bookmarks bookmarks={bookmarks} />
+      <Spotify songs={songs} />
     </>
+  );
+}
+
+function Intro() {
+  return (
+    <section className="mb-16">
+      <h1 className="mb-2 text-6xl font-bold">Hi, I'm Dane</h1>
+      <p className="max-w-lg mb-4 text-xl">
+        I am a developer that enjoys building cool, accessible experiences on
+        the web with the latest web technologies.
+      </p>
+      <ul className="flex gap-4">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/dmiller94/"
+            aria-label="Dane's linkedin profile"
+            className="link-focus decoration-green-500 hover:underline underline-offset-8 decoration-2"
+            rel="noreferrer"
+          >
+            Linkedin
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/nulfrost"
+            aria-label="Dane's github profile"
+            className="link-focus decoration-indigo-500 hover:underline underline-offset-8 decoration-2"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/hybridearth"
+            aria-label="Dane's twitter profile"
+            className="link-focus decoration-sky-500 hover:underline underline-offset-8 decoration-2"
+            rel="noreferrer"
+          >
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:khadane.miller@gmail.com?subject=Hello%20There!"
+            aria-label="Send an email to Dane, opens an email client"
+            className="link-focus decoration-orange-500 hover:underline underline-offset-8 decoration-2"
+            rel="noreferrer"
+          >
+            Email
+          </a>
+        </li>
+      </ul>
+    </section>
+  );
+}
+
+type BookmarksProps = {
+  bookmarks: BookmarkProps[];
+};
+
+function Bookmarks({ bookmarks }: BookmarksProps) {
+  return (
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold">Bookmarks</h2>
+      <p className="mb-6 text-lg text-gray-500">
+        Interesting things I've found on the web
+      </p>
+      <ul className="grid grid-cols-1 gap-4 mb-6 text-left md:grid-cols-3">
+        {bookmarks.map(({ link, title }) => (
+          <Bookmark
+            title={title}
+            link={link}
+            key={JSON.stringify({ link, title })}
+          />
+        ))}
+      </ul>
+      <Link
+        to="/bookmarks"
+        className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus"
+      >
+        View more bookmarks &rarr;
+      </Link>
+    </section>
   );
 }
 
@@ -102,10 +137,57 @@ function Bookmark({ title, link }: BookmarkProps) {
       <a
         href={link}
         aria-label={`${title}, opens in a new tab`}
+        target="_blank"
+        rel="noreferrer noopener"
         className="font-bold hover:underline link-focus"
       >
         {title}
       </a>
     </li>
+  );
+}
+
+type SpotifyProps = {
+  songs: RecentSongsResponse;
+};
+
+function Spotify({ songs }: SpotifyProps) {
+  return (
+    <section>
+      <h2 className="text-3xl font-bold">Recent Spotify Listens</h2>
+      <p className="mb-6 text-lg text-gray-500">
+        Some music I'm currently jamming to
+      </p>
+      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {songs.items.map(({ played_at, track }) => (
+          <li key={played_at} className="p-3 border border-gray-200 rounded-md">
+            <h2 className="mb-2 font-bold">
+              <a
+                href={track.external_urls.spotify}
+                target="_blank"
+                className="hover:underline link-focus"
+              >
+                {track.name}
+              </a>
+            </h2>
+            <p className="mb-2 space-x-2">
+              Artist(s) -{" "}
+              {track.artists.map((artist) => (
+                <span key={artist.id} className="after:content-['test']">
+                  {artist.name}
+                </span>
+              ))}
+            </p>
+            <small>
+              Listened{" "}
+              <time dateTime={played_at}>
+                {formatDistanceToNow(new Date(played_at))}
+              </time>{" "}
+              ago
+            </small>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

@@ -6,8 +6,7 @@ const handleRequest = createPagesFunctionHandler({
   mode: process.env.NODE_ENV,
   getLoadContext: (context) => ({
     ...context.env,
-    DATOCMS_READONLY_TOKEN: context.env.DATOCMS_READONLY_TOKEN,
-    DATOCMS_ENVIRONMENT: context.env.DATOCMS_ENVIRONMENT,
+    SPOTIFY_ACCESS_TOKEN: context.env.SPOTIFY_ACCESS_TOKEN,
   }),
 });
 

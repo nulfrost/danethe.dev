@@ -26,7 +26,7 @@ export default function App() {
       </head>
       <body>
         <Navbar />
-        <main className="max-w-5xl mx-auto">
+        <main className="max-w-5xl px-4 mx-auto xl:px-0">
           <Outlet />
         </main>
         <ScrollRestoration />
