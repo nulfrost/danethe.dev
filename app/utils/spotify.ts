@@ -19,7 +19,7 @@ export type RecentSongsResponse = {
   }[];
 };
 
-export async function fetchSpotifyRecent({
+export async function fetchSpotifyRecentSongs({
   token,
   limit = 3,
 }: SpotifyRecentParams) {

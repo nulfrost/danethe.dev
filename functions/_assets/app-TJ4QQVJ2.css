@@ -410,11 +410,6 @@ video {
   height: auto;
 }
 
-:root {
-  --smoky: 15 15 15;
-  --almond: 242 229 215;
-}
-
 .link-focus:focus-visible {
   outline-style: dashed;
   outline-width: 4px;
@@ -814,6 +809,11 @@ html,  body {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.dark .dark\:bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {

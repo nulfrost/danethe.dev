@@ -4,6 +4,11 @@
 
 @layer base {
 
+  :root {
+    --smoky: 15 15 15;
+    --almond: 242 229 215;
+  }
+
   .link-focus {
     @apply focus-visible:outline-dashed focus-visible:outline-offset-4 focus-visible:outline-4 focus-visible:outline-indigo-700;
   }

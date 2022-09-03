@@ -24,7 +24,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="grid grid-cols-1">
+      <body>
         <Navbar />
         <main className="max-w-5xl px-4 mx-auto xl:px-0">
           <Outlet />
@@ -33,6 +33,24 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary({ error }: any) {
+  console.error(error);
+
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <h1>oopsies</h1>
+        <Scripts />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "@remix-run/react";
 import type { LoaderArgs } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
-import { fetchSpotifyRecent } from "~/utils/spotify";
+import { fetchSpotifyRecentSongs } from "~/utils/spotify";
 import { formatDistanceToNow } from "date-fns";
 import type { MetaFunction } from "@remix-run/server-runtime";
 import type { RecentSongsResponse } from "~/utils/spotify";
@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export async function loader({ context }: LoaderArgs) {
-  const songs = await fetchSpotifyRecent({
+  const songs = await fetchSpotifyRecentSongs({
     // @ts-ignore
     token: context.SPOTIFY_ACCESS_TOKEN,
   });
@@ -179,7 +179,7 @@ function Spotify({ songs }: SpotifyProps) {
         role="list"
         aria-labelledby="spotify"
       >
-        {songs.items.map(({ played_at, track }) => (
+        {songs?.items?.map(({ played_at, track }) => (
           <li
             key={played_at}
             className="flex flex-col p-3 border border-gray-200 rounded-md"

@@ -1,10 +1,14 @@
 import { NavLink } from "@remix-run/react";
+import { Sun, Moon } from "phosphor-react";
+import { useState } from "react";
 
 export function Navbar() {
+  const [theme, setTheme] = useState(false);
+
   return (
-    <header className="p-6 mb-32">
-      <nav aria-label="Main site navigation">
-        <ul className="flex justify-center gap-4">
+    <header className="max-w-5xl py-6 mx-auto mb-32">
+      <nav aria-label="Main site navigation" className="flex">
+        <ul className="flex gap-4">
           <li>
             <NavLink
               to="/"
@@ -38,6 +42,9 @@ export function Navbar() {
             </NavLink>
           </li>
         </ul>
+        <button className="ml-auto link-focus" onClick={() => setTheme(!theme)}>
+          {theme === true ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
       </nav>
     </header>
   );
