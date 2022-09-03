@@ -13,14 +13,14 @@ export function Navbar() {
               Home
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/writings"
               className="hover:underline underline-offset-8 decoration-2 decoration-sky-500 link-focus"
             >
               Writings
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/bookmarks"

@@ -763,11 +763,6 @@ html,  body {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
 .decoration-orange-500 {
   -webkit-text-decoration-color: #f97316;
           text-decoration-color: #f97316;

@@ -3,7 +3,12 @@ import type { LoaderArgs } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
 import { fetchSpotifyRecent } from "~/utils/spotify";
 import { formatDistanceToNow } from "date-fns";
+import type { MetaFunction } from "@remix-run/server-runtime";
 import type { RecentSongsResponse } from "~/utils/spotify";
+
+export const meta: MetaFunction = () => ({
+  title: "Home / Dane",
+});
 
 export async function loader({ context }: LoaderArgs) {
   const songs = await fetchSpotifyRecent({
@@ -50,7 +55,10 @@ function Intro() {
         I am a developer that enjoys building cool, accessible experiences on
         the web with the latest web technologies.
       </p>
-      <ul className="flex gap-4" role="list">
+      <h2 className="sr-only" id="personal">
+        How to contact me
+      </h2>
+      <ul className="flex gap-4" role="list" aria-labelledby="personal">
         <li role="listitem">
           <a
             href="https://www.linkedin.com/in/dmiller94/"
@@ -103,13 +111,16 @@ type BookmarksProps = {
 function Bookmarks({ bookmarks }: BookmarksProps) {
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold">Bookmarks</h2>
+      <h2 className="text-3xl font-bold" id="bookmarks">
+        Bookmarks
+      </h2>
       <p className="mb-6 text-lg text-gray-500">
         Interesting things I've found on the web
       </p>
       <ul
         className="grid grid-cols-1 gap-4 mb-6 text-left md:grid-cols-3"
         role="list"
+        aria-labelledby="bookmarks"
       >
         {bookmarks.map(({ link, title }) => (
           <Bookmark
@@ -157,15 +168,21 @@ type SpotifyProps = {
 function Spotify({ songs }: SpotifyProps) {
   return (
     <section>
-      <h2 className="text-3xl font-bold">Recent Spotify Listens</h2>
+      <h2 className="text-3xl font-bold" id="spotify">
+        Spotify
+      </h2>
       <p className="mb-6 text-lg text-gray-500">
         Some music I'm currently jamming to
       </p>
-      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3" role="list">
+      <ul
+        className="grid grid-cols-1 gap-4 md:grid-cols-3"
+        role="list"
+        aria-labelledby="spotify"
+      >
         {songs.items.map(({ played_at, track }) => (
           <li
             key={played_at}
-            className="p-3 border border-gray-200 rounded-md"
+            className="flex flex-col p-3 border border-gray-200 rounded-md"
             role="listitem"
           >
             <h2 className="mb-2 font-bold">
@@ -177,15 +194,14 @@ function Spotify({ songs }: SpotifyProps) {
                 {track.name}
               </a>
             </h2>
-            <p className="mb-2 space-x-2">
-              Artist(s) -{" "}
+            <p className="mb-2">
               {track.artists.map((artist) => (
-                <span key={artist.id} className="after:content-['test']">
+                <span key={artist.id} className="artist-separator">
                   {artist.name}
                 </span>
               ))}
             </p>
-            <small>
+            <small className="mt-auto">
               Listened{" "}
               <time dateTime={played_at}>
                 {formatDistanceToNow(new Date(played_at))}

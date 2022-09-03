@@ -461,12 +461,8 @@ html {
   font-family: Manrope, system-ui, sans-serif;
 }
 
-html,  body {
-  height: 100%;
-}
-
-.artist-separator:not(:first-of-type)::before {
-  content: " \00B7  "
+.artist-separator:not(:last-of-type):not(:first-of-type)::before {
+  content: "· "
 }
 
 *, ::before, ::after {
@@ -647,10 +643,6 @@ html,  body {
   margin-bottom: 1.5rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -675,10 +667,6 @@ html,  body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -687,8 +675,10 @@ html,  body {
   gap: 1rem;
 }
 
-.self-end {
-  align-self: flex-end;
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .rounded-md {
@@ -715,10 +705,6 @@ html,  body {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -761,11 +747,6 @@ html,  body {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .decoration-orange-500 {

@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/server-runtime";
-import { Navbar } from "~/components";
+import { Footer, Navbar } from "~/components";
 
 import styles from "~/styles/app.css";
 
@@ -24,11 +24,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="grid grid-cols-1">
         <Navbar />
         <main className="max-w-5xl px-4 mx-auto xl:px-0">
           <Outlet />
         </main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
