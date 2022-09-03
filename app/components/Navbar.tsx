@@ -25,14 +25,14 @@ export function Navbar() {
               Writings
             </NavLink>
           </li> */}
-          {/* <li>
+          <li>
             <NavLink
               to="/bookmarks"
               className="hover:underline underline-offset-8 decoration-2 decoration-indigo-500 link-focus"
             >
               Bookmarks
             </NavLink>
-          </li> */}
+          </li>
           <li>
             <NavLink
               to="/uses"
@@ -42,9 +42,9 @@ export function Navbar() {
             </NavLink>
           </li>
         </ul>
-        <button className="ml-auto link-focus" onClick={() => setTheme(!theme)}>
+        {/* <button className="ml-auto link-focus" onClick={() => setTheme(!theme)}>
           {theme === true ? <Sun size={16} /> : <Moon size={16} />}
-        </button>
+        </button> */}
       </nav>
     </header>
   );

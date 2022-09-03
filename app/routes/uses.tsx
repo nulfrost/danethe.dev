@@ -25,7 +25,7 @@ function Hardware() {
       </h2>
       <ul
         aria-labelledby="gear"
-        className="list-disc [&>li]:ml-5 mb-16"
+        className="list-disc [&>li]:ml-5 mb-16 space-y-2"
         role="list"
       >
         <li role="listitem">13 inch M1 Macbook Air (Personal)</li>
@@ -76,7 +76,7 @@ function Software() {
       </h2>
       <ul
         aria-labelledby="development"
-        className="list-disc [&>li]:ml-5"
+        className="list-disc [&>li]:ml-5 space-y-2"
         role="list"
       >
         <li role="listitem">VSCode</li>

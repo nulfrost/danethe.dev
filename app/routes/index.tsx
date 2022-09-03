@@ -37,7 +37,7 @@ export default function Index() {
   return (
     <>
       <Intro />
-      {/* <Bookmarks bookmarks={bookmarks} /> */}
+      <Bookmarks bookmarks={bookmarks} />
       <Spotify songs={songs} />
     </>
   );
@@ -181,8 +181,10 @@ function Spotify({ songs }: SpotifyProps) {
             className="flex flex-col p-3 border border-gray-200 rounded-md"
             role="listitem"
           >
-            <h2 className="mb-2 font-bold">
+            <h2 className="mb-2 overflow-hidden font-bold whitespace-nowrap text-ellipsis">
               <a
+                title={track.name}
+                aria-label={`Listen to ${track.name} on spotify, opens in a new tab`}
                 href={track.external_urls.spotify}
                 target="_blank"
                 className="hover:underline link-focus"

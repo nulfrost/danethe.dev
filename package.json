@@ -6,7 +6,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "cross-env NODE_ENV=production npm run build:css && remix build",
-    "dev": "cross-env NODE_ENV=development remix build && run-p dev:*",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
     "start": "cross-env NODE_ENV=production netlify dev",
     "build:css": "npx tailwindcss -m -i ./styles/app.css -o ./app/styles/app.css",
     "dev:tailwind": "concurrently \"npm run dev:css\" \"remix dev:remix\"",
