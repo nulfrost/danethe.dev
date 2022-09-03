@@ -24,9 +24,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex flex-col">
         <Navbar />
-        <main className="max-w-5xl px-4 mx-auto xl:px-0">
+        <main className="w-full max-w-5xl px-4 mx-auto xl:px-0">
           <Outlet />
         </main>
         <Footer />

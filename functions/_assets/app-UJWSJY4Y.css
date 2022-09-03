@@ -672,20 +672,12 @@ html,  body {
   display: grid;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .max-w-5xl {
   max-width: 64rem;
 }
 
 .max-w-lg {
   max-width: 32rem;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 .list-disc {

@@ -684,10 +684,6 @@ html,  body {
   max-width: 32rem;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .list-disc {
   list-style-type: disc;
 }

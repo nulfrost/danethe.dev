@@ -6,7 +6,7 @@ export function Navbar() {
   const [theme, setTheme] = useState(false);
 
   return (
-    <header className="max-w-5xl px-4 py-6 mx-auto mb-32 xl:px-0">
+    <header className="w-full max-w-5xl px-4 py-6 mx-auto mb-32 xl:px-0">
       <nav aria-label="Main site navigation" className="flex">
         <ul className="flex gap-4">
           <li>
