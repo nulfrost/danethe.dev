@@ -680,14 +680,6 @@ html,  body {
   max-width: 32rem;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
-.list-\[circle\] {
-  list-style-type: circle;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -764,11 +756,6 @@ html,  body {
   line-height: 1.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -789,6 +776,11 @@ html,  body {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 .decoration-orange-500 {
@@ -844,8 +836,4 @@ html,  body {
     padding-left: 0px;
     padding-right: 0px;
   }
-}
-
-.\[\&\>li\]\:ml-5>li {
-  margin-left: 1.25rem;
 }

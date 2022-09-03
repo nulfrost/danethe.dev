@@ -660,6 +660,18 @@ html,  body {
   margin-top: auto;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -684,8 +696,8 @@ html,  body {
   list-style-type: disc;
 }
 
-.list-\[circle\] {
-  list-style-type: circle;
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .grid-cols-1 {
@@ -791,6 +803,11 @@ html,  body {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 .decoration-orange-500 {
   -webkit-text-decoration-color: #f97316;
           text-decoration-color: #f97316;
@@ -844,6 +861,10 @@ html,  body {
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.\[\&\>\*\]\:ml-5>* {
+  margin-left: 1.25rem;
 }
 
 .\[\&\>li\]\:ml-5>li {

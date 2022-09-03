@@ -201,7 +201,7 @@ function Spotify({ songs }: SpotifyProps) {
                 </span>
               ))}
             </p>
-            <small className="mt-auto">
+            <small className="mt-auto text-gray-400">
               Listened{" "}
               <time dateTime={played_at}>
                 {formatDistanceToNow(new Date(played_at))}
