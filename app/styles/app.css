@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -463,7 +463,7 @@ video {
 }
 
 html {
-  font-family: Manrope, system-ui, sans-serif;
+  /* font-family: Manrope, system-ui, sans-serif; */
 }
 
 html,  body {
@@ -632,6 +632,10 @@ html,  body {
   margin-right: auto;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -654,10 +658,6 @@ html,  body {
 
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.mt-auto {
-  margin-top: auto;
 }
 
 .inline-block {
@@ -684,10 +684,6 @@ html,  body {
   max-width: 32rem;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .list-disc {
   list-style-type: disc;
 }
@@ -698,10 +694,6 @@ html,  body {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -776,17 +768,8 @@ html,  body {
   line-height: 1.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .uppercase {

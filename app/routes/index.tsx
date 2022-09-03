@@ -1,7 +1,6 @@
 import { Link, useLoaderData } from "@remix-run/react";
-import type { LoaderArgs } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
-import { fetchSpotifyRecentSongs } from "~/utils/spotify";
+import { getRecentTracks } from "~/utils/spotify";
 import { formatDistanceToNow } from "date-fns";
 import type { MetaFunction } from "@remix-run/server-runtime";
 import type { RecentSongsResponse } from "~/utils/spotify";
@@ -10,11 +9,8 @@ export const meta: MetaFunction = () => ({
   title: "Home / Dane",
 });
 
-export async function loader({ context }: LoaderArgs) {
-  const songs = await fetchSpotifyRecentSongs({
-    // @ts-ignore
-    token: context.SPOTIFY_ACCESS_TOKEN,
-  });
+export async function loader() {
+  const songs: RecentSongsResponse = await getRecentTracks();
 
   const bookmarks = [
     {
@@ -41,7 +37,7 @@ export default function Index() {
   return (
     <>
       <Intro />
-      <Bookmarks bookmarks={bookmarks} />
+      {/* <Bookmarks bookmarks={bookmarks} /> */}
       <Spotify songs={songs} />
     </>
   );
@@ -50,7 +46,7 @@ export default function Index() {
 function Intro() {
   return (
     <section className="mb-16">
-      <h1 className="mb-2 text-6xl font-bold">Hi, I'm Dane</h1>
+      <h1 className="mb-2 text-6xl font-bold">Hey, I'm Dane</h1>
       <p className="max-w-lg mb-4 text-xl">
         I am a developer that enjoys building cool, accessible experiences on
         the web with the latest web technologies.

@@ -1,3 +1,9 @@
+import { MetaFunction } from "@remix-run/server-runtime";
+
+export const meta: MetaFunction = () => ({
+  title: "Uses / Dane",
+});
+
 export default function Uses() {
   return (
     <section>

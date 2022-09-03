@@ -25,14 +25,14 @@ export function Navbar() {
               Writings
             </NavLink>
           </li> */}
-          <li>
+          {/* <li>
             <NavLink
               to="/bookmarks"
               className="hover:underline underline-offset-8 decoration-2 decoration-indigo-500 link-focus"
             >
               Bookmarks
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/uses"
