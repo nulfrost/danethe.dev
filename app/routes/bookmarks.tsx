@@ -3,7 +3,7 @@ import { useMatches } from "@remix-run/react";
 import { BookmarkList } from "~/components";
 
 export const meta: MetaFunction = () => ({
-  title: "Home / Dane",
+  title: "Bookmarks / Dane",
 });
 
 export default function Bookmarks() {
