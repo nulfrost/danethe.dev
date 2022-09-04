@@ -7,8 +7,8 @@
 @layer base {
 
   :root {
-    --smoky: 15 15 15;
-    --almond: 242 229 215;
+    --smokey: #222222;
+    --almond: #EAE6E5;
   }
 
   .link-focus {

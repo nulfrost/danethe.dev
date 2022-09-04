@@ -26,7 +26,7 @@ export function BookmarkList({
       {showViewMore ? (
         <Link
           to="/bookmarks"
-          className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus"
+          className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus dark:hover:bg-gray-50/10"
         >
           View more bookmarks &rarr;
         </Link>

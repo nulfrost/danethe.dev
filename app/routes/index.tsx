@@ -28,7 +28,7 @@ export default function Index() {
         <h2 className="text-3xl font-bold" id="bookmarks">
           Bookmarks
         </h2>
-        <p className="mb-6 text-lg text-gray-500">
+        <p className="mb-6 text-lg text-gray-500 dark:text-gray-400">
           Interesting things I've found on the web
         </p>
       </BookmarkList>
@@ -41,7 +41,7 @@ function Intro() {
   return (
     <section className="mb-16">
       <h1 className="mb-2 font-sans text-6xl font-bold">Hey, I'm Dane</h1>
-      <p className="max-w-lg mb-4 text-xl">
+      <p className="max-w-lg mb-4 text-xl dark:text-gray-400">
         I am a developer that enjoys building cool, accessible experiences on
         the web with the latest web technologies.
       </p>
@@ -104,7 +104,7 @@ function Spotify({ songs }: SpotifyProps) {
       <h2 className="text-3xl font-bold" id="spotify">
         Spotify
       </h2>
-      <p className="mb-6 text-lg text-gray-500">
+      <p className="mb-6 text-lg text-gray-500 dark:text-gray-400">
         Some music I'm currently jamming to
       </p>
       <ul
