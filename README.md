@@ -6,7 +6,7 @@ hi hi, this repository has the code for my personal website. whenever i decide t
 
 - [Remix](https://remix.run/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Netlify](https://www.netlify.com/)
 
 # Contact
 
