@@ -40,7 +40,7 @@ export default function Index() {
 function Intro() {
   return (
     <section className="mb-16">
-      <h1 className="mb-2 text-6xl font-bold">Hey, I'm Dane</h1>
+      <h1 className="mb-2 font-sans text-6xl font-bold">Hey, I'm Dane</h1>
       <p className="max-w-lg mb-4 text-xl">
         I am a developer that enjoys building cool, accessible experiences on
         the web with the latest web technologies.

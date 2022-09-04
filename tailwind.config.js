@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   mode: "jit",
   darkMode: "class",
@@ -9,6 +11,9 @@ module.exports = {
       colors: {
         smoky: "hsl(var(--smoky))",
         almond: "hsl(var(--almond))",
+      },
+      fontFamily: {
+        sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
       },
     },
   },

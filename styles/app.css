@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,37 +15,6 @@
     @apply focus-visible:outline-dashed focus-visible:outline-offset-4 focus-visible:outline-4 focus-visible:outline-indigo-700;
   }
 
-  @font-face {
-    font-family: "Manrope";
-    font-weight: 700;
-    src: url("/fonts/Manrope-Bold.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Manrope";
-    font-weight: 600;
-    src: url("/fonts/Manrope-SemiBold.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Manrope";
-    font-weight: 400;
-    src: url("/fonts/Manrope-Regular.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Manrope";
-    font-weight: 500;
-    src: url("/fonts/Manrope-Medium.ttf") format("ttf");
-  }
-  @font-face {
-    font-family: "Manrope";
-    font-weight: 300;
-    src: url("/fonts/Manrope-Light.ttf") format("ttf");
-  }
-
-
-  html {
-    /* font-family: Manrope, system-ui, sans-serif; */
-  }
-
   html, body {
     @apply h-full;
   }
@@ -51,5 +22,5 @@
   .artist-separator:not(:first-of-type)::before {
     content: " \00B7  "
   }
-
 }
+
