@@ -1,6 +1,7 @@
-import { Link, useLoaderData } from "@remix-run/react";
+import { useLoaderData, useMatches } from "@remix-run/react";
 import { json } from "@remix-run/server-runtime";
 import { getRecentTracks } from "~/utils/spotify";
+import { BookmarkList } from "~/components/bookmarks";
 import { formatDistanceToNow } from "date-fns";
 import type { MetaFunction } from "@remix-run/server-runtime";
 import type { RecentSongsResponse } from "~/utils/spotify";
@@ -11,33 +12,26 @@ export const meta: MetaFunction = () => ({
 
 export async function loader() {
   const songs: RecentSongsResponse = await getRecentTracks();
-
-  const bookmarks = [
-    {
-      link: "https://testingaccessibility.com/introducing-keyboard-testing-library-by-grunet",
-      title:
-        " Bringing Together Keyboard-only and Click-based UI Tests with keyboard-testing-library",
-    },
-    {
-      link: "https://web.dev/one-line-layouts/#02.-the-deconstructed-pancake:-flex:-lessgrowgreater-lessshrinkgreater-lessbasewidthgreater",
-      title: "Ten modern layouts in one line of CSS",
-    },
-    {
-      link: "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/",
-      title: "A (Mostly) Complete Guide to React Rendering Behavior",
-    },
-  ];
-  // ideally return the most recent things I've bookmarked
-  return json({ bookmarks, songs });
+  return json({ songs });
 }
 
 export default function Index() {
-  const { bookmarks, songs } = useLoaderData<typeof loader>();
+  const { songs } = useLoaderData<typeof loader>();
+  const { bookmarks } = useMatches().filter(
+    (route) => route.pathname === "/"
+  )[0].data;
 
   return (
     <>
       <Intro />
-      <Bookmarks bookmarks={bookmarks} />
+      <BookmarkList bookmarks={bookmarks} showViewMore>
+        <h2 className="text-3xl font-bold" id="bookmarks">
+          Bookmarks
+        </h2>
+        <p className="mb-6 text-lg text-gray-500">
+          Interesting things I've found on the web
+        </p>
+      </BookmarkList>
       <Spotify songs={songs} />
     </>
   );
@@ -97,63 +91,6 @@ function Intro() {
         </li>
       </ul>
     </section>
-  );
-}
-
-type BookmarksProps = {
-  bookmarks: BookmarkProps[];
-};
-
-function Bookmarks({ bookmarks }: BookmarksProps) {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold" id="bookmarks">
-        Bookmarks
-      </h2>
-      <p className="mb-6 text-lg text-gray-500">
-        Interesting things I've found on the web
-      </p>
-      <ul
-        className="grid grid-cols-1 gap-4 mb-6 text-left md:grid-cols-3"
-        role="list"
-        aria-labelledby="bookmarks"
-      >
-        {bookmarks.map(({ link, title }) => (
-          <Bookmark
-            title={title}
-            link={link}
-            key={JSON.stringify({ link, title })}
-          />
-        ))}
-      </ul>
-      <Link
-        to="/bookmarks"
-        className="inline-block p-3 text-sm font-bold uppercase duration-150 border border-gray-200 rounded-md hover:bg-gray-50 link-focus"
-      >
-        View more bookmarks &rarr;
-      </Link>
-    </section>
-  );
-}
-
-type BookmarkProps = {
-  title: string;
-  link: string;
-};
-
-function Bookmark({ title, link }: BookmarkProps) {
-  return (
-    <li className="p-3 border border-gray-200 rounded-md" role="listitem">
-      <a
-        href={link}
-        aria-label={`${title}, opens in a new tab`}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="font-bold hover:underline link-focus"
-      >
-        {title}
-      </a>
-    </li>
   );
 }
 
