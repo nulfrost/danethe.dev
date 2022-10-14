@@ -413,8 +413,8 @@ video {
 }
 
 :root {
-  --smokey: #222222;
-  --almond: #EAE6E5;
+  --black-ish: #101b37;
+  --purple-mountains: #a88ddc;
 }
 
 .link-focus:focus-visible{
@@ -697,6 +697,14 @@ html,  body{
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.border-gray-200\/50{
+  border-color: rgb(229 231 235 / 0.5);
+}
+
+.border-gray-200\/20{
+  border-color: rgb(229 231 235 / 0.2);
+}
+
 .p-3{
   padding: 0.75rem;
 }
@@ -812,12 +820,20 @@ html,  body{
           text-decoration-line: underline;
 }
 
-.dark .dark\:bg-smokey{
-  background-color: var(--smokey);
+.dark .dark\:border-purple-mountains{
+  border-color: var(--purple-mountains);
 }
 
-.dark .dark\:text-almond{
-  color: var(--almond);
+.dark .dark\:border-black-ish{
+  border-color: var(--black-ish);
+}
+
+.dark .dark\:bg-black-ish{
+  background-color: var(--black-ish);
+}
+
+.dark .dark\:text-purple-mountains{
+  color: var(--purple-mountains);
 }
 
 .dark .dark\:text-gray-400{

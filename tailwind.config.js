@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        smokey: "var(--smokey)",
-        almond: "var(--almond)",
+        "black-ish": "var(--black-ish)",
+        "purple-mountains": "var(--purple-mountains)",
       },
       fontFamily: {
         sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],

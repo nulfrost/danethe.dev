@@ -3,7 +3,7 @@ import type { BookmarkItemProps } from "./types";
 export function BookmarkItem({ title, link }: BookmarkItemProps) {
   return (
     <li
-      className="p-3 border border-gray-200 rounded-md dark:border-almond/50"
+      className="p-3 border border-gray-200 rounded-md dark:border-purple-mountains"
       role="listitem"
     >
       <a

@@ -7,8 +7,8 @@
 @layer base {
 
   :root {
-    --smokey: #222222;
-    --almond: #EAE6E5;
+    --black-ish: #101b37;
+    --purple-mountains: #a88ddc;
   }
 
   .link-focus {

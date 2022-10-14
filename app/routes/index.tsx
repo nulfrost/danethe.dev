@@ -115,7 +115,7 @@ function Spotify({ songs }: SpotifyProps) {
         {songs?.items?.map(({ played_at, track }) => (
           <li
             key={played_at}
-            className="flex flex-col p-3 border border-gray-200 rounded-md"
+            className="flex flex-col p-3 border border-gray-200 rounded-md dark:border-purple-mountains"
             role="listitem"
           >
             <h2 className="mb-2 overflow-hidden font-bold whitespace-nowrap text-ellipsis">

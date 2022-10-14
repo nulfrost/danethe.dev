@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 export function Navbar() {
   const [theme, setTheme] = useState(false);
 
-  // temporary lol. change this. maybe use cookies
-  useEffect(() => {
-    setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  }, []);
+  // // temporary lol. change this. maybe use cookies
+  // useEffect(() => {
+  //   setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // }, []);
 
   return (
     <header className="w-full max-w-5xl px-4 py-6 mx-auto mb-32 xl:px-0">
@@ -47,7 +47,7 @@ export function Navbar() {
             </NavLink>
           </li>
         </ul>
-        <button
+        {/* <button
           className="ml-auto link-focus"
           onClick={() => {
             if (theme) {
@@ -59,8 +59,8 @@ export function Navbar() {
             }
           }}
         >
-          {theme === true ? <Sun size={16} /> : <Moon size={16} />}
-        </button>
+          {theme ? <Sun size={16} /> : <Moon size={16} />}
+        </button> */}
       </nav>
     </header>
   );
