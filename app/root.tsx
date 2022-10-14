@@ -46,7 +46,10 @@ export default function App() {
       </head>
       <body className="flex flex-col dark:bg-black-ish dark:text-purple-mountains">
         <Navbar />
-        <main className="w-full max-w-5xl px-4 mx-auto xl:px-0">
+        <main
+          className="w-full max-w-5xl px-4 mx-auto xl:px-0"
+          id="maincontent"
+        >
           <Outlet />
         </main>
         <Footer />

@@ -585,6 +585,10 @@ html,  body{
   border-width: 0;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -630,8 +634,16 @@ html,  body{
   display: grid;
 }
 
+.h-px{
+  height: 1px;
+}
+
 .w-full{
   width: 100%;
+}
+
+.w-px{
+  width: 1px;
 }
 
 .max-w-5xl{
@@ -816,6 +828,38 @@ html,  body{
 }
 
 .hover\:underline:hover{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.focus\:link-focus:focus:focus-visible{
+  outline-style: dashed;
+  outline-width: 4px;
+  outline-offset: 4px;
+  outline-color: #4338ca;
+}
+
+.focus\:static:focus{
+  position: static;
+}
+
+.focus\:left-0:focus{
+  left: 0px;
+}
+
+.focus\:h-auto:focus{
+  height: auto;
+}
+
+.focus\:w-auto:focus{
+  width: auto;
+}
+
+.focus\:overflow-visible:focus{
+  overflow: visible;
+}
+
+.focus\:underline:focus{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }

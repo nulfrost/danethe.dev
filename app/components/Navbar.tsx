@@ -12,6 +12,12 @@ export function Navbar() {
 
   return (
     <header className="w-full max-w-5xl px-4 py-6 mx-auto mb-32 xl:px-0">
+      <a
+        href="#maincontent"
+        className="absolute w-px h-px overflow-hidden focus:static focus:left-0 focus:w-auto focus:h-auto focus:overflow-visible focus:link-focus"
+      >
+        Skip to main content
+      </a>
       <nav aria-label="Main site navigation" className="flex">
         <ul className="flex gap-4">
           <li>
