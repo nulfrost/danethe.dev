@@ -1,73 +1,55 @@
-import { NavLink } from "@remix-run/react";
-import { Sun, Moon } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { Link, NavLink } from "@remix-run/react";
+import React from "react";
+import clsx from "clsx";
 
 export function Navbar() {
-  const [theme, setTheme] = useState(false);
-
-  // // temporary lol. change this. maybe use cookies
-  // useEffect(() => {
-  //   setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  // }, []);
-
   return (
-    <header className="w-full max-w-5xl px-4 py-6 mx-auto mb-32 xl:px-0">
-      <a
-        href="#maincontent"
-        className="absolute w-px h-px overflow-hidden focus:static focus:left-0 focus:w-auto focus:h-auto focus:overflow-visible focus:link-focus"
+    <header className="mt-10">
+      <nav
+        className="flex w-full max-w-5xl mx-auto bg-snes-light-purple"
+        aria-label="Main site navigation"
       >
-        Skip to main content
-      </a>
-      <nav aria-label="Main site navigation" className="flex">
-        <ul className="flex gap-4">
-          <li>
-            <NavLink
-              to="/"
-              className="hover:underline underline-offset-8 decoration-2 decoration-orange-500 link-focus"
-            >
-              Home
-            </NavLink>
-          </li>
-          {/* <li>
-            <NavLink
-              to="/writings"
-              className="hover:underline underline-offset-8 decoration-2 decoration-sky-500 link-focus"
-            >
-              Writings
-            </NavLink>
-          </li> */}
-          <li>
-            <NavLink
-              to="/bookmarks"
-              className="hover:underline underline-offset-8 decoration-2 decoration-indigo-500 link-focus"
-            >
-              Bookmarks
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/uses"
-              className="hover:underline underline-offset-8 decoration-2 decoration-green-500 link-focus"
-            >
-              Uses
-            </NavLink>
-          </li>
-        </ul>
-        {/* <button
-          className="ml-auto link-focus"
-          onClick={() => {
-            if (theme) {
-              document.documentElement.classList.remove("dark");
-              setTheme(false);
-            } else {
-              document.documentElement.classList.add("dark");
-              setTheme(true);
-            }
-          }}
+        <a
+          href="#maincontent"
+          className="absolute -translate-y-[300%] left-2/4 focus-visible:-translate-y-[170%] duration-150 bg-snes-black text-snes-light-gray px-2 focus-visible:outline-snes-purple focus-visible:outline-4 focus-within:outline-dotted font-bold"
         >
-          {theme ? <Sun size={16} /> : <Moon size={16} />}
-        </button> */}
+          Skip to main content
+        </a>
+        <CustomLink path="/" label="Dane" />
+        <ul className="ml-auto">
+          {[
+            { path: "/blog", label: "Blog" },
+            { path: "/uses", label: "Uses" },
+            { path: "/interests", label: "Interesting Finds" },
+          ].map(({ path, label }) => (
+            <CustomLink
+              path={path}
+              label={label}
+              key={JSON.stringify({ path, label })}
+            />
+          ))}
+        </ul>
       </nav>
     </header>
+  );
+}
+
+type NavLinkProps = {
+  path: string;
+  label: string;
+} & React.ComponentPropsWithoutRef<"a">;
+
+function CustomLink({ path, label, className, ...props }: NavLinkProps) {
+  return (
+    <NavLink
+      to={path}
+      className={clsx(
+        className,
+        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-lime-600"
+      )}
+      {...props}
+    >
+      {label}
+    </NavLink>
   );
 }

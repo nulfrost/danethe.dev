@@ -1,26 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-
   :root {
-    --black-ish: #101b37;
-    --purple-mountains: #a88ddc;
-  }
-
-  .link-focus {
-    @apply focus-visible:outline-dashed focus-visible:outline-offset-4 focus-visible:outline-4 focus-visible:outline-indigo-700;
-  }
-
-  html, body {
-    @apply h-full;
-  }
-
-  .artist-separator:not(:first-of-type)::before {
-    content: " \00B7  "
+    --snes-black: #211a21;
+    --snes-light-gray: #cec9cc;
+    --snes-dark-gray: #908a99;
+    --snes-purple: #4f43ae;
+    --snes-light-purple: #b5b6e4;
   }
 }
 

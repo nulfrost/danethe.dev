@@ -4,16 +4,18 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  darkMode: "class",
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        "black-ish": "var(--black-ish)",
-        "purple-mountains": "var(--purple-mountains)",
+        "snes-black": "var(--snes-black)",
+        "snes-light-gray": "var(--snes-light-gray)",
+        "snes-dark-gray": "var(--snes-dark-gray)",
+        "snes-purple": "var(--snes-purple)",
+        "snes-light-purple": "var(--snes-light-purple)",
       },
       fontFamily: {
-        sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
       },
     },
   },
