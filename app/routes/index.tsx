@@ -4,6 +4,12 @@ export const meta: MetaFunction = ({}) => ({
   title: "Dane's site / Home",
 });
 
+export function headers() {
+  return {
+    "Cache-Control": "no-store",
+  };
+}
+
 export default function Index() {
   return (
     <div className="pb-4 border-b-4 [border-style:double] border-snes-purple">
