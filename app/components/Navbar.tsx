@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export function Navbar() {
   return (
-    <header className="mt-10">
+    <header className="px-3 mt-10 xl:px-0">
       <nav
         className="flex w-full max-w-5xl mx-auto bg-snes-light-purple"
         aria-label="Main site navigation"
@@ -19,8 +19,8 @@ export function Navbar() {
         <ul className="ml-auto">
           {[
             { path: "/blog", label: "Blog" },
-            { path: "/uses", label: "Uses" },
             { path: "/interests", label: "Interesting Finds" },
+            { path: "/uses", label: "Uses" },
           ].map(({ path, label }) => (
             <CustomLink
               path={path}
@@ -45,7 +45,7 @@ function CustomLink({ path, label, className, ...props }: NavLinkProps) {
       to={path}
       className={clsx(
         className,
-        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-lime-600"
+        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-lime-600 active:[border-style:inset]"
       )}
       {...props}
     >

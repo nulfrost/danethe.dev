@@ -25,7 +25,7 @@ export default function App() {
       </head>
       <body className="bg-snes-light-gray">
         <Navbar />
-        <main className="max-w-5xl mx-auto" id="maincontent">
+        <main className="max-w-5xl px-3 mx-auto xl:px-0" id="maincontent">
           <Outlet />
         </main>
         <ScrollRestoration />

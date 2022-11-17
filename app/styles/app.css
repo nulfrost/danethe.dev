@@ -566,6 +566,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .flex{
   display: flex;
 }
@@ -621,6 +625,18 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-b-4{
+  border-bottom-width: 4px;
+}
+
+.border-dotted{
+  border-style: dotted;
+}
+
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -669,6 +685,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -707,6 +733,11 @@ video {
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold{
@@ -883,5 +914,16 @@ video {
 
 .focus-visible\:outline-yellow-300:focus-visible{
   outline-color: #fde047;
+}
+
+.active\:\[border-style\:inset\]:active{
+  border-style: inset;
+}
+
+@media (min-width: 1280px){
+  .xl\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
