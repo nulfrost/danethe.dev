@@ -788,6 +788,14 @@ video {
   border-style: outset;
 }
 
+.\[border-style\:groove\]{
+  border-style: groove;
+}
+
+.\[border-style\:double\]{
+  border-style: double;
+}
+
 .focus-within\:outline-dotted:focus-within{
   outline-style: dotted;
 }

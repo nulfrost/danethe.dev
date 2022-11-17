@@ -1,6 +1,18 @@
+import { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = ({}) => ({
+  title: "Dane's site | Home",
+});
+
+export function headers() {
+  return {
+    "Cache-Control": "s-maxage=86400",
+  };
+}
+
 export default function Index() {
   return (
-    <div className="pb-4 border-b-4 border-dotted border-snes-purple">
+    <div className="pb-4 border-b-4 [border-style:double] border-snes-purple">
       <h1 className="mt-4 text-2xl font-bold text-snes-black">
         Howdy, I'm Dane
       </h1>

@@ -1,3 +1,9 @@
+import { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = ({}) => ({
+  title: "Dane's site | Uses",
+});
+
 export default function Uses() {
   return (
     <>
