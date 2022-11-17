@@ -7,7 +7,12 @@ export const meta: MetaFunction = ({}) => ({
 export default function Uses() {
   return (
     <>
-      <h1 className="mt-4 mb-8 text-2xl font-bold text-snes-black">Uses</h1>
+      <h1 className="mt-4 text-2xl font-bold text-snes-black">Uses</h1>
+      <p className="mb-8">
+        Here you'll find things I use on a day to day basis for my job or for
+        personal use. I tend to change my set up a little bit as the years go on
+        but most of this stuff stays the same.
+      </p>
       <h2 className="text-lg font-bold text-snes-black">Hardware</h2>
       <ul className="pl-5 mb-8 list-disc">
         <li>Macbook Pro 2019 15 inch (Work)</li>

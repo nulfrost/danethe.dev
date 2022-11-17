@@ -1,14 +1,8 @@
 import { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = ({}) => ({
-  title: "Dane's site | Home",
+  title: "Dane's site / Home",
 });
-
-export function headers() {
-  return {
-    "Cache-Control": "s-maxage=86400",
-  };
-}
 
 export default function Index() {
   return (
