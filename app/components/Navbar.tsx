@@ -16,17 +16,15 @@ export function Navbar() {
           Skip to main content
         </a>
         <CustomLink path="/" label="Dane" />
-        <ul className="ml-auto">
+        <ul className="flex gap-2 ml-auto">
           {[
             { path: "/blog", label: "Blog" },
             { path: "/interests", label: "Interesting Finds" },
             { path: "/uses", label: "Uses" },
           ].map(({ path, label }) => (
-            <CustomLink
-              path={path}
-              label={label}
-              key={JSON.stringify({ path, label })}
-            />
+            <li key={JSON.stringify({ path, label })}>
+              <CustomLink path={path} label={label} />
+            </li>
           ))}
         </ul>
       </nav>
@@ -45,7 +43,7 @@ function CustomLink({ path, label, className, ...props }: NavLinkProps) {
       to={path}
       className={clsx(
         className,
-        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-lime-600 active:[border-style:inset]"
+        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-snes-black active:[border-style:inset]"
       )}
       {...props}
     >

@@ -617,6 +617,18 @@ video {
   list-style-type: decimal;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
+}
+
 .border-2{
   border-width: 2px;
 }
@@ -922,6 +934,10 @@ video {
 
 .focus-visible\:outline-yellow-300:focus-visible{
   outline-color: #fde047;
+}
+
+.focus-visible\:outline-snes-black:focus-visible{
+  outline-color: var(--snes-black);
 }
 
 .active\:\[border-style\:inset\]:active{
