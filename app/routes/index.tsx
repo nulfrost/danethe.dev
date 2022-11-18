@@ -6,7 +6,7 @@ export const meta: MetaFunction = ({}) => ({
 
 export default function Index() {
   return (
-    <div className="pb-4 border-b-4 [border-style:double] border-snes-purple">
+    <div>
       <h1 className="mt-4 text-2xl font-bold text-snes-black">
         Howdy, I'm Dane
       </h1>
@@ -30,7 +30,11 @@ export default function Index() {
         new places in the city to eat at, listening to music, skateboarding,
         biking, building insane website ideas and most importantly napping.
       </p>
-      {/* <p>Here are some other places you can find me on the web:</p>
+      <p>Here are some other places you can find me on the web:</p>
+      <div className="border-b-4 [border-style:double] border-snes-purple my-4"></div>
+      <h2 className="text-lg font-bold">
+        Other places on the internet where you can find me:
+      </h2>
       <ul className="pl-4 list-disc">
         <li>
           <a
@@ -44,12 +48,13 @@ export default function Index() {
         </li>
         <li>
           <a
-            href="https://twitter.com/hybridearth"
+            rel="me"
+            href="https://hachyderm.io/@dane"
             target="_blank"
-            aria-label="Dane's twitter profile, opens in a new tab"
+            aria-label="Dane's mastodon profile, opens in a new tab"
             className="text-blue-800 hover:underline"
           >
-            Twitter
+            Mastodon
           </a>
         </li>
         <li>
@@ -62,7 +67,7 @@ export default function Index() {
             Github
           </a>
         </li>
-      </ul> */}
+      </ul>
     </div>
   );
 }
