@@ -1,6 +1,6 @@
-import { Link, NavLink } from "@remix-run/react";
-import React from "react";
+import { NavLink } from "@remix-run/react";
 import clsx from "clsx";
+import React from "react";
 
 export function Navbar() {
   return (

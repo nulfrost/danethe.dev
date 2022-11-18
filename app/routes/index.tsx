@@ -30,7 +30,6 @@ export default function Index() {
         new places in the city to eat at, listening to music, skateboarding,
         biking, building insane website ideas and most importantly napping.
       </p>
-      <p>Here are some other places you can find me on the web:</p>
       <div className="border-b-4 [border-style:double] border-snes-purple my-4"></div>
       <h2 className="text-lg font-bold">
         Other places on the internet where you can find me:
