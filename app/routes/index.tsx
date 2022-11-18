@@ -6,7 +6,7 @@ export const meta: MetaFunction = ({}) => ({
 
 export function headers() {
   return {
-    "Cache-Control": "public, s-maxage=60",
+    "Cache-Control": "public, s-maxage=120",
   };
 }
 
