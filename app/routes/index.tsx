@@ -4,12 +4,6 @@ export const meta: MetaFunction = ({}) => ({
   title: "Dane's site / Home",
 });
 
-export function headers() {
-  return {
-    "Cache-Control": "public, max-age=60, s-maxage=120",
-  };
-}
-
 export default function Index() {
   return (
     <div>
@@ -40,13 +34,13 @@ export default function Index() {
       <h2 className="text-lg font-bold">
         Other places on the internet where you can find me:
       </h2>
-      <ul className="pl-4 list-disc">
+      <ul className="list-disc list-inside ">
         <li>
           <a
             href="https://www.linkedin.com/in/dmiller94/"
             target="_blank"
             aria-label="Dane's linkedin profile, opens in a new tab"
-            className="text-blue-800 hover:underline"
+            className="text-blue-800 hover:underline link-focus"
           >
             Linkedin
           </a>
@@ -57,7 +51,7 @@ export default function Index() {
             href="https://hachyderm.io/@dane"
             target="_blank"
             aria-label="Dane's mastodon profile, opens in a new tab"
-            className="text-blue-800 hover:underline"
+            className="text-blue-800 hover:underline link-focus"
           >
             Mastodon
           </a>
@@ -67,7 +61,7 @@ export default function Index() {
             href="https://github.com/nulfrost"
             target="_blank"
             aria-label="Dane's github profile, opens in a new tab"
-            className="text-blue-800 hover:underline"
+            className="text-blue-800 hover:underline link-focus"
           >
             Github
           </a>

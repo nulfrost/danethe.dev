@@ -43,7 +43,7 @@ function CustomLink({ path, label, className, ...props }: NavLinkProps) {
       to={path}
       className={clsx(
         className,
-        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-snes-black active:[border-style:inset]"
+        "border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs active:[border-style:inset] link-focus"
       )}
       {...props}
     >

@@ -12,5 +12,9 @@
     --snes-purple: #4f43ae;
     --snes-light-purple: #b5b6e4;
   }
+
+  .link-focus {
+    @apply focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-snes-black;
+  }
 }
 
