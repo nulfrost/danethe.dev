@@ -20,13 +20,12 @@ export async function loader() {
 
 export default function Bookmarks() {
   const { bookmarks } = useLoaderData<typeof loader>();
-  console.log(bookmarks);
   return (
     <>
       <h1 className="mt-4 text-2xl font-bold text-snes-black mb-4">
         Bookmarks
       </h1>
-      <ul className="flex flex-col gap-2 md:flex-row">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {bookmarks.results.map((bookmark) => (
           <li key={bookmark.id}>
             <a
@@ -34,7 +33,7 @@ export default function Bookmarks() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label={`${bookmark?.properties?.Title?.title[0].plain_text}, opens in a new tab`}
-              className="[border-style:outset] border-2 border-white p-3 inline-block hover:[border-style:inset]"
+              className="[border-style:outset] border-2 border-white p-3 inline-block hover:[border-style:inset] focus-visible:outline-4 focus-visible:outline-offset-1 focus-visible:outline-snes-purple focus-visible:outline-dashed border-none focus-visible:underline hover:underline w-full"
             >
               <h2 className="font-bold">
                 {bookmark?.properties?.Title?.title[0].plain_text}
