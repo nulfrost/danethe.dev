@@ -19,7 +19,7 @@ export function Navbar() {
         <ul className="flex gap-2 ml-auto">
           {[
             { path: "/blog", label: "Blog" },
-            { path: "/interests", label: "Interesting Finds" },
+            { path: "/bookmarks", label: "Bookmarks" },
             { path: "/uses", label: "Uses" },
           ].map(({ path, label }) => (
             <li key={JSON.stringify({ path, label })}>
