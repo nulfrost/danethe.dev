@@ -18,7 +18,7 @@ export async function loader() {
     { bookmarks },
     {
       headers: {
-        "Cache-Control": "public, s-maxage=120",
+        "Cache-Control": "public, s-maxage=1800",
       },
     }
   );
