@@ -13,6 +13,7 @@
     "dev:css": "npx tailwindcss -w -i ./styles/app.css -o ./app/styles/app.css"
   },
   "dependencies": {
+    "@fontsource/asap": "^4.5.11",
     "@netlify/functions": "^1.4.0",
     "@notionhq/client": "^2.2.3",
     "@remix-run/netlify": "^1.12.0",

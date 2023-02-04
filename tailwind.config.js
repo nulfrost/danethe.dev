@@ -15,7 +15,7 @@ module.exports = {
         "snes-light-purple": "var(--snes-light-purple)",
       },
       fontFamily: {
-        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["AsapVariable", ...defaultTheme.fontFamily.sans],
       },
     },
   },

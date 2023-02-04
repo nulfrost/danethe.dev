@@ -9,11 +9,14 @@ import {
 import type { LinksFunction } from "@remix-run/server-runtime";
 import styles from "~/styles/app.css";
 import { Navbar } from "./components/Navbar";
+import asap from "@fontsource/asap/variable.css";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: asap },
+    { rel: "stylesheet", href: styles },
+  ];
 };
-
 
 export default function App() {
   return (
