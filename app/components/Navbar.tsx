@@ -15,15 +15,20 @@ export function Navbar() {
         >
           Skip to main content
         </a>
-        <CustomLink path="/" label="Dane" />
-        <ul className="flex gap-2 ml-auto">
+        <HomeLink path="/" label="Dane" />
+        <ul className="flex items-center gap-2 pr-4 ml-auto">
           {[
             { path: "/blog", label: "Blog" },
             { path: "/bookmarks", label: "Bookmarks" },
             { path: "/uses", label: "Uses" },
           ].map(({ path, label }) => (
             <li key={JSON.stringify({ path, label })}>
-              <CustomLink path={path} label={label} />
+              <NavLink
+                to={path}
+                className="text-blue-800 underline hover:text-blue-600 link-focus"
+              >
+                {label}
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -32,12 +37,12 @@ export function Navbar() {
   );
 }
 
-type NavLinkProps = {
+type HomeLinkProps = {
   path: string;
   label: string;
 } & React.ComponentPropsWithoutRef<"a">;
 
-function CustomLink({ path, label, className, ...props }: NavLinkProps) {
+function HomeLink({ path, label, className, ...props }: HomeLinkProps) {
   return (
     <NavLink
       to={path}

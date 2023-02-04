@@ -34,7 +34,7 @@ export default function Index() {
       <h2 className="text-lg font-bold">
         Other places on the internet where you can find me:
       </h2>
-      <ul className="list-disc list-inside ">
+      <ul className="mb-3 list-disc list-inside">
         <li>
           <a
             href="https://www.linkedin.com/in/dmiller94/"
@@ -67,6 +67,20 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <div className="border-b-4 [border-style:double] border-snes-purple my-4"></div>
+      <div className="flex justify-center gap-1">
+        <img src="./badges/pride.gif" alt="pride flag" title="pride!" />
+        <img
+          src="./badges/canadian.gif"
+          alt="canadian flag"
+          title="yeah, eh?"
+        />
+        <img
+          src="./badges/macuser.png"
+          alt="macbook user"
+          title="I love my macbook"
+        />
+      </div>
     </div>
   );
 }
