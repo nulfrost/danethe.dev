@@ -6,9 +6,14 @@ export const meta: MetaFunction = ({}) => ({
   title: "Dane's site / Bookmarks",
 });
 
+export function headers() {
+  return {
+    "Cache-Control": "public, s-maxage=60",
+  };
+}
+
 export async function loader() {
   const notion = new Client({ auth: process.env.NOTION_INTEGRATION_TOKEN });
-
   const databaseId = process.env.NOTION_DATABASE_ID as string;
 
   const bookmarks = await notion.databases.query({

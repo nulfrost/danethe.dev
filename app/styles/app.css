@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
 /*
 ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
@@ -429,14 +427,14 @@ video {
   --snes-light-purple: #b5b6e4;
 }
 
-.link-focus:focus-visible{
+.link-focus:focus-visible {
   outline-style: dashed;
   outline-width: 4px;
   outline-offset: 2px;
   outline-color: var(--snes-black);
 }
 
-*, ::before, ::after{
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -483,7 +481,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop{
+::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -530,310 +528,309 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute{
+.absolute {
   position: absolute;
 }
 
-.left-2\/4{
+.left-2\/4 {
   left: 50%;
 }
 
-.mx-auto{
+.mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.my-3{
+.my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.my-4{
+.my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.mt-10{
+.mt-10 {
   margin-top: 2.5rem;
 }
 
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
 
-.mt-4{
+.mt-4 {
   margin-top: 1rem;
 }
 
-.mb-4{
+.mb-4 {
   margin-bottom: 1rem;
 }
 
-.mt-auto{
+.mt-auto {
   margin-top: auto;
 }
 
-.mb-3{
+.mb-3 {
   margin-bottom: 0.75rem;
 }
 
-.mb-8{
+.mb-8 {
   margin-bottom: 2rem;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.grid{
+.grid {
   display: grid;
 }
 
-.h-full{
+.h-full {
   height: 100%;
 }
 
-.w-full{
+.w-full {
   width: 100%;
 }
 
-.max-w-5xl{
+.max-w-5xl {
   max-width: 64rem;
 }
 
-.-translate-y-\[300\%\]{
+.-translate-y-\[300\%\] {
   --tw-translate-y: -300%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.list-inside{
+.list-inside {
   list-style-position: inside;
 }
 
-.list-disc{
+.list-disc {
   list-style-type: disc;
 }
 
-.auto-cols-fr{
+.auto-cols-fr {
   grid-auto-columns: minmax(0, 1fr);
 }
 
-.grid-cols-1{
+.grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
 
-.items-center{
+.items-center {
   align-items: center;
 }
 
-.justify-center{
+.justify-center {
   justify-content: center;
 }
 
-.gap-2{
+.gap-2 {
   gap: 0.5rem;
 }
 
-.gap-1{
+.gap-1 {
   gap: 0.25rem;
 }
 
-.border-2{
+.border-2 {
   border-width: 2px;
 }
 
-.border-b-4{
+.border-b-4 {
   border-bottom-width: 4px;
 }
 
-.border-white{
+.border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.border-snes-purple{
+.border-snes-purple {
   border-color: var(--snes-purple);
 }
 
-.bg-snes-light-gray{
+.bg-snes-light-gray {
   background-color: var(--snes-light-gray);
 }
 
-.bg-snes-light-purple{
+.bg-snes-light-purple {
   background-color: var(--snes-light-purple);
 }
 
-.bg-snes-black{
+.bg-snes-black {
   background-color: var(--snes-black);
 }
 
-.bg-snes-purple{
+.bg-snes-purple {
   background-color: var(--snes-purple);
 }
 
-.p-3{
+.p-3 {
   padding: 0.75rem;
 }
 
-.px-3{
+.px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-.px-2{
+.px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.py-1{
+.py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
-.pr-4{
+.pr-4 {
   padding-right: 1rem;
 }
 
-.pl-5{
+.pl-5 {
   padding-left: 1.25rem;
 }
 
-.font-sans{
+.font-sans {
   font-family: AsapVariable, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.text-xs{
+.text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-.text-2xl{
+.text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.text-sm{
+.text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.text-lg{
+.text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.font-bold{
+.font-bold {
   font-weight: 700;
 }
 
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 
-.text-snes-light-gray{
+.text-snes-light-gray {
   color: var(--snes-light-gray);
 }
 
-.text-blue-800{
+.text-blue-800 {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
-.text-white{
+.text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-snes-black{
+.text-snes-black {
   color: var(--snes-black);
 }
 
-.text-snes-purple{
+.text-snes-purple {
   color: var(--snes-purple);
 }
 
-.underline{
+.underline {
   text-decoration-line: underline;
 }
 
-.duration-150{
+.duration-150 {
   transition-duration: 150ms;
 }
 
-.\[border-style\:outset\]{
+.\[border-style\:outset\] {
   border-style: outset;
 }
 
-.\[border-style\:double\]{
+.\[border-style\:double\] {
   border-style: double;
 }
 
-.focus-within\:outline-dotted:focus-within{
+.focus-within\:outline-dotted:focus-within {
   outline-style: dotted;
 }
 
-.hover\:text-blue-600:hover{
+.hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
-.hover\:underline:hover{
+.hover\:underline:hover {
   text-decoration-line: underline;
 }
 
-.hover\:\[border-style\:inset\]:hover{
+.hover\:\[border-style\:inset\]:hover {
   border-style: inset;
 }
 
-.focus-visible\:-translate-y-\[170\%\]:focus-visible{
+.focus-visible\:-translate-y-\[170\%\]:focus-visible {
   --tw-translate-y: -170%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.focus-visible\:underline:focus-visible{
+.focus-visible\:underline:focus-visible {
   text-decoration-line: underline;
 }
 
-.focus-visible\:outline-dashed:focus-visible{
+.focus-visible\:outline-dashed:focus-visible {
   outline-style: dashed;
 }
 
-.focus-visible\:outline-4:focus-visible{
+.focus-visible\:outline-4:focus-visible {
   outline-width: 4px;
 }
 
-.focus-visible\:outline-offset-1:focus-visible{
+.focus-visible\:outline-offset-1:focus-visible {
   outline-offset: 1px;
 }
 
-.focus-visible\:outline-snes-purple:focus-visible{
+.focus-visible\:outline-snes-purple:focus-visible {
   outline-color: var(--snes-purple);
 }
 
-.active\:\[border-style\:inset\]:active{
+.active\:\[border-style\:inset\]:active {
   border-style: inset;
 }
 
-@media (min-width: 768px){
-  .md\:grid-cols-2{
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px){
-  .lg\:grid-cols-3{
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1280px){
-  .xl\:px-0{
+@media (min-width: 1280px) {
+  .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
-
