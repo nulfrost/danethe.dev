@@ -13,6 +13,8 @@ import asap from "@fontsource/asap/variable.css";
 
 export const links: LinksFunction = () => {
   return [
+    { rel: "preload", href: styles, as: "style" },
+    { rel: "preload", href: asap, as: "style" },
     { rel: "stylesheet", href: asap },
     { rel: "stylesheet", href: styles },
   ];
