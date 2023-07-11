@@ -5,38 +5,32 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run build:css && remix build",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "start": "cross-env NODE_ENV=production netlify dev",
-    "build:css": "npx tailwindcss -m -i ./styles/app.css -o ./app/styles/app.css",
-    "dev:tailwind": "concurrently \"npm run dev:css\" \"remix dev:remix\"",
-    "dev:css": "npx tailwindcss -w -i ./styles/app.css -o ./app/styles/app.css"
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "cross-env NODE_ENV=production netlify dev"
   },
   "dependencies": {
-    "@fontsource/asap": "^4.5.11",
-    "@netlify/functions": "^1.4.0",
-    "@notionhq/client": "^2.2.3",
-    "@remix-run/netlify": "^1.12.0",
-    "@remix-run/react": "^1.12.0",
+    "@fontsource/asap": "^5.0.5",
+    "@netlify/functions": "^1.6.0",
+    "@notionhq/client": "^2.2.7",
+    "@remix-run/netlify": "^1.18.1",
+    "@remix-run/react": "^1.18.1",
     "clsx": "^1.2.1",
-    "date-fns": "^2.29.3",
+    "date-fns": "^2.30.0",
+    "isbot": "^3.6.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remix": "^1.12.0"
+    "remix": "^1.18.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.12.0",
-    "@remix-run/serve": "^1.12.0",
+    "@remix-run/dev": "^1.18.1",
+    "@remix-run/serve": "^1.18.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "cross-env": "^7.0.3",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.5"
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=14"

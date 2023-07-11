@@ -5,11 +5,13 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
+  useLocation,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/server-runtime";
+import type { LinksFunction } from "@remix-run/node";
 import styles from "~/styles/app.css";
 import { Navbar } from "./components/Navbar";
-import asap from "@fontsource/asap/variable.css";
+import asap from "@fontsource/asap/index.css";
 
 export const links: LinksFunction = () => {
   return [
@@ -26,6 +28,15 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+          name="description"
+          content="Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies."
+        />
+        <meta property="og:title" content="Dane's personal website" />
+        <meta
+          property="og:description"
+          content="Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies."
+        />
         <Meta />
         <Links />
       </head>

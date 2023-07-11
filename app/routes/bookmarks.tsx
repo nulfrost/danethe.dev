@@ -1,10 +1,14 @@
-import { MetaFunction, json } from "@remix-run/node";
+import { V2_MetaFunction, json } from "@remix-run/node";
 import { Client } from "@notionhq/client";
 import { useLoaderData } from "@remix-run/react";
 
-export const meta: MetaFunction = ({}) => ({
-  title: "Dane's site / Bookmarks",
-});
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      title: "Dane's site / Blog",
+    },
+  ];
+};
 
 export async function loader() {
   const notion = new Client({ auth: process.env.NOTION_INTEGRATION_TOKEN });

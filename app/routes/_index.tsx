@@ -1,8 +1,10 @@
-import { MetaFunction } from "@remix-run/node";
+import { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: MetaFunction = ({}) => ({
-  title: "Dane's site / Home",
-});
+export const meta: V2_MetaFunction = ({ location }) => [
+  {
+    title: "Dane's site / Home"
+  },
+];
 
 export default function Index() {
   return (
