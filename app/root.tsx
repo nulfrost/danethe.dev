@@ -5,8 +5,6 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
-  useLocation,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import styles from "~/styles/app.css";
