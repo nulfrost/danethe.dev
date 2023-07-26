@@ -30,22 +30,29 @@ export default function Blog() {
     <>
       <h1 className="mt-4 mb-4 text-2xl font-bold text-snes-black">Blog</h1>
       <ul className="space-y-4">
-        {data.allArticles.map((article) => (
-          <li key={article.id}>
-            <article>
-              <h2 className="mb-1 font-bold text-blue-700 hover:text-blue-500 hover:underline">
-                <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-              </h2>
-              <footer className="text-sm">
-                <time dateTime={article._firstPublishedAt}>
-                  {new Intl.DateTimeFormat("en-us", {
-                    dateStyle: "full",
-                  }).format(new Date(article._firstPublishedAt))}
-                </time>
-              </footer>
-            </article>
-          </li>
-        ))}
+        {data.allArticles
+          .sort((articleA, articleB) => {
+            return (
+              new Date(articleB._firstPublishedAt).getTime() -
+              new Date(articleA._firstPublishedAt).getTime()
+            );
+          })
+          .map((article) => (
+            <li key={article.id}>
+              <article>
+                <h2 className="mb-1 font-bold text-blue-700 hover:text-blue-500 hover:underline">
+                  <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+                </h2>
+                <footer className="text-sm">
+                  <time dateTime={article._firstPublishedAt}>
+                    {new Intl.DateTimeFormat("en-us", {
+                      dateStyle: "full",
+                    }).format(new Date(article._firstPublishedAt))}
+                  </time>
+                </footer>
+              </article>
+            </li>
+          ))}
       </ul>
     </>
   );
