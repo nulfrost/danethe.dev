@@ -1,7 +1,10 @@
-import { V2_MetaFunction, useLoaderData } from "@remix-run/react";
-import type { LoaderArgs } from "@remix-run/node";
+import { type V2_MetaFunction, useLoaderData } from "@remix-run/react";
+import type { LoaderArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { query, type SingleArticle } from "~/utils/datocms";
+import Markdown from "react-markdown";
+import duotoneSea from "~/styles/dracula.css";
+import { CodeBlock } from "~/components/CodeBlock";
 
 const SINGLE_ARTICLE_QUERY = `
 query Article($slug: String) {
@@ -9,7 +12,7 @@ query Article($slug: String) {
     id
     title
     date
-    content(markdown: true)
+    content
     excerpt
     coverImage {
       url
@@ -19,6 +22,10 @@ query Article($slug: String) {
 `;
 
 export const meta: V2_MetaFunction = () => [{ title: "Does this work?" }];
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: duotoneSea }];
+};
 
 export async function loader({ params }: LoaderArgs) {
   const article = await query<SingleArticle>({
@@ -36,10 +43,15 @@ export default function Slug() {
         {data.article.title}
       </h1>
       <p className="mb-4 text-sm">{data.article.excerpt}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: data.article.content }}
+      <Markdown
+        children={data.article.content}
         className="pb-6 prose max-w-none prose-h2:mb-1 prose-a:text-blue-700 hover:prose-a:text-blue-600 prose-h2:mt-7 prose-p:text-gray-700 prose-li:marker:text-snes-black"
-      ></div>
+        components={{
+          pre({ node, className, children, ...props }) {
+            return <CodeBlock {...props}>{children}</CodeBlock>;
+          },
+        }}
+      />
     </>
   );
 }

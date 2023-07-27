@@ -18,8 +18,10 @@
     "clsx": "^1.2.1",
     "date-fns": "^2.30.0",
     "isbot": "^3.6.12",
+    "prism-react-renderer": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
     "remix": "^1.19.1",
     "zod": "^3.21.4"
   },
