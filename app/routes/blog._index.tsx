@@ -13,9 +13,21 @@ const ARTICLES_QUERY = `
 }
 `;
 
-export const meta: V2_MetaFunction = ({}) => [
+export const meta: V2_MetaFunction = () => [
   {
     title: "Dane's site / Blog",
+  },
+  {
+    name: "description",
+    content: "Brain dump",
+  },
+  {
+    property: "og:title",
+    content: "Dane's site / Blog",
+  },
+  {
+    property: "og:description",
+    content: "Brain dump",
   },
 ];
 

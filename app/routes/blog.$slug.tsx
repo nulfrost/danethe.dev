@@ -21,7 +21,15 @@ query Article($slug: String) {
 }
 `;
 
-export const meta: V2_MetaFunction = () => [{ title: "Does this work?" }];
+export const meta: V2_MetaFunction<typeof loader> = ({ data }) => [
+  { title: data?.article.title },
+  { name: "description", content: data?.article.excerpt },
+  {
+    property: "og:title",
+    content: data?.article.title,
+  },
+  { property: "og:description", content: data?.article.excerpt },
+];
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: duotoneSea }];

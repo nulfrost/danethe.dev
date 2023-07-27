@@ -1,8 +1,22 @@
 import { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: V2_MetaFunction = ({ location }) => [
+export const meta: V2_MetaFunction = () => [
   {
-    title: "Dane's site / Home"
+    title: "Dane's site / Home",
+  },
+  {
+    name: "description",
+    content:
+      "Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies.",
+  },
+  {
+    property: "og:title",
+    content: "Dane's personal website",
+  },
+  {
+    property: "og:description",
+    content:
+      "Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies.",
   },
 ];
 

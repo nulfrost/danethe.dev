@@ -26,7 +26,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta
+        {/* <meta
           name="description"
           content="Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies."
         />
@@ -34,7 +34,7 @@ export default function App() {
         <meta
           property="og:description"
           content="Dane is a self-taught developer from Toronto that enjoys building cool and accessible experiences on the web with the latest web technologies."
-        />
+        /> */}
         <Meta />
         <Links />
       </head>
