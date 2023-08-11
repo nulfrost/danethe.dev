@@ -1,0 +1,30 @@
+---
+const links = [
+  { path: "/blog", label: "Blog" },
+  { path: "/bookmarks", label: "Bookmarks" },
+  { path: "/uses", label: "Uses" },
+];
+---
+
+<header class="px-3 mt-10 xl:px-0">
+  <nav
+    class="flex w-full max-w-5xl mx-auto bg-snes-light-purple"
+    aria-label="Main site navigation"
+  >
+    <a
+      href="#maincontent"
+      class="absolute -translate-y-[300%] left-2/4 focus-visible:-translate-y-[170%] duration-150 bg-snes-black text-snes-light-gray px-2 focus-visible:outline-snes-purple focus-visible:outline-4 focus-within:outline-dotted font-bold"
+    >
+      Skip to main content
+    </a>
+    <a
+      href="/"
+      class="border-2 border-white [border-style:outset] bg-snes-purple px-2 py-1 font-bold uppercase text-white text-xs active:[border-style:inset] link-focus"
+      >Dane</a
+    >
+    <ul class="flex items-center gap-2 pr-4 ml-auto">
+     {links.map(link => <li class="text-blue-800 underline hover:text-blue-600 link-focus"><a href={link.path}>{link.label}</a></li>)}
+    </ul>
+
+  </nav>
+</header>

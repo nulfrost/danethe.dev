@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Dane's site / Home">
+  <main class="max-w-5xl px-3 mx-auto xl:px-0" id="mainconent">
+    <div>
+      <h1 class="mt-4 text-2xl font-bold text-snes-black">Howdy, I'm Dane</h1>
+      <p>
+        Currently working at{" "}
+        <abbr title="Bank of Montreal" class="font-bold text-snes-purple">
+          BMO
+        </abbr>{" "}
+        as a frontend developer on the platform team.
+      </p>
+      <div class="my-3"></div>
+      <p>
+        I'm a self-taught developer from Toronto that enjoys building cool
+        experiences on the web with the latest web technologies. On my website
+        you'll find things that I'm working on, my interests and maybe a blog
+        post or two when I find the time to write.
+      </p>
+      <div class="my-3"></div>
+      <p>
+        In my spare time I enjoy playing video games with my friends, finding
+        new places in the city to eat at, listening to music, skateboarding,
+        biking, building insane website ideas and most importantly napping.
+      </p>
+      <div class="border-b-4 [border-style:double] border-snes-purple my-4">
+      </div>
+      <h2 class="text-lg font-bold">
+        Other places on the internet where you can find me:
+      </h2>
+      <ul class="mb-3 list-disc list-inside">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/dmiller94/"
+            target="_blank"
+            aria-label="Dane's linkedin profile, opens in a new tab"
+            class="text-blue-800 hover:underline link-focus"
+          >
+            Linkedin
+          </a>
+        </li>
+        <li>
+          <a
+            rel="me"
+            href="https://hachyderm.io/@dane"
+            target="_blank"
+            aria-label="Dane's mastodon profile, opens in a new tab"
+            class="text-blue-800 hover:underline link-focus"
+          >
+            Mastodon
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/nulfrost"
+            target="_blank"
+            aria-label="Dane's github profile, opens in a new tab"
+            class="text-blue-800 hover:underline link-focus"
+          >
+            Github
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <style is:global>
+    @tailwind base;
+    @tailwind utilities;
+    @tailwind components;
+
+    @layer base {
+      :root {
+        --snes-black: #211a21;
+        --snes-light-gray: #cec9cc;
+        --snes-dark-gray: #908a99;
+        --snes-purple: #4f43ae;
+        --snes-light-purple: #b5b6e4;
+      }
+
+      .link-focus {
+        @apply focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-snes-black;
+      }
+    }
+  </style>
+</Layout>
