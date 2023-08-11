@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Client } from "@notionhq/client";
+
+const notion = new Client({ auth: import.meta.env.NOTION_INTEGRATION_TOKEN });
+const databaseId = import.meta.env.NOTION_DATABASE_ID;
+
+const bookmarks = await notion.databases.query({
+  database_id: databaseId,
+});
+---
+
+<Layout title="Dane's site / Bookmarks">
+  <h1 class="mt-4 mb-4 text-2xl font-bold text-snes-black">Bookmarks</h1>
+  <ul class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 auto-cols-fr">
+    {
+      bookmarks.results.map((bookmark) => (
+        <li>
+          <a
+            href={bookmark?.properties?.URL?.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label={`${bookmark?.properties?.Title?.title[0].plain_text}, opens in a new tab`}
+            class="[border-style:outset] border-2 border-white p-3 hover:[border-style:inset] focus-visible:outline-4 focus-visible:outline-offset-1 focus-visible:outline-snes-purple focus-visible:outline-dashed focus-visible:underline hover:underline w-full h-full flex flex-col"
+          >
+            <h2 class="font-bold">
+              {bookmark?.properties?.Title?.title[0].plain_text}
+            </h2>
+            <p class="mt-auto text-sm">
+              {bookmark?.properties?.Author.rich_text[0]?.plain_text}
+            </p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
