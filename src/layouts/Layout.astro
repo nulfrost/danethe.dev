@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import "../styles/tailwind.css";
 interface Props {
   title: string;
 }
@@ -19,6 +20,8 @@ const { title } = Astro.props;
   </head>
   <body class="bg-snes-light-gray">
     <Navbar />
-    <slot />
+    <main class="max-w-5xl px-3 mx-auto xl:px-0" id="maincontent">
+      <slot />
+    </main>
   </body>
 </html>
