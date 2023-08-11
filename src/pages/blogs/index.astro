@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+const allBlogPosts = await getCollection("2021");
+---
+
+<Layout title="Dane's site / Blog">
+  <h1 class="mt-4 mb-4 text-2xl font-bold text-snes-black">Blog</h1>
+  <ul class="space-y-4">
+    {
+      allBlogPosts.map((article) => (
+        <BlogPost
+          title={article.data.title}
+          slug={article.slug}
+          published_at={article.data.published_at}
+        />
+      ))
+    }
+  </ul>
+</Layout>

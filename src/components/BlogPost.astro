@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  published_at: Date;
+  slug: string;
+}
+
+const { title, published_at, slug } = Astro.props;
+---
+
+<li>
+  <article>
+    <h2
+      class="mb-1 font-bold text-blue-700 hover:text-blue-500 hover:underline"
+    >
+      <a href={`/blogs/${slug}`}>{title}</a>
+    </h2>
+    <footer class="text-sm">
+      <time datetime={published_at.toISOString()}>
+        {
+          new Intl.DateTimeFormat("en-us", {
+            dateStyle: "full",
+          }).format(new Date(published_at))
+        }
+      </time>
+    </footer>
+  </article>
+</li>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+import Navbar from "../components/Navbar.astro";
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="font-sans" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-snes-light-gray">
+    <Navbar />
+    <main class="max-w-5xl px-3 mx-auto xl:px-0" id="maincontent">
+      <h1 class="mt-4 mb-1 text-2xl font-bold text-snes-black">
+        {title}
+      </h1>
+      <p class="mb-4 text-sm">{description}</p>
+      <slot />
+    </main>
+  </body>
+</html>
