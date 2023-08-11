@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Docker for Frontend Developers
 description: A short walkthrough on how to create an API
 year: 2021
