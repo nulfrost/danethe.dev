@@ -11,7 +11,5 @@ const blogCollection = defineCollection({
 });
 
 export const collections = {
-  "2021": blogCollection,
-  "2022": blogCollection,
-  "2023": blogCollection,
+  blog: blogCollection,
 };

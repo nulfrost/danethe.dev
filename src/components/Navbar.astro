@@ -1,6 +1,6 @@
 ---
 const links = [
-  { path: "/blog", label: "Blog" },
+  { path: "/blogs", label: "Blog" },
   { path: "/bookmarks", label: "Bookmarks" },
   { path: "/uses", label: "Uses" },
 ];
@@ -23,8 +23,13 @@ const links = [
       >Dane</a
     >
     <ul class="flex items-center gap-2 pr-4 ml-auto">
-     {links.map(link => <li class="text-blue-800 underline hover:text-blue-600 link-focus"><a href={link.path}>{link.label}</a></li>)}
+      {
+        links.map((link) => (
+          <li class="text-blue-800 underline hover:text-blue-600 link-focus">
+            <a href={link.path}>{link.label}</a>
+          </li>
+        ))
+      }
     </ul>
-
   </nav>
 </header>

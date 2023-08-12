@@ -5,6 +5,7 @@ interface Props {
 }
 
 import Navbar from "../components/Navbar.astro";
+import "../styles/tailwind.css";
 const { title, description } = Astro.props;
 ---
 
@@ -25,7 +26,11 @@ const { title, description } = Astro.props;
         {title}
       </h1>
       <p class="mb-4 text-sm">{description}</p>
-      <slot />
+      <div
+        class="pb-6 prose prose-h2:mb-1 prose-a:text-blue-700 hover:prose-a:text-blue-600 prose-h2:mt-7 prose-p:text-gray-700 prose-li:marker:text-snes-black !max-w-none"
+      >
+        <slot />
+      </div>
     </main>
   </body>
 </html>

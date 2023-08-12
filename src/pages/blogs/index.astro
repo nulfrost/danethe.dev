@@ -2,19 +2,21 @@
 import Layout from "../../layouts/Layout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import { getCollection } from "astro:content";
-// promise.all for 2021, 2022, 2023
-const allBlogPosts = await getCollection("2021");
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.published_at.valueOf() - a.data.published_at.valueOf()
+);
 ---
 
 <Layout title="Dane's site / Blog">
   <h1 class="mt-4 mb-4 text-2xl font-bold text-snes-black">Blog</h1>
   <ul class="space-y-4">
     {
-      allBlogPosts.map((article) => (
+      posts.map((post) => (
         <BlogPost
-          title={article.data.title}
-          slug={article.slug}
-          published_at={article.data.published_at}
+          title={post.data.title}
+          slug={post.slug}
+          published_at={post.data.published_at}
         />
       ))
     }
