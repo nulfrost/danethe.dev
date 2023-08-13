@@ -5,20 +5,14 @@ interface Props {
 }
 
 import Navbar from "../components/Navbar.astro";
+import Meta from "../components/Meta.astro";
 import "../styles/tailwind.css";
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="font-sans" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
+  <Meta title={title} description={description} />
   <body class="bg-snes-light-gray">
     <Navbar />
     <main class="max-w-5xl px-3 mx-auto xl:px-0" id="maincontent">
