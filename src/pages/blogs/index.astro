@@ -8,7 +8,10 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<Layout title="Dane's site / Blog">
+<Layout
+  title="Dane's site / Blog"
+  description="Where I write about things I've learned or found interesting"
+>
   <h1 class="mt-4 mb-4 text-2xl font-bold text-snes-black">Blog</h1>
   <ul class="space-y-4">
     {

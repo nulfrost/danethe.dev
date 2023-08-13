@@ -25,5 +25,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:description" content={description} />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="canonical" href={canonicalURL} />
+  <meta property="og:url" content={canonicalURL} />
   <title>{title}</title>
 </head>

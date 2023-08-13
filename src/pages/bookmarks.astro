@@ -10,7 +10,10 @@ const bookmarks = await notion.databases.query({
 });
 ---
 
-<Layout title="Dane's site / Bookmarks">
+<Layout
+  title="Dane's site / Bookmarks"
+  description="Articles or code snippets I've found on the web that are interesting."
+>
   <h1 class="mt-4 mb-4 text-2xl font-bold text-snes-black">Bookmarks</h1>
   <ul class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 auto-cols-fr">
     {
